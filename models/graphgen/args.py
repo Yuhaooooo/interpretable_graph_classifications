@@ -16,18 +16,21 @@ class Args:
         Change start
         '''
 
-        self.note = os.environ.get('MODEL')
-        self.graph_type = os.environ.get('DATA')
+        self.note = 'DFScodeRNN_cls_LSTM'
+        self.graph_type = 'MUTAG'
+
+        self.epochs = 50
+        self.batch_size = 1
 
         self.num_layers = 1  # Layers of rnn
         self.embedding_size_dfscode_rnn = 8  # input size for dfscode RNN
         self.hidden_size_dfscode_rnn = 4
-        self.dfscode_rnn_dropout = 0  # Dropout layer in between RNN layers
-
-        self.lr = 0.0001  # Learning rate
+        self.dfscode_rnn_dropout = 0.2  # Dropout layer in between RNN layers
+        self.number_of_mlp_layer = 1
+        self.lr = 0.003  # Learning rate
         # Learning rate decay factor at each milestone (no. of epochs)
-        self.gamma = 0.3
-        self.milestones = [100, 200, 400, 800]  # List of milestones
+        # self.gamma = 0.3
+        # self.milestones = [100, 200, 400, 800]  # List of milestones
         
 
         # usually not change

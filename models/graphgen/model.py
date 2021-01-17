@@ -11,7 +11,7 @@ def create_model(args, feature_map):
     elif args.note == 'DFScodeRNN':
         model = create_model_graphgen(args, feature_map)
 
-    elif args.note == 'DFScodeRNN_cls':
+    elif 'DFScodeRNN_cls' in args.note:
         model = create_model_graphgen_cls(args, feature_map)
 
     elif args.note == 'DGMG':

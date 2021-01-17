@@ -7,6 +7,7 @@ import torch
 from tqdm.auto import tqdm
 
 from dfscode.dfs_wrapper import get_min_dfscode
+import sys
 from sys import exit
 
 MAX_WORKERS = 48
@@ -117,7 +118,10 @@ def graph_to_min_dfscode(graph_file, graphs_path, min_dfscodes_path, temp_path):
             with open(min_dfscodes_path + graph_file, 'wb') as f:
                 pickle.dump(min_dfscode, f)
         else:
+            print(f'len(G.edges()): {len(G.edges())}')
+            print(f'len(min_dfscode): {len(min_dfscode)}')
             print('Error in min dfscode for filename', graph_file)
+            sys.exit()
             exit()
 
 

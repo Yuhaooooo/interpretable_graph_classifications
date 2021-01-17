@@ -423,7 +423,7 @@ def create_graphs(args):
     #     args.current_processed_dataset_path = args.graph_path
     # elif args.note == 'DFScodeRNN':
     #     args.current_processed_dataset_path = args.min_dfscode_tensor_path
-    if args.note == 'DFScodeRNN_cls':
+    if 'DFScodeRNN_cls' in args.note:
         args.current_processed_dataset_path = args.min_dfscode_tensor_path
 
     if not os.path.exists(args.graph_path):

@@ -33,7 +33,7 @@ def get_feature_map(graph_label_list):
     with open(fearure_map_path, 'rb') as f:
         feature_map = pickle.load(f)
     # 在原来的generate任务中不需要label，这里单独加上
-    if args.note == 'DFScodeRNN_cls':
+    if 'DFScodeRNN_cls' in args.note:
         feature_map['label_size'] = len(set(graph_label_list))
     return feature_map
 

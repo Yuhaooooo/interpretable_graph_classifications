@@ -31,8 +31,10 @@ from utilities.util import graph_to_tensor
 from utilities.output_results import output_to_images
 from utilities.metrics import auc_scores, compute_metric
 
+import json
+
 # Check if gpu is available
-print('\n\ntorch.cuda.is_available(): ', torch.cuda.is_available(), '\n\n')
+# print('\n\ntorch.cuda.is_available(): ', torch.cuda.is_available(), '\n\n')
 
 # Define timer list to report running statistics
 timing_dict = {"forward": [], "backward": []}
@@ -321,9 +323,17 @@ if __name__ == '__main__':
 	# Get run arguments
 	cmd_opt = argparse.ArgumentParser(
 		description='Argparser for graph classification')
-	cmd_opt.add_argument('-cuda', default='1', help='0-CPU, 1-GPU')
+
 	cmd_opt.add_argument('-gm', default='DFScodeRNN_cls', help='GNN model to use')
 	cmd_opt.add_argument('-data', default='NCI-H23', help='Dataset to use')
+	cmd_opt.add_argument('-epoch', type=int, help='for dfscode_rnn only')
+	cmd_opt.add_argument('-number_of_rnn_layer', type=int, help='for dfscode_rnn only')
+	cmd_opt.add_argument('-embedding_size', type=int, help='for dfscode_rnn only')
+	cmd_opt.add_argument('-hidden_size', type=int, help='for dfscode_rnn only')
+	cmd_opt.add_argument('-number_of_mlp_layer', type=int, help='for dfscode_rnn only')
+	cmd_opt.add_argument('-learning_rate', type=float, help='for dfscode_rnn only')
+
+	cmd_opt.add_argument('-cuda', default='1', help='0-CPU, 1-GPU')
 	# 0 -> Load classifier, 1 -> train from scratch
 	cmd_opt.add_argument('-retrain', default='1', help='Whether to re-train the classifier or use saved trained model')
 	cmd_args, _ = cmd_opt.parse_known_args()
@@ -332,6 +342,8 @@ if __name__ == '__main__':
 	config = yaml.safe_load(open("config.yml"))
 	config["run"]["model"] = cmd_args.gm
 	config["run"]["dataset"] = cmd_args.data
+	# print(f'model: {config["run"]["model"]}')
+	# print(f'dataset: {config["run"]["dataset"]}')
 
 	# Set random seed
 	random.seed(config["run"]["seed"])
@@ -341,7 +353,7 @@ if __name__ == '__main__':
 	# [1] Load graph data using util.load_data(), see util.py =========================================================
 	# Specify the dataset to use and the number of folds for partitioning
 
-	if config["run"]["model"]=='DFScodeRNN_cls':
+	if 'DFScodeRNN_cls' in config["run"]["model"]:
 
 		sys.path.append(os.path.abspath(os.path.join(os.getcwd(), "models/graphgen")))
 		sys.path.append(os.path.abspath(os.path.join(os.getcwd(), "models/graphgen/bin")))
@@ -352,10 +364,17 @@ if __name__ == '__main__':
 		# 统一yml & args
 		# 其实不需要统一，统一用GCN里的就好
 		# 
-		# args.note = config["run"]["model"]
-		# args.graph_type = config["run"]["dataset"]
-		args.epochs = config["run"]["num_epochs"] # epoch用GCN的
+		args.note = config["run"]["model"]
+		args.graph_type = config["run"]["dataset"]
+		args.rnn_type = args.note.split('_')[-1] # use LSTM or GRU
+		args.epochs = cmd_args.epoch
+		config["run"]["num_epochs"] = args.epochs #在GCN框架下用config里的参数
 		args.batch_size = config["general"]["batch_size"] #bs用GCN的
+		args.num_layers = cmd_args.number_of_rnn_layer  # Layers of rnn
+		args.embedding_size_dfscode_rnn = cmd_args.embedding_size  # input size for dfscode RNN
+		args.hidden_size_dfscode_rnn = cmd_args.hidden_size
+		args.number_of_mlp_layer = cmd_args.number_of_mlp_layer
+		args.lr = cmd_args.learning_rate
 		config['run']['learning_rate'] = args.lr # only for printing purpose
 		# args.lr = config["run"]["learning_rate"] #用GCN的
 
@@ -364,6 +383,12 @@ if __name__ == '__main__':
 		# args.produce_graphs = False 
 		# args.produce_min_dfscodes = False
 		# args.produce_min_dfscode_tensors = False
+		args_dict = vars(args)
+		print('\n\n\n\n\n')
+		print('Params Turning Set')
+		for i in [item for item in args_dict.items()][:13]:
+			print(i)
+		print('\n\n\n\n\n')
 
 		graph_list = get_graph_list()
 		graph_label_list = get_graph_label_list()
@@ -393,20 +418,28 @@ if __name__ == '__main__':
 
 	# [2] Instantiate the classifier using config.yml =================================================================
 	# Display to user the current configuration used:
-	run_configuration_string = "==== Configuration Settings ====\n"
-	run_configuration_string += "== Run Settings ==\n"
-	run_configuration_string += "Model: %s, Dataset: %s\n" % (
-		config["run"]["model"], config["run"]["dataset"])
 
-	for option, value in config["run"].items():
-		run_configuration_string += "%s: %s\n" % (option, value)
+	if 'DFScodeRNN_cls' not in config["run"]["model"]:
+		run_configuration_string = "==== Configuration Settings ====\n"
+		run_configuration_string += "== Run Settings ==\n"
+		run_configuration_string += "Model: %s, Dataset: %s\n" % (
+			config["run"]["model"], config["run"]["dataset"])
 
-	run_configuration_string += "\n== Model Settings and results ==\n"
-	for option, value in config["GNN_models"][config["run"]["model"]].items():
-		run_configuration_string += "%s: %s\n" % (option, value)
-	run_configuration_string += "\n"
+		for option, value in config["run"].items():
+			run_configuration_string += "%s: %s\n" % (option, value)
 
-	run_statistics_string += run_configuration_string
+		run_configuration_string += "\n== Model Settings and results ==\n"
+		
+		for option, value in config["GNN_models"][config["run"]["model"]].items():
+				run_configuration_string += "%s: %s\n" % (option, value)
+		run_configuration_string += "\n"
+
+		run_statistics_string += run_configuration_string
+
+	else:
+		for i in [item for item in args_dict.items()][:13]:
+			run_statistics_string += str(i)
+			run_statistics_string += '\n'
 
 	model_list = []
 	model_metrics_dict = {"accuracy": [], "roc_auc": [], "prc_auc": []}
@@ -474,11 +507,13 @@ if __name__ == '__main__':
 				  % fold_number)
 
 			# load model
-			if config["run"]["model"]=='DFScodeRNN_cls':
+			if 'DFScodeRNN_cls' in config["run"]["model"]:
 				classifier_model = get_model(dataset_features)
 				if cmd_args.cuda == '1':
 					classifier_model['dfs_code_rnn'] = classifier_model['dfs_code_rnn'].cuda()
 					classifier_model['output_layer'] = classifier_model['output_layer'].cuda()
+				print(classifier_model)
+				# sys.exit()
 			else:
 				exec_string = "classifier_model = %s(deepcopy(config[\"GNN_models\"][\"%s\"])," \
 							" deepcopy(config[\"dataset_features\"]))" % \
@@ -489,11 +524,12 @@ if __name__ == '__main__':
 
 
 			# Define back propagation optimizer
-			if config["run"]["model"]=='DFScodeRNN_cls':
+			if 'DFScodeRNN_cls' in config["run"]["model"]:
 				# graphgen optimizer(Adam) and scheduler(MultiStepLR)
 				from models.graphgen.train import get_optimizer, get_scheduler
 				optimizer = get_optimizer(classifier_model, args)
-				scheduler = get_scheduler(classifier_model, optimizer, args)
+				# scheduler = get_scheduler(classifier_model, optimizer, args)
+				scheduler=None #set scheduler as None first, cuz it does not reach milestone
 				# GCN optimizer(Adam)
 				# optimizer = {}
 				# for name, net in classifier_model.items():
@@ -508,11 +544,11 @@ if __name__ == '__main__':
 			best_loss = None
 
 			# For each epoch:
-			for epoch in range(config["run"]["num_epochs"]):
+			for epoch in range(config["run"]["num_epochs"]): #epochs will be changed if use rnn
 				# Set classifier to train mode
 				
 				# Calculate training loss
-				if config["run"]["model"]=='DFScodeRNN_cls':
+				if 'DFScodeRNN_cls' in config["run"]["model"]:
 					classifier_model['dfs_code_rnn'].train()
 					classifier_model['output_layer'].train()
 					avg_loss = loop_dataset_DFSRNN(
@@ -542,7 +578,7 @@ if __name__ == '__main__':
 
 				# Calculate test loss
 
-				if config["run"]["model"]=='DFScodeRNN_cls':
+				if 'DFScodeRNN_cls' in config["run"]["model"]:
 					classifier_model['dfs_code_rnn'].eval()
 					classifier_model['output_layer'].eval()
 					test_loss = loop_dataset_DFSRNN(
@@ -581,6 +617,7 @@ if __name__ == '__main__':
 		# 		   (dataset_features["name"],config["run"]["model"],run_hash,model_hash))
 
 	# Report average performance metrics
+	run_statistics_string += "\n\n"
 	run_statistics_string += "Accuracy (avg): %s " % \
 							 round(sum(model_metrics_dict["accuracy"])/len(model_metrics_dict["accuracy"]),5)
 	run_statistics_string += "ROC_AUC (avg): %s " % \
@@ -702,19 +739,32 @@ if __name__ == '__main__':
 
 	print(run_statistics_string)
 
-	# Save dataset features and run statistics to log
-	current_datetime = datetime.datetime.now().strftime("%d%m%Y-%H%M%S")
-	log_file_name = "%s_%s_datetime_%s.txt" %\
-				   (config["run"]["dataset"],
-					config["run"]["model"],
-					str(current_datetime))
+	if 'DFScodeRNN_cls' in config["run"]["model"]:
+		log_file_name = f"E{args.epochs}_N{args.num_layers}_e{args.embedding_size_dfscode_rnn}_h{args.hidden_size_dfscode_rnn}_n{args.number_of_mlp_layer}_l{args.lr}.txt"
 
-	# Save log to text file
-	with open("results/logs/%s" % log_file_name, "w") as f:
-		# if "dataset_info" in dataset_features.keys():
-		# 	dataset_info = dataset_features["dataset_info"] + "\n"
-		# else:
-		dataset_info = ""
-		f.write(dataset_info + run_statistics_string)
+		# Save log to text file
+		with open(f"results/logs/{args.rnn_type}/turning/{args.graph_type}/{log_file_name}", "w") as f:
+			print('model:\n', classifier_model, file=f)
+			f.write('\n\n')
+			f.write(run_statistics_string)
+			
+			
+	else:
+		# Save dataset features and run statistics to log
+		current_datetime = datetime.datetime.now().strftime("%d%m%Y-%H%M%S")
+		log_file_name = "%s_%s_datetime_%s.txt" %\
+					(config["run"]["dataset"],
+						config["run"]["model"],
+						str(current_datetime))
+
+		# Save log to text file
+		with open("results/logs/%s" % log_file_name, "w") as f:
+			# if "dataset_info" in dataset_features.keys():
+			# 	dataset_info = dataset_features["dataset_info"] + "\n"
+			# else:
+			dataset_info = ""
+			f.write(dataset_info + run_statistics_string)
+
+	
 
 

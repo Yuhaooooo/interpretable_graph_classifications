@@ -1,0 +1,22 @@
+Run statistics: 
+==== Configuration Settings ====
+== Run Settings ==
+Model: DiffPool, Dataset: TOX21_AR
+num_epochs: 50
+learning_rate: 0.0001
+seed: 1800
+k_fold: 5
+model: DiffPool
+dataset: TOX21_AR
+
+== Model Settings and results ==
+convolution_layers_size: 64-64-64
+pred_hidden_layers: 50-50-50
+assign_ratio: 0.25
+number_of_pooling: 1
+concat_tensors: False
+
+Accuracy (avg): 0.96331 ROC_AUC (avg): 0.80145 PRC_AUC (avg): 0.41582 
+
+Average forward propagation time taken(ms): 2.4280007341151477
+Average backward propagation time taken(ms): 3.474613919464768

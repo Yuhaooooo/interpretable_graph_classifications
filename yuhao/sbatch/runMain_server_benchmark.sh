@@ -1,6 +1,7 @@
 #!/bin/bash
 
-#SBATCH --partition=SCSEGPU_UG 
+#SBATCH --partition=SCSEGPU_UG
+#SBATCH --qos=q_ug8
 #SBATCH --nodes=1
 #SBATCH --gres=gpu:1
 #SBATCH --mem=8000M 
@@ -12,7 +13,9 @@ conda activate GCNN_GAP_graphgen
 conda env list
 
 # MODEL=GCN
-MODEL=DFScodeRNN_cls
+# MODEL=DFScodeRNN_cls_GRU
+# MODEL=DGCNN
+MODEL=DiffPool
 
 # DATA=MUTAG
 # DATA=NCI-H23
