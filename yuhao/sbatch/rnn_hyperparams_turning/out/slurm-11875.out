@@ -1,0 +1,738 @@
+# conda environments:
+#
+base                     /apps/anaconda3
+DGCNN                    /home/FYP/heyu0012/.conda/envs/DGCNN
+GCNN_GAP                 /home/FYP/heyu0012/.conda/envs/GCNN_GAP
+GCNN_GAP_graphgen     *  /home/FYP/heyu0012/.conda/envs/GCNN_GAP_graphgen
+graphgen                 /home/FYP/heyu0012/.conda/envs/graphgen
+pytorch                  /home/FYP/heyu0012/.conda/envs/pytorch
+
+====== begin of gnn configuration ======
+| msg_average = 0
+======   end of gnn configuration ======
+
+
+
+
+
+
+Params Turning Set
+('note', 'DFScodeRNN_cls_LSTM')
+('graph_type', 'MUTAG')
+('epochs', 50)
+('batch_size', 1)
+('num_layers', 2)
+('embedding_size_dfscode_rnn', 8)
+('hidden_size_dfscode_rnn', 4)
+('dfscode_rnn_dropout', 0.2)
+('number_of_mlp_layer', 0)
+('lr', 0.0001)
+('rnn_type', 'LSTM')
+('gradient_clipping', True)
+('device', device(type='cuda', index=0))
+
+
+
+
+
+
+args.base_path: /home/FYP/heyu0012/projects/interpretable_graph_classifications/data/MUTAG/
+args.graph_path: /home/FYP/heyu0012/projects/interpretable_graph_classifications/data/MUTAG/graphgen/graphs/
+args.min_dfscode_path: /home/FYP/heyu0012/projects/interpretable_graph_classifications/data/MUTAG/graphgen/min_dfscodes/
+args.min_dfscode_tensor_path: /home/FYP/heyu0012/projects/interpretable_graph_classifications/data/MUTAG/graphgen/min_dfscode_tensors/
+*** 1 train_index:  [  0   2   3   6   9  10  11  12  13  14  15  16  17  19  20  21  22  23
+  24  26  27  30  31  32  33  35  36  38  39  41  42  43  44  45  46  47
+  48  49  50  52  53  54  56  57  59  60  61  62  63  64  65  66  67  69
+  70  71  72  73  74  76  77  78  79  80  81  82  83  84  87  88  89  91
+  92  94  95  96  97  98 100 101 102 103 104 106 107 108 109 110 112 113
+ 115 116 117 118 119 120 121 122 124 125 126 127 129 130 131 132 134 136
+ 138 139 140 141 142 144 145 146 147 148 149 151 152 153 154 155 156 157
+ 158 159 160 161 164 165 166 167 169 170 171 172 173 175 176 177 178 179
+ 180 182 184 185 186 187]
+*** 2 test_index:  [  1   4   5   7   8  18  25  28  29  34  37  40  51  55  58  68  75  85
+  86  90  93  99 105 111 114 123 128 133 135 137 143 150 162 163 168 174
+ 181 183]
+*** 1 train_index:  [  0   1   2   4   5   6   7   8  10  11  12  13  14  15  16  17  18  19
+  20  21  22  24  25  26  27  28  29  30  32  33  34  35  36  37  38  39
+  40  41  43  44  45  46  49  50  51  52  53  54  55  56  58  59  60  61
+  62  63  64  65  66  67  68  69  70  71  74  75  76  77  79  80  81  82
+  83  84  85  86  88  90  91  92  93  94  96  97  98  99 101 102 103 104
+ 105 106 107 111 112 113 114 115 120 121 122 123 124 125 126 128 129 130
+ 131 133 134 135 136 137 138 139 140 143 144 145 147 148 150 153 154 155
+ 156 159 162 163 164 165 167 168 169 170 171 172 173 174 175 177 178 179
+ 180 181 182 183 186 187]
+*** 2 test_index:  [  3   9  23  31  42  47  48  57  72  73  78  87  89  95 100 108 109 110
+ 116 117 118 119 127 132 141 142 146 149 151 152 157 158 160 161 166 176
+ 184 185]
+*** 1 train_index:  [  1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  17  18  19
+  20  23  24  25  26  28  29  31  32  34  35  36  37  38  40  41  42  43
+  44  47  48  51  53  54  55  56  57  58  59  60  64  66  68  70  71  72
+  73  74  75  76  77  78  79  81  82  84  85  86  87  88  89  90  92  93
+  95  96  97  98  99 100 104 105 106 107 108 109 110 111 112 113 114 115
+ 116 117 118 119 120 121 123 124 125 126 127 128 129 130 131 132 133 134
+ 135 137 139 140 141 142 143 144 146 148 149 150 151 152 153 156 157 158
+ 159 160 161 162 163 165 166 167 168 169 171 172 173 174 175 176 177 178
+ 179 181 183 184 185 186]
+*** 2 test_index:  [  0  16  21  22  27  30  33  39  45  46  49  50  52  61  62  63  65  67
+  69  80  83  91  94 101 102 103 122 136 138 145 147 154 155 164 170 180
+ 182 187]
+*** 1 train_index:  [  0   1   3   4   5   6   7   8   9  13  14  16  18  19  21  22  23  25
+  26  27  28  29  30  31  33  34  36  37  38  39  40  42  43  45  46  47
+  48  49  50  51  52  53  55  56  57  58  60  61  62  63  65  66  67  68
+  69  71  72  73  75  76  77  78  79  80  81  83  84  85  86  87  88  89
+  90  91  92  93  94  95  97  98  99 100 101 102 103 105 106 108 109 110
+ 111 113 114 115 116 117 118 119 120 121 122 123 125 127 128 131 132 133
+ 134 135 136 137 138 140 141 142 143 144 145 146 147 148 149 150 151 152
+ 154 155 156 157 158 160 161 162 163 164 165 166 168 170 171 174 175 176
+ 180 181 182 183 184 185 187]
+*** 2 test_index:  [  2  10  11  12  15  17  20  24  32  35  41  44  54  59  64  70  74  82
+  96 104 107 112 124 126 129 130 139 153 159 167 169 172 173 177 178 179
+ 186]
+*** 1 train_index:  [  0   1   2   3   4   5   7   8   9  10  11  12  15  16  17  18  20  21
+  22  23  24  25  27  28  29  30  31  32  33  34  35  37  39  40  41  42
+  44  45  46  47  48  49  50  51  52  54  55  57  58  59  61  62  63  64
+  65  67  68  69  70  72  73  74  75  78  80  82  83  85  86  87  89  90
+  91  93  94  95  96  99 100 101 102 103 104 105 107 108 109 110 111 112
+ 114 116 117 118 119 122 123 124 126 127 128 129 130 132 133 135 136 137
+ 138 139 141 142 143 145 146 147 149 150 151 152 153 154 155 157 158 159
+ 160 161 162 163 164 166 167 168 169 170 172 173 174 176 177 178 179 180
+ 181 182 183 184 185 186 187]
+*** 2 test_index:  [  6  13  14  19  26  36  38  43  53  56  60  66  71  76  77  79  81  84
+  88  92  97  98 106 113 115 120 121 125 131 134 140 144 148 156 165 171
+ 175]
+{'base_path': '/home/FYP/heyu0012/projects/interpretable_graph_classifications/data/MUTAG/',
+ 'batch_size': 1,
+ 'clean_temp': False,
+ 'clean_tensorboard': False,
+ 'current_dataset_path': None,
+ 'current_min_dfscode_path': None,
+ 'current_model_save_path': '/home/FYP/heyu0012/projects/interpretable_graph_classifications/data/MUTAG/graphgen/model_save/DFScodeRNN_cls_LSTM_MUTAG_2021-01-17-19-38-40/',
+ 'current_processed_dataset_path': '/home/FYP/heyu0012/projects/interpretable_graph_classifications/data/MUTAG/graphgen/min_dfscode_tensors/',
+ 'current_temp_path': '/home/FYP/heyu0012/projects/interpretable_graph_classifications/data/MUTAG/graphgen/tmp/DFScodeRNN_cls_LSTM_MUTAG_2021-01-17-19-38-40/',
+ 'dataset_path': '/home/FYP/heyu0012/projects/interpretable_graph_classifications/data/MUTAG/graphgen/datasets/',
+ 'device': device(type='cuda', index=0),
+ 'dfscode_rnn_dropout': 0.2,
+ 'embedding_size_dfscode_rnn': 8,
+ 'epochs': 50,
+ 'epochs_end': 10000,
+ 'epochs_save': 20,
+ 'epochs_validate': 1,
+ 'fname': 'DFScodeRNN_cls_LSTM_MUTAG',
+ 'gradient_clipping': True,
+ 'graph_path': '/home/FYP/heyu0012/projects/interpretable_graph_classifications/data/MUTAG/graphgen/graphs/',
+ 'graph_type': 'MUTAG',
+ 'graphgen_save_path': '/home/FYP/heyu0012/projects/interpretable_graph_classifications/data/MUTAG/graphgen/',
+ 'hidden_size_dfscode_rnn': 4,
+ 'load_device': device(type='cuda', index=0),
+ 'load_model': False,
+ 'load_model_path': '',
+ 'log_tensorboard': False,
+ 'lr': 0.0001,
+ 'max_prev_node': None,
+ 'min_dfscode_path': '/home/FYP/heyu0012/projects/interpretable_graph_classifications/data/MUTAG/graphgen/min_dfscodes/',
+ 'min_dfscode_tensor_path': '/home/FYP/heyu0012/projects/interpretable_graph_classifications/data/MUTAG/graphgen/min_dfscode_tensors/',
+ 'model_save_path': '/home/FYP/heyu0012/projects/interpretable_graph_classifications/data/MUTAG/graphgen/model_save/',
+ 'note': 'DFScodeRNN_cls_LSTM',
+ 'num_graphs': None,
+ 'num_layers': 2,
+ 'num_workers': 8,
+ 'number_of_mlp_layer': 0,
+ 'rnn_type': 'LSTM',
+ 'save_model': False,
+ 'temp_path': '/home/FYP/heyu0012/projects/interpretable_graph_classifications/data/MUTAG/graphgen/tmp/',
+ 'tensorboard_path': '/home/FYP/heyu0012/projects/interpretable_graph_classifications/data/MUTAG/graphgen/tensorboard/',
+ 'time': '2021-01-17-19-38-40',
+ 'weights': False}
+
+
+graphgen args.__dict__: None
+
+
+
+
+dataset_features: {'node_forward': {'0': 0, '1': 1, '2': 2, '3': 3, '5': 4, '6': 5, '4': 6}, 'node_backward': {0: '0', 1: '1', 2: '2', 3: '3', 4: '5', 5: '6', 6: '4'}, 'edge_forward': {'0': 0}, 'edge_backward': {0: '0'}, 'max_nodes': 28, 'min_nodes': 10, 'max_edges': 33, 'min_edges': 10, 'max_degree': 4, 'label_size': 2}
+
+
+
+
+config: {'general': {'data_autobalance': False, 'print_dataset_features': True, 'batch_size': 1, 'extract_features': False}, 'run': {'num_epochs': 50, 'learning_rate': 0.0001, 'seed': 1800, 'k_fold': 5, 'model': 'DFScodeRNN_cls_LSTM', 'dataset': 'MUTAG'}, 'GNN_models': {'DGCNN': {'convolution_layers_size': '32-32-32-1', 'sortpooling_k': 0.6, 'n_hidden': 128, 'convolution_dropout': 0.5, 'pred_dropout': 0.5, 'FP_len': 0}, 'GCN': {'convolution_layers_size': '128-256-512', 'dropout': 0.5}, 'GCND': {'convolution_layers_size': '128-256-512', 'dropout': 0.5}, 'DiffPool': {'convolution_layers_size': '64-64-64', 'pred_hidden_layers': '50-50-50', 'assign_ratio': 0.25, 'number_of_pooling': 1, 'concat_tensors': False}, 'DiffPoolD': {'convolution_layers_size': '64-64-64', 'pred_hidden_layers': '50-50-50', 'assign_ratio': 0.25, 'number_of_pooling': 1, 'concat_tensors': False}, 'DFScodeRNN_cls': {'dummy': 0}}, 'dataset_features': {'node_forward': {'0': 0, '1': 1, '2': 2, '3': 3, '5': 4, '6': 5, '4': 6}, 'node_backward': {0: '0', 1: '1', 2: '2', 3: '3', 4: '5', 5: '6', 6: '4'}, 'edge_forward': {'0': 0}, 'edge_backward': {0: '0'}, 'max_nodes': 28, 'min_nodes': 10, 'max_edges': 33, 'min_edges': 10, 'max_degree': 4, 'label_size': 2}}
+
+
+Training a new model: DFScodeRNN_cls_LSTM
+Training model with dataset, testing using fold 0
+use LSTM
+{'dfs_code_rnn': RNN(
+  (input): Linear(in_features=76, out_features=8, bias=True)
+  (rnn): LSTM(8, 4, num_layers=2, batch_first=True, dropout=0.2)
+), 'output_layer': MLP_layers(
+  (mlp): Sequential(
+    (Linear0): Linear(in_features=4, out_features=2, bias=True)
+  )
+)}
+DfscodeRnn_cls_LSTM args.lr: 0.0001
+[92maverage training of epoch 0: loss -0.70252 acc 0.33333 roc_auc 0.46180 prc_auc 0.63617[0m
+[93maverage test of epoch 0: loss -0.76159 acc 0.34211 roc_auc 0.46769 prc_auc 0.71143[0m
+[92maverage training of epoch 1: loss -0.83710 acc 0.33333 roc_auc 0.51260 prc_auc 0.69221[0m
+[93maverage test of epoch 1: loss -0.93405 acc 0.34211 roc_auc 0.55692 prc_auc 0.75324[0m
+[92maverage training of epoch 2: loss -0.98927 acc 0.33333 roc_auc 0.43840 prc_auc 0.67428[0m
+[93maverage test of epoch 2: loss -1.07274 acc 0.34211 roc_auc 0.53846 prc_auc 0.66531[0m
+[92maverage training of epoch 3: loss -1.14023 acc 0.34000 roc_auc 0.46580 prc_auc 0.66943[0m
+[93maverage test of epoch 3: loss -1.23126 acc 0.34211 roc_auc 0.64615 prc_auc 0.81847[0m
+[92maverage training of epoch 4: loss -1.28738 acc 0.37333 roc_auc 0.44340 prc_auc 0.66262[0m
+[93maverage test of epoch 4: loss -1.35683 acc 0.34211 roc_auc 0.52308 prc_auc 0.72214[0m
+[92maverage training of epoch 5: loss -1.42926 acc 0.44667 roc_auc 0.50280 prc_auc 0.66585[0m
+[93maverage test of epoch 5: loss -1.51769 acc 0.55263 roc_auc 0.52615 prc_auc 0.71084[0m
+[92maverage training of epoch 6: loss -1.59903 acc 0.62667 roc_auc 0.46860 prc_auc 0.68463[0m
+[93maverage test of epoch 6: loss -1.67120 acc 0.57895 roc_auc 0.48923 prc_auc 0.71495[0m
+[92maverage training of epoch 7: loss -1.77140 acc 0.64667 roc_auc 0.38200 prc_auc 0.61622[0m
+[93maverage test of epoch 7: loss -1.88576 acc 0.65789 roc_auc 0.56308 prc_auc 0.68846[0m
+[92maverage training of epoch 8: loss -1.97792 acc 0.66667 roc_auc 0.46560 prc_auc 0.66010[0m
+[93maverage test of epoch 8: loss -2.09329 acc 0.65789 roc_auc 0.55385 prc_auc 0.73467[0m
+[92maverage training of epoch 9: loss -2.20230 acc 0.66667 roc_auc 0.49860 prc_auc 0.68205[0m
+[93maverage test of epoch 9: loss -2.32117 acc 0.65789 roc_auc 0.37231 prc_auc 0.63670[0m
+[92maverage training of epoch 10: loss -2.44139 acc 0.66667 roc_auc 0.49340 prc_auc 0.67176[0m
+[93maverage test of epoch 10: loss -2.54442 acc 0.65789 roc_auc 0.46154 prc_auc 0.70076[0m
+[92maverage training of epoch 11: loss -2.68414 acc 0.66667 roc_auc 0.43940 prc_auc 0.61920[0m
+[93maverage test of epoch 11: loss -2.79586 acc 0.65789 roc_auc 0.60000 prc_auc 0.79806[0m
+[92maverage training of epoch 12: loss -2.91255 acc 0.66667 roc_auc 0.42480 prc_auc 0.64096[0m
+[93maverage test of epoch 12: loss -3.00188 acc 0.65789 roc_auc 0.53846 prc_auc 0.74965[0m
+[92maverage training of epoch 13: loss -3.11833 acc 0.66667 roc_auc 0.56740 prc_auc 0.73892[0m
+[93maverage test of epoch 13: loss -3.22002 acc 0.65789 roc_auc 0.63385 prc_auc 0.79671[0m
+[92maverage training of epoch 14: loss -3.34097 acc 0.66667 roc_auc 0.50540 prc_auc 0.69605[0m
+[93maverage test of epoch 14: loss -3.41012 acc 0.65789 roc_auc 0.47692 prc_auc 0.71682[0m
+[92maverage training of epoch 15: loss -3.54526 acc 0.66667 roc_auc 0.58360 prc_auc 0.74496[0m
+[93maverage test of epoch 15: loss -3.62214 acc 0.65789 roc_auc 0.45538 prc_auc 0.65696[0m
+[92maverage training of epoch 16: loss -3.74949 acc 0.66667 roc_auc 0.46880 prc_auc 0.64669[0m
+[93maverage test of epoch 16: loss -3.85324 acc 0.65789 roc_auc 0.46769 prc_auc 0.62410[0m
+[92maverage training of epoch 17: loss -3.94567 acc 0.66667 roc_auc 0.49540 prc_auc 0.66223[0m
+[93maverage test of epoch 17: loss -4.02999 acc 0.65789 roc_auc 0.49846 prc_auc 0.67288[0m
+[92maverage training of epoch 18: loss -4.12446 acc 0.66667 roc_auc 0.43600 prc_auc 0.65391[0m
+[93maverage test of epoch 18: loss -4.20845 acc 0.65789 roc_auc 0.66769 prc_auc 0.81931[0m
+[92maverage training of epoch 19: loss -4.28427 acc 0.66667 roc_auc 0.48140 prc_auc 0.65824[0m
+[93maverage test of epoch 19: loss -4.35584 acc 0.65789 roc_auc 0.57231 prc_auc 0.70889[0m
+[92maverage training of epoch 20: loss -4.43224 acc 0.66667 roc_auc 0.52480 prc_auc 0.69354[0m
+[93maverage test of epoch 20: loss -4.45982 acc 0.65789 roc_auc 0.52923 prc_auc 0.65550[0m
+[92maverage training of epoch 21: loss -4.57831 acc 0.66667 roc_auc 0.60210 prc_auc 0.77525[0m
+[93maverage test of epoch 21: loss -4.63700 acc 0.65789 roc_auc 0.58769 prc_auc 0.75828[0m
+[92maverage training of epoch 22: loss -4.68801 acc 0.66667 roc_auc 0.54840 prc_auc 0.68774[0m
+[93maverage test of epoch 22: loss -4.73521 acc 0.65789 roc_auc 0.84308 prc_auc 0.89909[0m
+[92maverage training of epoch 23: loss -4.80036 acc 0.66667 roc_auc 0.40260 prc_auc 0.60437[0m
+[93maverage test of epoch 23: loss -4.84422 acc 0.65789 roc_auc 0.52615 prc_auc 0.69774[0m
+[92maverage training of epoch 24: loss -4.90755 acc 0.66667 roc_auc 0.55480 prc_auc 0.68169[0m
+[93maverage test of epoch 24: loss -4.93516 acc 0.65789 roc_auc 0.56923 prc_auc 0.73450[0m
+[92maverage training of epoch 25: loss -5.01590 acc 0.66667 roc_auc 0.51000 prc_auc 0.66850[0m
+[93maverage test of epoch 25: loss -5.03658 acc 0.65789 roc_auc 0.42769 prc_auc 0.62701[0m
+[92maverage training of epoch 26: loss -5.09281 acc 0.66667 roc_auc 0.45380 prc_auc 0.63745[0m
+[93maverage test of epoch 26: loss -5.11758 acc 0.65789 roc_auc 0.53538 prc_auc 0.73685[0m
+[92maverage training of epoch 27: loss -5.19752 acc 0.66667 roc_auc 0.45200 prc_auc 0.62683[0m
+[93maverage test of epoch 27: loss -5.21937 acc 0.65789 roc_auc 0.63385 prc_auc 0.80569[0m
+[92maverage training of epoch 28: loss -5.27656 acc 0.66667 roc_auc 0.62210 prc_auc 0.74012[0m
+[93maverage test of epoch 28: loss -5.30914 acc 0.65789 roc_auc 0.63385 prc_auc 0.80063[0m
+[92maverage training of epoch 29: loss -5.34896 acc 0.66667 roc_auc 0.45720 prc_auc 0.62727[0m
+[93maverage test of epoch 29: loss -5.34643 acc 0.65789 roc_auc 0.44308 prc_auc 0.66556[0m
+[92maverage training of epoch 30: loss -5.43631 acc 0.66667 roc_auc 0.44560 prc_auc 0.64230[0m
+[93maverage test of epoch 30: loss -5.46425 acc 0.65789 roc_auc 0.71385 prc_auc 0.85007[0m
+[92maverage training of epoch 31: loss -5.50719 acc 0.66667 roc_auc 0.48340 prc_auc 0.67527[0m
+[93maverage test of epoch 31: loss -5.52178 acc 0.65789 roc_auc 0.30462 prc_auc 0.60674[0m
+[92maverage training of epoch 32: loss -5.58693 acc 0.66667 roc_auc 0.49400 prc_auc 0.68779[0m
+[93maverage test of epoch 32: loss -5.60188 acc 0.65789 roc_auc 0.60615 prc_auc 0.78263[0m
+[92maverage training of epoch 33: loss -5.65193 acc 0.66667 roc_auc 0.46320 prc_auc 0.66199[0m
+[93maverage test of epoch 33: loss -5.66119 acc 0.65789 roc_auc 0.56308 prc_auc 0.75479[0m
+[92maverage training of epoch 34: loss -5.72425 acc 0.66667 roc_auc 0.44880 prc_auc 0.60948[0m
+[93maverage test of epoch 34: loss -5.74923 acc 0.65789 roc_auc 0.50769 prc_auc 0.69087[0m
+[92maverage training of epoch 35: loss -5.78460 acc 0.66667 roc_auc 0.43130 prc_auc 0.64275[0m
+[93maverage test of epoch 35: loss -5.80508 acc 0.65789 roc_auc 0.34154 prc_auc 0.60089[0m
+[92maverage training of epoch 36: loss -5.86219 acc 0.66667 roc_auc 0.53240 prc_auc 0.69760[0m
+[93maverage test of epoch 36: loss -5.88287 acc 0.65789 roc_auc 0.42462 prc_auc 0.64305[0m
+[92maverage training of epoch 37: loss -5.92374 acc 0.66667 roc_auc 0.51820 prc_auc 0.69916[0m
+[93maverage test of epoch 37: loss -5.94127 acc 0.65789 roc_auc 0.39077 prc_auc 0.66881[0m
+[92maverage training of epoch 38: loss -5.99582 acc 0.66667 roc_auc 0.45120 prc_auc 0.62542[0m
+[93maverage test of epoch 38: loss -5.99218 acc 0.65789 roc_auc 0.47077 prc_auc 0.68528[0m
+[92maverage training of epoch 39: loss -6.06414 acc 0.66667 roc_auc 0.50180 prc_auc 0.65388[0m
+[93maverage test of epoch 39: loss -6.05258 acc 0.65789 roc_auc 0.56000 prc_auc 0.78547[0m
+[92maverage training of epoch 40: loss -6.12543 acc 0.66667 roc_auc 0.59440 prc_auc 0.74065[0m
+[93maverage test of epoch 40: loss -6.12753 acc 0.65789 roc_auc 0.70462 prc_auc 0.81979[0m
+[92maverage training of epoch 41: loss -6.18071 acc 0.66667 roc_auc 0.45410 prc_auc 0.62813[0m
+[93maverage test of epoch 41: loss -6.15848 acc 0.65789 roc_auc 0.40000 prc_auc 0.62141[0m
+[92maverage training of epoch 42: loss -6.25858 acc 0.66667 roc_auc 0.48000 prc_auc 0.65399[0m
+[93maverage test of epoch 42: loss -6.26557 acc 0.65789 roc_auc 0.60923 prc_auc 0.78770[0m
+[92maverage training of epoch 43: loss -6.31214 acc 0.66667 roc_auc 0.44640 prc_auc 0.62116[0m
+[93maverage test of epoch 43: loss -6.32485 acc 0.65789 roc_auc 0.37231 prc_auc 0.61538[0m
+[92maverage training of epoch 44: loss -6.38213 acc 0.66667 roc_auc 0.45010 prc_auc 0.64580[0m
+[93maverage test of epoch 44: loss -6.37852 acc 0.65789 roc_auc 0.49231 prc_auc 0.70788[0m
+[92maverage training of epoch 45: loss -6.43786 acc 0.66667 roc_auc 0.59720 prc_auc 0.70202[0m
+[93maverage test of epoch 45: loss -6.43202 acc 0.65789 roc_auc 0.55385 prc_auc 0.71729[0m
+[92maverage training of epoch 46: loss -6.49725 acc 0.66667 roc_auc 0.53200 prc_auc 0.68496[0m
+[93maverage test of epoch 46: loss -6.51730 acc 0.65789 roc_auc 0.66769 prc_auc 0.80182[0m
+[92maverage training of epoch 47: loss -6.55532 acc 0.66667 roc_auc 0.43540 prc_auc 0.62558[0m
+[93maverage test of epoch 47: loss -6.55964 acc 0.65789 roc_auc 0.29231 prc_auc 0.54843[0m
+[92maverage training of epoch 48: loss -6.61484 acc 0.66667 roc_auc 0.53520 prc_auc 0.69370[0m
+[93maverage test of epoch 48: loss -6.62652 acc 0.65789 roc_auc 0.56769 prc_auc 0.77251[0m
+[92maverage training of epoch 49: loss -6.67179 acc 0.66667 roc_auc 0.45190 prc_auc 0.61562[0m
+[93maverage test of epoch 49: loss -6.67388 acc 0.65789 roc_auc 0.58154 prc_auc 0.79613[0m
+Training model with dataset, testing using fold 1
+use LSTM
+{'dfs_code_rnn': RNN(
+  (input): Linear(in_features=76, out_features=8, bias=True)
+  (rnn): LSTM(8, 4, num_layers=2, batch_first=True, dropout=0.2)
+), 'output_layer': MLP_layers(
+  (mlp): Sequential(
+    (Linear0): Linear(in_features=4, out_features=2, bias=True)
+  )
+)}
+DfscodeRnn_cls_LSTM args.lr: 0.0001
+[92maverage training of epoch 0: loss -0.23316 acc 0.33333 roc_auc 0.51060 prc_auc 0.65663[0m
+[93maverage test of epoch 0: loss -0.36247 acc 0.34211 roc_auc 0.23692 prc_auc 0.54087[0m
+[92maverage training of epoch 1: loss -0.48956 acc 0.33333 roc_auc 0.61740 prc_auc 0.76631[0m
+[93maverage test of epoch 1: loss -0.61307 acc 0.34211 roc_auc 0.39692 prc_auc 0.60057[0m
+[92maverage training of epoch 2: loss -0.70971 acc 0.33333 roc_auc 0.59840 prc_auc 0.75314[0m
+[93maverage test of epoch 2: loss -0.81712 acc 0.34211 roc_auc 0.40308 prc_auc 0.62552[0m
+[92maverage training of epoch 3: loss -0.92103 acc 0.33333 roc_auc 0.42800 prc_auc 0.64123[0m
+[93maverage test of epoch 3: loss -1.06438 acc 0.34211 roc_auc 0.64615 prc_auc 0.79933[0m
+[92maverage training of epoch 4: loss -1.16785 acc 0.33333 roc_auc 0.43820 prc_auc 0.63381[0m
+[93maverage test of epoch 4: loss -1.33950 acc 0.34211 roc_auc 0.37846 prc_auc 0.58791[0m
+[92maverage training of epoch 5: loss -1.46395 acc 0.33333 roc_auc 0.56260 prc_auc 0.71633[0m
+[93maverage test of epoch 5: loss -1.62361 acc 0.34211 roc_auc 0.55692 prc_auc 0.76604[0m
+[92maverage training of epoch 6: loss -1.74302 acc 0.33333 roc_auc 0.46600 prc_auc 0.70593[0m
+[93maverage test of epoch 6: loss -1.86477 acc 0.34211 roc_auc 0.55385 prc_auc 0.71498[0m
+[92maverage training of epoch 7: loss -1.94353 acc 0.33333 roc_auc 0.37740 prc_auc 0.60441[0m
+[93maverage test of epoch 7: loss -2.05467 acc 0.34211 roc_auc 0.42462 prc_auc 0.66447[0m
+[92maverage training of epoch 8: loss -2.10721 acc 0.33333 roc_auc 0.40580 prc_auc 0.63156[0m
+[93maverage test of epoch 8: loss -2.19178 acc 0.34211 roc_auc 0.30769 prc_auc 0.57469[0m
+[92maverage training of epoch 9: loss -2.24246 acc 0.33333 roc_auc 0.49300 prc_auc 0.66324[0m
+[93maverage test of epoch 9: loss -2.32603 acc 0.34211 roc_auc 0.49231 prc_auc 0.64167[0m
+[92maverage training of epoch 10: loss -2.36976 acc 0.33333 roc_auc 0.44420 prc_auc 0.67123[0m
+[93maverage test of epoch 10: loss -2.43900 acc 0.34211 roc_auc 0.30154 prc_auc 0.56858[0m
+[92maverage training of epoch 11: loss -2.48324 acc 0.33333 roc_auc 0.43440 prc_auc 0.62435[0m
+[93maverage test of epoch 11: loss -2.55196 acc 0.34211 roc_auc 0.39077 prc_auc 0.67748[0m
+[92maverage training of epoch 12: loss -2.57778 acc 0.33333 roc_auc 0.40800 prc_auc 0.60836[0m
+[93maverage test of epoch 12: loss -2.66682 acc 0.34211 roc_auc 0.29231 prc_auc 0.56503[0m
+[92maverage training of epoch 13: loss -2.69257 acc 0.33333 roc_auc 0.48180 prc_auc 0.66125[0m
+[93maverage test of epoch 13: loss -2.75418 acc 0.34211 roc_auc 0.51692 prc_auc 0.70686[0m
+[92maverage training of epoch 14: loss -2.79581 acc 0.33333 roc_auc 0.44120 prc_auc 0.63484[0m
+[93maverage test of epoch 14: loss -2.86148 acc 0.34211 roc_auc 0.34462 prc_auc 0.62546[0m
+[92maverage training of epoch 15: loss -2.89667 acc 0.33333 roc_auc 0.42040 prc_auc 0.63859[0m
+[93maverage test of epoch 15: loss -2.94180 acc 0.34211 roc_auc 0.52308 prc_auc 0.71385[0m
+[92maverage training of epoch 16: loss -2.98631 acc 0.33333 roc_auc 0.41140 prc_auc 0.61364[0m
+[93maverage test of epoch 16: loss -3.07513 acc 0.34211 roc_auc 0.47385 prc_auc 0.67784[0m
+[92maverage training of epoch 17: loss -3.08873 acc 0.33333 roc_auc 0.38240 prc_auc 0.59310[0m
+[93maverage test of epoch 17: loss -3.15764 acc 0.34211 roc_auc 0.28308 prc_auc 0.54550[0m
+[92maverage training of epoch 18: loss -3.19046 acc 0.33333 roc_auc 0.46060 prc_auc 0.64218[0m
+[93maverage test of epoch 18: loss -3.23463 acc 0.34211 roc_auc 0.39692 prc_auc 0.61309[0m
+[92maverage training of epoch 19: loss -3.27485 acc 0.33333 roc_auc 0.51940 prc_auc 0.65585[0m
+[93maverage test of epoch 19: loss -3.32758 acc 0.34211 roc_auc 0.48615 prc_auc 0.68010[0m
+[92maverage training of epoch 20: loss -3.36081 acc 0.33333 roc_auc 0.40940 prc_auc 0.60363[0m
+[93maverage test of epoch 20: loss -3.43438 acc 0.34211 roc_auc 0.35692 prc_auc 0.63111[0m
+[92maverage training of epoch 21: loss -3.43930 acc 0.33333 roc_auc 0.39960 prc_auc 0.59858[0m
+[93maverage test of epoch 21: loss -3.49345 acc 0.34211 roc_auc 0.44615 prc_auc 0.60589[0m
+[92maverage training of epoch 22: loss -3.52687 acc 0.33333 roc_auc 0.43820 prc_auc 0.65272[0m
+[93maverage test of epoch 22: loss -3.57575 acc 0.34211 roc_auc 0.45846 prc_auc 0.64568[0m
+[92maverage training of epoch 23: loss -3.60171 acc 0.33333 roc_auc 0.45820 prc_auc 0.62423[0m
+[93maverage test of epoch 23: loss -3.66284 acc 0.34211 roc_auc 0.49538 prc_auc 0.69138[0m
+[92maverage training of epoch 24: loss -3.68171 acc 0.33333 roc_auc 0.44760 prc_auc 0.64037[0m
+[93maverage test of epoch 24: loss -3.72899 acc 0.34211 roc_auc 0.55077 prc_auc 0.69458[0m
+[92maverage training of epoch 25: loss -3.75666 acc 0.33333 roc_auc 0.51020 prc_auc 0.66904[0m
+[93maverage test of epoch 25: loss -3.79789 acc 0.34211 roc_auc 0.49846 prc_auc 0.67376[0m
+[92maverage training of epoch 26: loss -3.82276 acc 0.33333 roc_auc 0.42400 prc_auc 0.62299[0m
+[93maverage test of epoch 26: loss -3.87363 acc 0.34211 roc_auc 0.54462 prc_auc 0.73318[0m
+[92maverage training of epoch 27: loss -3.89114 acc 0.33333 roc_auc 0.42840 prc_auc 0.62156[0m
+[93maverage test of epoch 27: loss -3.94086 acc 0.34211 roc_auc 0.56000 prc_auc 0.77103[0m
+[92maverage training of epoch 28: loss -3.95976 acc 0.33333 roc_auc 0.46660 prc_auc 0.63359[0m
+[93maverage test of epoch 28: loss -4.00889 acc 0.34211 roc_auc 0.56923 prc_auc 0.77898[0m
+[92maverage training of epoch 29: loss -4.03172 acc 0.33333 roc_auc 0.44700 prc_auc 0.62910[0m
+[93maverage test of epoch 29: loss -4.06721 acc 0.34211 roc_auc 0.46462 prc_auc 0.70755[0m
+[92maverage training of epoch 30: loss -4.09242 acc 0.33333 roc_auc 0.45800 prc_auc 0.63460[0m
+[93maverage test of epoch 30: loss -4.13232 acc 0.34211 roc_auc 0.51385 prc_auc 0.73844[0m
+[92maverage training of epoch 31: loss -4.15916 acc 0.33333 roc_auc 0.48180 prc_auc 0.63937[0m
+[93maverage test of epoch 31: loss -4.18436 acc 0.34211 roc_auc 0.60000 prc_auc 0.79748[0m
+[92maverage training of epoch 32: loss -4.22355 acc 0.33333 roc_auc 0.40660 prc_auc 0.61219[0m
+[93maverage test of epoch 32: loss -4.26000 acc 0.34211 roc_auc 0.62154 prc_auc 0.78826[0m
+[92maverage training of epoch 33: loss -4.28782 acc 0.33333 roc_auc 0.44780 prc_auc 0.62890[0m
+[93maverage test of epoch 33: loss -4.34027 acc 0.34211 roc_auc 0.64923 prc_auc 0.81039[0m
+[92maverage training of epoch 34: loss -4.35318 acc 0.33333 roc_auc 0.48710 prc_auc 0.65319[0m
+[93maverage test of epoch 34: loss -4.39122 acc 0.34211 roc_auc 0.50462 prc_auc 0.67830[0m
+[92maverage training of epoch 35: loss -4.41808 acc 0.33333 roc_auc 0.41140 prc_auc 0.60372[0m
+[93maverage test of epoch 35: loss -4.45155 acc 0.34211 roc_auc 0.52462 prc_auc 0.68620[0m
+[92maverage training of epoch 36: loss -4.48027 acc 0.33333 roc_auc 0.49780 prc_auc 0.66221[0m
+[93maverage test of epoch 36: loss -4.51845 acc 0.34211 roc_auc 0.66462 prc_auc 0.73783[0m
+[92maverage training of epoch 37: loss -4.53717 acc 0.33333 roc_auc 0.39700 prc_auc 0.58942[0m
+[93maverage test of epoch 37: loss -4.56836 acc 0.34211 roc_auc 0.62462 prc_auc 0.76806[0m
+[92maverage training of epoch 38: loss -4.59675 acc 0.33333 roc_auc 0.42420 prc_auc 0.60395[0m
+[93maverage test of epoch 38: loss -4.63742 acc 0.34211 roc_auc 0.56154 prc_auc 0.71777[0m
+[92maverage training of epoch 39: loss -4.65395 acc 0.33333 roc_auc 0.40700 prc_auc 0.60264[0m
+[93maverage test of epoch 39: loss -4.70179 acc 0.34211 roc_auc 0.54462 prc_auc 0.66583[0m
+[92maverage training of epoch 40: loss -4.71972 acc 0.33333 roc_auc 0.45850 prc_auc 0.62596[0m
+[93maverage test of epoch 40: loss -4.75709 acc 0.34211 roc_auc 0.65385 prc_auc 0.81951[0m
+[92maverage training of epoch 41: loss -4.78254 acc 0.33333 roc_auc 0.47400 prc_auc 0.65154[0m
+[93maverage test of epoch 41: loss -4.81041 acc 0.34211 roc_auc 0.39077 prc_auc 0.69819[0m
+[92maverage training of epoch 42: loss -4.83719 acc 0.33333 roc_auc 0.43940 prc_auc 0.61394[0m
+[93maverage test of epoch 42: loss -4.87412 acc 0.34211 roc_auc 0.72615 prc_auc 0.85492[0m
+[92maverage training of epoch 43: loss -4.89462 acc 0.33333 roc_auc 0.53660 prc_auc 0.67767[0m
+[93maverage test of epoch 43: loss -4.94166 acc 0.34211 roc_auc 0.51231 prc_auc 0.69901[0m
+[92maverage training of epoch 44: loss -4.96091 acc 0.33333 roc_auc 0.42900 prc_auc 0.61906[0m
+[93maverage test of epoch 44: loss -4.99823 acc 0.34211 roc_auc 0.57846 prc_auc 0.78013[0m
+[92maverage training of epoch 45: loss -5.01635 acc 0.33333 roc_auc 0.46880 prc_auc 0.64356[0m
+[93maverage test of epoch 45: loss -5.05018 acc 0.34211 roc_auc 0.48923 prc_auc 0.68323[0m
+[92maverage training of epoch 46: loss -5.07246 acc 0.33333 roc_auc 0.40580 prc_auc 0.61934[0m
+[93maverage test of epoch 46: loss -5.10556 acc 0.34211 roc_auc 0.34923 prc_auc 0.62765[0m
+[92maverage training of epoch 47: loss -5.13044 acc 0.33333 roc_auc 0.42860 prc_auc 0.61318[0m
+[93maverage test of epoch 47: loss -5.17201 acc 0.34211 roc_auc 0.42462 prc_auc 0.63579[0m
+[92maverage training of epoch 48: loss -5.19265 acc 0.33333 roc_auc 0.45180 prc_auc 0.61383[0m
+[93maverage test of epoch 48: loss -5.22811 acc 0.34211 roc_auc 0.67231 prc_auc 0.77309[0m
+[92maverage training of epoch 49: loss -5.24722 acc 0.33333 roc_auc 0.43560 prc_auc 0.61761[0m
+[93maverage test of epoch 49: loss -5.28138 acc 0.34211 roc_auc 0.52615 prc_auc 0.73286[0m
+Training model with dataset, testing using fold 2
+use LSTM
+{'dfs_code_rnn': RNN(
+  (input): Linear(in_features=76, out_features=8, bias=True)
+  (rnn): LSTM(8, 4, num_layers=2, batch_first=True, dropout=0.2)
+), 'output_layer': MLP_layers(
+  (mlp): Sequential(
+    (Linear0): Linear(in_features=4, out_features=2, bias=True)
+  )
+)}
+DfscodeRnn_cls_LSTM args.lr: 0.0001
+[92maverage training of epoch 0: loss -0.35715 acc 0.66667 roc_auc 0.43980 prc_auc 0.64718[0m
+[93maverage test of epoch 0: loss -0.41183 acc 0.65789 roc_auc 0.49538 prc_auc 0.62903[0m
+[92maverage training of epoch 1: loss -0.47817 acc 0.66667 roc_auc 0.45360 prc_auc 0.65607[0m
+[93maverage test of epoch 1: loss -0.52216 acc 0.65789 roc_auc 0.60923 prc_auc 0.76414[0m
+[92maverage training of epoch 2: loss -0.60260 acc 0.66667 roc_auc 0.42100 prc_auc 0.59504[0m
+[93maverage test of epoch 2: loss -0.68359 acc 0.65789 roc_auc 0.51077 prc_auc 0.62979[0m
+[92maverage training of epoch 3: loss -0.76775 acc 0.66667 roc_auc 0.44680 prc_auc 0.60952[0m
+[93maverage test of epoch 3: loss -0.84162 acc 0.65789 roc_auc 0.42154 prc_auc 0.61823[0m
+[92maverage training of epoch 4: loss -0.96468 acc 0.66667 roc_auc 0.47100 prc_auc 0.65474[0m
+[93maverage test of epoch 4: loss -1.05713 acc 0.65789 roc_auc 0.53846 prc_auc 0.72356[0m
+[92maverage training of epoch 5: loss -1.15479 acc 0.66667 roc_auc 0.45700 prc_auc 0.63440[0m
+[93maverage test of epoch 5: loss -1.22854 acc 0.65789 roc_auc 0.40308 prc_auc 0.62482[0m
+[92maverage training of epoch 6: loss -1.30687 acc 0.66667 roc_auc 0.45780 prc_auc 0.64768[0m
+[93maverage test of epoch 6: loss -1.37089 acc 0.65789 roc_auc 0.47077 prc_auc 0.70736[0m
+[92maverage training of epoch 7: loss -1.44251 acc 0.66667 roc_auc 0.51940 prc_auc 0.70156[0m
+[93maverage test of epoch 7: loss -1.48064 acc 0.65789 roc_auc 0.44923 prc_auc 0.62022[0m
+[92maverage training of epoch 8: loss -1.55536 acc 0.66667 roc_auc 0.51440 prc_auc 0.66767[0m
+[93maverage test of epoch 8: loss -1.58712 acc 0.65789 roc_auc 0.40308 prc_auc 0.65680[0m
+[92maverage training of epoch 9: loss -1.66685 acc 0.66667 roc_auc 0.49860 prc_auc 0.67704[0m
+[93maverage test of epoch 9: loss -1.70381 acc 0.65789 roc_auc 0.64000 prc_auc 0.71590[0m
+[92maverage training of epoch 10: loss -1.75765 acc 0.66667 roc_auc 0.38020 prc_auc 0.59642[0m
+[93maverage test of epoch 10: loss -1.80982 acc 0.65789 roc_auc 0.68308 prc_auc 0.81493[0m
+[92maverage training of epoch 11: loss -1.86246 acc 0.66667 roc_auc 0.43580 prc_auc 0.63386[0m
+[93maverage test of epoch 11: loss -1.90261 acc 0.65789 roc_auc 0.62154 prc_auc 0.74708[0m
+[92maverage training of epoch 12: loss -1.95953 acc 0.66667 roc_auc 0.45840 prc_auc 0.63778[0m
+[93maverage test of epoch 12: loss -1.97970 acc 0.65789 roc_auc 0.43077 prc_auc 0.66828[0m
+[92maverage training of epoch 13: loss -2.04725 acc 0.66667 roc_auc 0.43000 prc_auc 0.65541[0m
+[93maverage test of epoch 13: loss -2.10791 acc 0.65789 roc_auc 0.74769 prc_auc 0.84991[0m
+[92maverage training of epoch 14: loss -2.14261 acc 0.66667 roc_auc 0.43380 prc_auc 0.61398[0m
+[93maverage test of epoch 14: loss -2.17548 acc 0.65789 roc_auc 0.39385 prc_auc 0.61734[0m
+[92maverage training of epoch 15: loss -2.23108 acc 0.66667 roc_auc 0.50040 prc_auc 0.66866[0m
+[93maverage test of epoch 15: loss -2.24878 acc 0.65789 roc_auc 0.35692 prc_auc 0.60730[0m
+[92maverage training of epoch 16: loss -2.31307 acc 0.66667 roc_auc 0.44900 prc_auc 0.66281[0m
+[93maverage test of epoch 16: loss -2.32235 acc 0.65789 roc_auc 0.35077 prc_auc 0.62527[0m
+[92maverage training of epoch 17: loss -2.39751 acc 0.66667 roc_auc 0.49420 prc_auc 0.66090[0m
+[93maverage test of epoch 17: loss -2.43074 acc 0.65789 roc_auc 0.75692 prc_auc 0.88156[0m
+[92maverage training of epoch 18: loss -2.47885 acc 0.66667 roc_auc 0.47780 prc_auc 0.64768[0m
+[93maverage test of epoch 18: loss -2.51500 acc 0.65789 roc_auc 0.73538 prc_auc 0.85607[0m
+[92maverage training of epoch 19: loss -2.56590 acc 0.66667 roc_auc 0.46020 prc_auc 0.64153[0m
+[93maverage test of epoch 19: loss -2.57949 acc 0.65789 roc_auc 0.55077 prc_auc 0.71705[0m
+[92maverage training of epoch 20: loss -2.64054 acc 0.66667 roc_auc 0.52960 prc_auc 0.66335[0m
+[93maverage test of epoch 20: loss -2.65315 acc 0.65789 roc_auc 0.41846 prc_auc 0.64483[0m
+[92maverage training of epoch 21: loss -2.71370 acc 0.66667 roc_auc 0.46960 prc_auc 0.64908[0m
+[93maverage test of epoch 21: loss -2.71849 acc 0.65789 roc_auc 0.48923 prc_auc 0.73444[0m
+[92maverage training of epoch 22: loss -2.79647 acc 0.66667 roc_auc 0.54740 prc_auc 0.71041[0m
+[93maverage test of epoch 22: loss -2.80117 acc 0.65789 roc_auc 0.50462 prc_auc 0.64919[0m
+[92maverage training of epoch 23: loss -2.86071 acc 0.66667 roc_auc 0.51300 prc_auc 0.65282[0m
+[93maverage test of epoch 23: loss -2.88190 acc 0.65789 roc_auc 0.57538 prc_auc 0.76845[0m
+[92maverage training of epoch 24: loss -2.93539 acc 0.66667 roc_auc 0.52820 prc_auc 0.68283[0m
+[93maverage test of epoch 24: loss -2.95122 acc 0.65789 roc_auc 0.68308 prc_auc 0.78833[0m
+[92maverage training of epoch 25: loss -3.00425 acc 0.66667 roc_auc 0.44300 prc_auc 0.64146[0m
+[93maverage test of epoch 25: loss -3.03077 acc 0.65789 roc_auc 0.56615 prc_auc 0.76078[0m
+[92maverage training of epoch 26: loss -3.07444 acc 0.66667 roc_auc 0.50380 prc_auc 0.67474[0m
+[93maverage test of epoch 26: loss -3.08298 acc 0.65789 roc_auc 0.44615 prc_auc 0.66061[0m
+[92maverage training of epoch 27: loss -3.14232 acc 0.66667 roc_auc 0.43660 prc_auc 0.63696[0m
+[93maverage test of epoch 27: loss -3.16040 acc 0.65789 roc_auc 0.58769 prc_auc 0.78349[0m
+[92maverage training of epoch 28: loss -3.20966 acc 0.66667 roc_auc 0.49220 prc_auc 0.66321[0m
+[93maverage test of epoch 28: loss -3.22899 acc 0.65789 roc_auc 0.54462 prc_auc 0.70794[0m
+[92maverage training of epoch 29: loss -3.27366 acc 0.66667 roc_auc 0.46840 prc_auc 0.66384[0m
+[93maverage test of epoch 29: loss -3.29437 acc 0.65789 roc_auc 0.57846 prc_auc 0.73743[0m
+[92maverage training of epoch 30: loss -3.34232 acc 0.66667 roc_auc 0.43480 prc_auc 0.63929[0m
+[93maverage test of epoch 30: loss -3.34695 acc 0.65789 roc_auc 0.63385 prc_auc 0.78732[0m
+[92maverage training of epoch 31: loss -3.40772 acc 0.66667 roc_auc 0.56040 prc_auc 0.69801[0m
+[93maverage test of epoch 31: loss -3.43251 acc 0.65789 roc_auc 0.73846 prc_auc 0.83442[0m
+[92maverage training of epoch 32: loss -3.46990 acc 0.66667 roc_auc 0.52780 prc_auc 0.69928[0m
+[93maverage test of epoch 32: loss -3.47621 acc 0.65789 roc_auc 0.54154 prc_auc 0.71775[0m
+[92maverage training of epoch 33: loss -3.53000 acc 0.66667 roc_auc 0.46780 prc_auc 0.63236[0m
+[93maverage test of epoch 33: loss -3.53672 acc 0.65789 roc_auc 0.43692 prc_auc 0.67573[0m
+[92maverage training of epoch 34: loss -3.59111 acc 0.66667 roc_auc 0.44820 prc_auc 0.62997[0m
+[93maverage test of epoch 34: loss -3.59985 acc 0.65789 roc_auc 0.51692 prc_auc 0.72913[0m
+[92maverage training of epoch 35: loss -3.64690 acc 0.66667 roc_auc 0.45500 prc_auc 0.66910[0m
+[93maverage test of epoch 35: loss -3.65986 acc 0.65789 roc_auc 0.43077 prc_auc 0.61369[0m
+[92maverage training of epoch 36: loss -3.71154 acc 0.66667 roc_auc 0.42020 prc_auc 0.65313[0m
+[93maverage test of epoch 36: loss -3.71774 acc 0.65789 roc_auc 0.47385 prc_auc 0.70730[0m
+[92maverage training of epoch 37: loss -3.77599 acc 0.66667 roc_auc 0.47600 prc_auc 0.65716[0m
+[93maverage test of epoch 37: loss -3.77155 acc 0.65789 roc_auc 0.40615 prc_auc 0.65084[0m
+[92maverage training of epoch 38: loss -3.83543 acc 0.66667 roc_auc 0.49240 prc_auc 0.66613[0m
+[93maverage test of epoch 38: loss -3.84001 acc 0.65789 roc_auc 0.55077 prc_auc 0.72759[0m
+[92maverage training of epoch 39: loss -3.89528 acc 0.66667 roc_auc 0.47840 prc_auc 0.66176[0m
+[93maverage test of epoch 39: loss -3.90829 acc 0.65789 roc_auc 0.50154 prc_auc 0.70481[0m
+[92maverage training of epoch 40: loss -3.95637 acc 0.66667 roc_auc 0.37780 prc_auc 0.59288[0m
+[93maverage test of epoch 40: loss -3.95440 acc 0.65789 roc_auc 0.40615 prc_auc 0.62812[0m
+[92maverage training of epoch 41: loss -4.01448 acc 0.66667 roc_auc 0.46820 prc_auc 0.62348[0m
+[93maverage test of epoch 41: loss -4.01883 acc 0.65789 roc_auc 0.46308 prc_auc 0.62354[0m
+[92maverage training of epoch 42: loss -4.07592 acc 0.66667 roc_auc 0.48170 prc_auc 0.66027[0m
+[93maverage test of epoch 42: loss -4.07967 acc 0.65789 roc_auc 0.60923 prc_auc 0.73043[0m
+[92maverage training of epoch 43: loss -4.13585 acc 0.66667 roc_auc 0.48720 prc_auc 0.63337[0m
+[93maverage test of epoch 43: loss -4.13245 acc 0.65789 roc_auc 0.33846 prc_auc 0.60593[0m
+[92maverage training of epoch 44: loss -4.19572 acc 0.66667 roc_auc 0.52720 prc_auc 0.67683[0m
+[93maverage test of epoch 44: loss -4.20405 acc 0.65789 roc_auc 0.58000 prc_auc 0.71014[0m
+[92maverage training of epoch 45: loss -4.25095 acc 0.66667 roc_auc 0.44510 prc_auc 0.62698[0m
+[93maverage test of epoch 45: loss -4.24910 acc 0.65789 roc_auc 0.38154 prc_auc 0.66273[0m
+[92maverage training of epoch 46: loss -4.30845 acc 0.66667 roc_auc 0.40260 prc_auc 0.59816[0m
+[93maverage test of epoch 46: loss -4.31765 acc 0.65789 roc_auc 0.65538 prc_auc 0.82665[0m
+[92maverage training of epoch 47: loss -4.36397 acc 0.66667 roc_auc 0.43720 prc_auc 0.63607[0m
+[93maverage test of epoch 47: loss -4.37421 acc 0.65789 roc_auc 0.56923 prc_auc 0.74548[0m
+[92maverage training of epoch 48: loss -4.42551 acc 0.66667 roc_auc 0.48900 prc_auc 0.65550[0m
+[93maverage test of epoch 48: loss -4.42883 acc 0.65789 roc_auc 0.53385 prc_auc 0.72971[0m
+[92maverage training of epoch 49: loss -4.48629 acc 0.66667 roc_auc 0.44960 prc_auc 0.62347[0m
+[93maverage test of epoch 49: loss -4.49174 acc 0.65789 roc_auc 0.66154 prc_auc 0.74658[0m
+Training model with dataset, testing using fold 3
+use LSTM
+{'dfs_code_rnn': RNN(
+  (input): Linear(in_features=76, out_features=8, bias=True)
+  (rnn): LSTM(8, 4, num_layers=2, batch_first=True, dropout=0.2)
+), 'output_layer': MLP_layers(
+  (mlp): Sequential(
+    (Linear0): Linear(in_features=4, out_features=2, bias=True)
+  )
+)}
+DfscodeRnn_cls_LSTM args.lr: 0.0001
+[92maverage training of epoch 0: loss 0.55218 acc 0.54967 roc_auc 0.44980 prc_auc 0.61396[0m
+[93maverage test of epoch 0: loss 0.49967 acc 0.62162 roc_auc 0.56333 prc_auc 0.71538[0m
+[92maverage training of epoch 1: loss 0.47438 acc 0.67550 roc_auc 0.44706 prc_auc 0.64534[0m
+[93maverage test of epoch 1: loss 0.41014 acc 0.70270 roc_auc 0.61333 prc_auc 0.77231[0m
+[92maverage training of epoch 2: loss 0.39165 acc 0.63576 roc_auc 0.52667 prc_auc 0.67679[0m
+[93maverage test of epoch 2: loss 0.37062 acc 0.64865 roc_auc 0.38333 prc_auc 0.61506[0m
+[92maverage training of epoch 3: loss 0.34117 acc 0.66887 roc_auc 0.44490 prc_auc 0.63081[0m
+[93maverage test of epoch 3: loss 0.29866 acc 0.70270 roc_auc 0.47000 prc_auc 0.67498[0m
+[92maverage training of epoch 4: loss 0.27078 acc 0.64901 roc_auc 0.49029 prc_auc 0.66448[0m
+[93maverage test of epoch 4: loss 0.25220 acc 0.67568 roc_auc 0.53667 prc_auc 0.74124[0m
+[92maverage training of epoch 5: loss 0.23171 acc 0.66887 roc_auc 0.41333 prc_auc 0.62298[0m
+[93maverage test of epoch 5: loss 0.18417 acc 0.67568 roc_auc 0.48333 prc_auc 0.71024[0m
+[92maverage training of epoch 6: loss 0.16020 acc 0.66225 roc_auc 0.52843 prc_auc 0.72357[0m
+[93maverage test of epoch 6: loss 0.11982 acc 0.67568 roc_auc 0.56000 prc_auc 0.70663[0m
+[92maverage training of epoch 7: loss 0.12667 acc 0.66225 roc_auc 0.44235 prc_auc 0.65799[0m
+[93maverage test of epoch 7: loss 0.05149 acc 0.67568 roc_auc 0.53000 prc_auc 0.66926[0m
+[92maverage training of epoch 8: loss 0.05661 acc 0.66225 roc_auc 0.48176 prc_auc 0.63736[0m
+[93maverage test of epoch 8: loss -0.06595 acc 0.67568 roc_auc 0.62333 prc_auc 0.72745[0m
+[92maverage training of epoch 9: loss -0.01945 acc 0.66225 roc_auc 0.54392 prc_auc 0.67772[0m
+[93maverage test of epoch 9: loss -0.08993 acc 0.67568 roc_auc 0.46667 prc_auc 0.64301[0m
+[92maverage training of epoch 10: loss -0.09143 acc 0.66225 roc_auc 0.46627 prc_auc 0.65365[0m
+[93maverage test of epoch 10: loss -0.13251 acc 0.67568 roc_auc 0.44667 prc_auc 0.70072[0m
+[92maverage training of epoch 11: loss -0.16953 acc 0.66225 roc_auc 0.45039 prc_auc 0.62125[0m
+[93maverage test of epoch 11: loss -0.23587 acc 0.67568 roc_auc 0.45000 prc_auc 0.69629[0m
+[92maverage training of epoch 12: loss -0.29788 acc 0.66225 roc_auc 0.46588 prc_auc 0.62189[0m
+[93maverage test of epoch 12: loss -0.42476 acc 0.67568 roc_auc 0.65667 prc_auc 0.81934[0m
+[92maverage training of epoch 13: loss -0.44353 acc 0.66225 roc_auc 0.46725 prc_auc 0.63282[0m
+[93maverage test of epoch 13: loss -0.54404 acc 0.67568 roc_auc 0.49000 prc_auc 0.74510[0m
+[92maverage training of epoch 14: loss -0.55028 acc 0.66225 roc_auc 0.41627 prc_auc 0.63015[0m
+[93maverage test of epoch 14: loss -0.69237 acc 0.67568 roc_auc 0.45333 prc_auc 0.64098[0m
+[92maverage training of epoch 15: loss -0.74171 acc 0.66225 roc_auc 0.54412 prc_auc 0.71215[0m
+[93maverage test of epoch 15: loss -0.82498 acc 0.67568 roc_auc 0.50000 prc_auc 0.71482[0m
+[92maverage training of epoch 16: loss -0.85996 acc 0.66225 roc_auc 0.46275 prc_auc 0.65492[0m
+[93maverage test of epoch 16: loss -0.98485 acc 0.67568 roc_auc 0.36333 prc_auc 0.61335[0m
+[92maverage training of epoch 17: loss -1.03452 acc 0.66225 roc_auc 0.53490 prc_auc 0.69777[0m
+[93maverage test of epoch 17: loss -1.10198 acc 0.67568 roc_auc 0.53333 prc_auc 0.76171[0m
+[92maverage training of epoch 18: loss -1.12548 acc 0.66225 roc_auc 0.51392 prc_auc 0.72355[0m
+[93maverage test of epoch 18: loss -1.28002 acc 0.67568 roc_auc 0.60000 prc_auc 0.74263[0m
+[92maverage training of epoch 19: loss -1.25898 acc 0.66225 roc_auc 0.51294 prc_auc 0.69324[0m
+[93maverage test of epoch 19: loss -1.39580 acc 0.67568 roc_auc 0.59333 prc_auc 0.77059[0m
+[92maverage training of epoch 20: loss -1.35987 acc 0.66225 roc_auc 0.51765 prc_auc 0.68384[0m
+[93maverage test of epoch 20: loss -1.49835 acc 0.67568 roc_auc 0.56333 prc_auc 0.74491[0m
+[92maverage training of epoch 21: loss -1.46709 acc 0.66225 roc_auc 0.55510 prc_auc 0.69339[0m
+[93maverage test of epoch 21: loss -1.55003 acc 0.67568 roc_auc 0.32000 prc_auc 0.57895[0m
+[92maverage training of epoch 22: loss -1.56008 acc 0.66225 roc_auc 0.55784 prc_auc 0.68588[0m
+[93maverage test of epoch 22: loss -1.70003 acc 0.67568 roc_auc 0.61667 prc_auc 0.76809[0m
+[92maverage training of epoch 23: loss -1.63064 acc 0.66225 roc_auc 0.56039 prc_auc 0.73598[0m
+[93maverage test of epoch 23: loss -1.72402 acc 0.67568 roc_auc 0.39667 prc_auc 0.69153[0m
+[92maverage training of epoch 24: loss -1.72102 acc 0.66225 roc_auc 0.51824 prc_auc 0.69463[0m
+[93maverage test of epoch 24: loss -1.79348 acc 0.67568 roc_auc 0.45000 prc_auc 0.68894[0m
+[92maverage training of epoch 25: loss -1.78678 acc 0.66225 roc_auc 0.53824 prc_auc 0.67979[0m
+[93maverage test of epoch 25: loss -1.86862 acc 0.67568 roc_auc 0.56667 prc_auc 0.78810[0m
+[92maverage training of epoch 26: loss -1.85876 acc 0.66225 roc_auc 0.47314 prc_auc 0.65787[0m
+[93maverage test of epoch 26: loss -2.00059 acc 0.67568 roc_auc 0.59000 prc_auc 0.76038[0m
+[92maverage training of epoch 27: loss -1.92628 acc 0.66225 roc_auc 0.47520 prc_auc 0.63954[0m
+[93maverage test of epoch 27: loss -1.99828 acc 0.67568 roc_auc 0.55000 prc_auc 0.79401[0m
+[92maverage training of epoch 28: loss -2.00367 acc 0.66225 roc_auc 0.53725 prc_auc 0.69381[0m
+[93maverage test of epoch 28: loss -2.09672 acc 0.67568 roc_auc 0.52000 prc_auc 0.77786[0m
+[92maverage training of epoch 29: loss -2.07192 acc 0.66225 roc_auc 0.56529 prc_auc 0.70888[0m
+[93maverage test of epoch 29: loss -2.18159 acc 0.67568 roc_auc 0.61000 prc_auc 0.81216[0m
+[92maverage training of epoch 30: loss -2.14494 acc 0.66225 roc_auc 0.61549 prc_auc 0.72056[0m
+[93maverage test of epoch 30: loss -2.23847 acc 0.67568 roc_auc 0.53333 prc_auc 0.76014[0m
+[92maverage training of epoch 31: loss -2.20055 acc 0.66225 roc_auc 0.55863 prc_auc 0.71704[0m
+[93maverage test of epoch 31: loss -2.31533 acc 0.67568 roc_auc 0.61000 prc_auc 0.76297[0m
+[92maverage training of epoch 32: loss -2.25279 acc 0.66225 roc_auc 0.44235 prc_auc 0.66888[0m
+[93maverage test of epoch 32: loss -2.34683 acc 0.67568 roc_auc 0.49000 prc_auc 0.75958[0m
+[92maverage training of epoch 33: loss -2.30268 acc 0.66225 roc_auc 0.42382 prc_auc 0.64834[0m
+[93maverage test of epoch 33: loss -2.44810 acc 0.67568 roc_auc 0.64667 prc_auc 0.77289[0m
+[92maverage training of epoch 34: loss -2.38959 acc 0.66225 roc_auc 0.52637 prc_auc 0.69853[0m
+[93maverage test of epoch 34: loss -2.52323 acc 0.67568 roc_auc 0.60333 prc_auc 0.72282[0m
+[92maverage training of epoch 35: loss -2.44485 acc 0.66225 roc_auc 0.44735 prc_auc 0.65567[0m
+[93maverage test of epoch 35: loss -2.55537 acc 0.67568 roc_auc 0.45333 prc_auc 0.73449[0m
+[92maverage training of epoch 36: loss -2.54979 acc 0.66225 roc_auc 0.64647 prc_auc 0.79550[0m
+[93maverage test of epoch 36: loss -2.65559 acc 0.67568 roc_auc 0.63333 prc_auc 0.77828[0m
+[92maverage training of epoch 37: loss -2.60683 acc 0.66225 roc_auc 0.52118 prc_auc 0.71897[0m
+[93maverage test of epoch 37: loss -2.74501 acc 0.67568 roc_auc 0.58667 prc_auc 0.78197[0m
+[92maverage training of epoch 38: loss -2.70589 acc 0.66225 roc_auc 0.50078 prc_auc 0.68889[0m
+[93maverage test of epoch 38: loss -2.85345 acc 0.67568 roc_auc 0.67667 prc_auc 0.85060[0m
+[92maverage training of epoch 39: loss -2.82890 acc 0.66225 roc_auc 0.58627 prc_auc 0.77320[0m
+[93maverage test of epoch 39: loss -3.00009 acc 0.67568 roc_auc 0.69667 prc_auc 0.83272[0m
+[92maverage training of epoch 40: loss -2.96297 acc 0.66225 roc_auc 0.51039 prc_auc 0.71265[0m
+[93maverage test of epoch 40: loss -3.13339 acc 0.67568 roc_auc 0.59333 prc_auc 0.72909[0m
+[92maverage training of epoch 41: loss -3.10874 acc 0.66225 roc_auc 0.56471 prc_auc 0.76309[0m
+[93maverage test of epoch 41: loss -3.25713 acc 0.67568 roc_auc 0.52667 prc_auc 0.76815[0m
+[92maverage training of epoch 42: loss -3.30730 acc 0.66225 roc_auc 0.73804 prc_auc 0.83611[0m
+[93maverage test of epoch 42: loss -3.41669 acc 0.67568 roc_auc 0.59667 prc_auc 0.80162[0m
+[92maverage training of epoch 43: loss -3.47417 acc 0.66225 roc_auc 0.79167 prc_auc 0.87887[0m
+[93maverage test of epoch 43: loss -3.60225 acc 0.67568 roc_auc 0.74333 prc_auc 0.85550[0m
+[92maverage training of epoch 44: loss -3.54225 acc 0.66225 roc_auc 0.82961 prc_auc 0.89976[0m
+[93maverage test of epoch 44: loss -3.61705 acc 0.67568 roc_auc 0.73000 prc_auc 0.81881[0m
+[92maverage training of epoch 45: loss -3.65243 acc 0.66225 roc_auc 0.84941 prc_auc 0.91574[0m
+[93maverage test of epoch 45: loss -3.66257 acc 0.67568 roc_auc 0.70000 prc_auc 0.82259[0m
+[92maverage training of epoch 46: loss -3.75796 acc 0.66887 roc_auc 0.88353 prc_auc 0.94218[0m
+[93maverage test of epoch 46: loss -3.89127 acc 0.67568 roc_auc 0.85333 prc_auc 0.89957[0m
+[92maverage training of epoch 47: loss -3.83523 acc 0.66225 roc_auc 0.85304 prc_auc 0.91009[0m
+[93maverage test of epoch 47: loss -3.95557 acc 0.67568 roc_auc 0.85667 prc_auc 0.92113[0m
+[92maverage training of epoch 48: loss -3.94630 acc 0.66225 roc_auc 0.88608 prc_auc 0.92998[0m
+[93maverage test of epoch 48: loss -3.96492 acc 0.67568 roc_auc 0.84667 prc_auc 0.92461[0m
+[92maverage training of epoch 49: loss -4.01667 acc 0.68874 roc_auc 0.87314 prc_auc 0.92237[0m
+[93maverage test of epoch 49: loss -4.19850 acc 0.70270 roc_auc 0.92667 prc_auc 0.96073[0m
+Training model with dataset, testing using fold 4
+use LSTM
+{'dfs_code_rnn': RNN(
+  (input): Linear(in_features=76, out_features=8, bias=True)
+  (rnn): LSTM(8, 4, num_layers=2, batch_first=True, dropout=0.2)
+), 'output_layer': MLP_layers(
+  (mlp): Sequential(
+    (Linear0): Linear(in_features=4, out_features=2, bias=True)
+  )
+)}
+DfscodeRnn_cls_LSTM args.lr: 0.0001
+[92maverage training of epoch 0: loss -0.09930 acc 0.33775 roc_auc 0.51843 prc_auc 0.70005[0m
+[93maverage test of epoch 0: loss -0.18099 acc 0.32432 roc_auc 0.36333 prc_auc 0.64172[0m
+[92maverage training of epoch 1: loss -0.30100 acc 0.33775 roc_auc 0.60314 prc_auc 0.76920[0m
+[93maverage test of epoch 1: loss -0.40855 acc 0.32432 roc_auc 0.75000 prc_auc 0.78678[0m
+[92maverage training of epoch 2: loss -0.53291 acc 0.33775 roc_auc 0.55843 prc_auc 0.70787[0m
+[93maverage test of epoch 2: loss -0.63665 acc 0.32432 roc_auc 0.63667 prc_auc 0.80794[0m
+[92maverage training of epoch 3: loss -0.76709 acc 0.34437 roc_auc 0.51804 prc_auc 0.71846[0m
+[93maverage test of epoch 3: loss -0.90439 acc 0.32432 roc_auc 0.73000 prc_auc 0.87778[0m
+[92maverage training of epoch 4: loss -0.99319 acc 0.50331 roc_auc 0.53490 prc_auc 0.72690[0m
+[93maverage test of epoch 4: loss -1.09173 acc 0.62162 roc_auc 0.59333 prc_auc 0.75784[0m
+[92maverage training of epoch 5: loss -1.18348 acc 0.66887 roc_auc 0.48451 prc_auc 0.67660[0m
+[93maverage test of epoch 5: loss -1.29388 acc 0.67568 roc_auc 0.58000 prc_auc 0.76668[0m
+[92maverage training of epoch 6: loss -1.39868 acc 0.66225 roc_auc 0.62451 prc_auc 0.79423[0m
+[93maverage test of epoch 6: loss -1.48957 acc 0.67568 roc_auc 0.61333 prc_auc 0.79639[0m
+[92maverage training of epoch 7: loss -1.58661 acc 0.66225 roc_auc 0.53647 prc_auc 0.70830[0mUsing backend: pytorch
+
+[93maverage test of epoch 7: loss -1.70591 acc 0.67568 roc_auc 0.70333 prc_auc 0.84074[0m
+[92maverage training of epoch 8: loss -1.77886 acc 0.66225 roc_auc 0.66686 prc_auc 0.80061[0m
+[93maverage test of epoch 8: loss -1.87857 acc 0.67568 roc_auc 0.78333 prc_auc 0.91304[0m
+[92maverage training of epoch 9: loss -1.92405 acc 0.66225 roc_auc 0.64784 prc_auc 0.79039[0m
+[93maverage test of epoch 9: loss -2.00963 acc 0.67568 roc_auc 0.71333 prc_auc 0.88020[0m
+[92maverage training of epoch 10: loss -2.04467 acc 0.66225 roc_auc 0.66902 prc_auc 0.82402[0m
+[93maverage test of epoch 10: loss -2.12063 acc 0.67568 roc_auc 0.62333 prc_auc 0.77885[0m
+[92maverage training of epoch 11: loss -2.15404 acc 0.66225 roc_auc 0.65176 prc_auc 0.80336[0m
+[93maverage test of epoch 11: loss -2.22203 acc 0.67568 roc_auc 0.68000 prc_auc 0.86838[0m
+[92maverage training of epoch 12: loss -2.25578 acc 0.66225 roc_auc 0.62353 prc_auc 0.79952[0m
+[93maverage test of epoch 12: loss -2.32303 acc 0.67568 roc_auc 0.60667 prc_auc 0.78311[0m
+[92maverage training of epoch 13: loss -2.34107 acc 0.66225 roc_auc 0.61353 prc_auc 0.78045[0m
+[93maverage test of epoch 13: loss -2.40897 acc 0.67568 roc_auc 0.65667 prc_auc 0.77566[0m
+[92maverage training of epoch 14: loss -2.43591 acc 0.66225 roc_auc 0.66020 prc_auc 0.80029[0m
+[93maverage test of epoch 14: loss -2.49224 acc 0.67568 roc_auc 0.57333 prc_auc 0.70915[0m
+[92maverage training of epoch 15: loss -2.51571 acc 0.66225 roc_auc 0.52941 prc_auc 0.67611[0m
+[93maverage test of epoch 15: loss -2.59839 acc 0.67568 roc_auc 0.66333 prc_auc 0.79559[0m
+[92maverage training of epoch 16: loss -2.59800 acc 0.66225 roc_auc 0.52745 prc_auc 0.69527[0m
+[93maverage test of epoch 16: loss -2.65816 acc 0.67568 roc_auc 0.52000 prc_auc 0.73910[0m
+[92maverage training of epoch 17: loss -2.68441 acc 0.66225 roc_auc 0.53471 prc_auc 0.72739[0m
+[93maverage test of epoch 17: loss -2.74392 acc 0.67568 roc_auc 0.55333 prc_auc 0.73717[0m
+[92maverage training of epoch 18: loss -2.75096 acc 0.66225 roc_auc 0.50078 prc_auc 0.68250[0m
+[93maverage test of epoch 18: loss -2.82163 acc 0.67568 roc_auc 0.54000 prc_auc 0.80261[0m
+[92maverage training of epoch 19: loss -2.82920 acc 0.66225 roc_auc 0.52137 prc_auc 0.69158[0m
+[93maverage test of epoch 19: loss -2.87974 acc 0.67568 roc_auc 0.42333 prc_auc 0.69963[0m
+[92maverage training of epoch 20: loss -2.91033 acc 0.66225 roc_auc 0.51686 prc_auc 0.68737[0m
+[93maverage test of epoch 20: loss -2.98024 acc 0.67568 roc_auc 0.61667 prc_auc 0.79325[0m
+[92maverage training of epoch 21: loss -2.97202 acc 0.66225 roc_auc 0.49392 prc_auc 0.66853[0m
+[93maverage test of epoch 21: loss -3.04483 acc 0.67568 roc_auc 0.58333 prc_auc 0.78519[0m
+[92maverage training of epoch 22: loss -3.05292 acc 0.66225 roc_auc 0.51980 prc_auc 0.69488[0m
+[93maverage test of epoch 22: loss -3.11473 acc 0.67568 roc_auc 0.56000 prc_auc 0.74998[0m
+[92maverage training of epoch 23: loss -3.11989 acc 0.66225 roc_auc 0.53745 prc_auc 0.69033[0m
+[93maverage test of epoch 23: loss -3.17833 acc 0.67568 roc_auc 0.55667 prc_auc 0.72255[0m
+[92maverage training of epoch 24: loss -3.18460 acc 0.66225 roc_auc 0.44784 prc_auc 0.63449[0m
+[93maverage test of epoch 24: loss -3.25687 acc 0.67568 roc_auc 0.63000 prc_auc 0.79497[0m
+[92maverage training of epoch 25: loss -3.25211 acc 0.66225 roc_auc 0.42784 prc_auc 0.61173[0m
+[93maverage test of epoch 25: loss -3.33699 acc 0.67568 roc_auc 0.73667 prc_auc 0.88254[0m
+[92maverage training of epoch 26: loss -3.32080 acc 0.66225 roc_auc 0.47000 prc_auc 0.62937[0m
+[93maverage test of epoch 26: loss -3.40155 acc 0.67568 roc_auc 0.55000 prc_auc 0.73124[0m
+[92maverage training of epoch 27: loss -3.38377 acc 0.66225 roc_auc 0.41529 prc_auc 0.58691[0m
+[93maverage test of epoch 27: loss -3.45600 acc 0.67568 roc_auc 0.44333 prc_auc 0.69719[0m
+[92maverage training of epoch 28: loss -3.45922 acc 0.66225 roc_auc 0.49118 prc_auc 0.64652[0m
+[93maverage test of epoch 28: loss -3.49689 acc 0.67568 roc_auc 0.24333 prc_auc 0.62071[0m
+[92maverage training of epoch 29: loss -3.52015 acc 0.66225 roc_auc 0.52078 prc_auc 0.67761[0m
+[93maverage test of epoch 29: loss -3.58619 acc 0.67568 roc_auc 0.70000 prc_auc 0.85374[0m
+[92maverage training of epoch 30: loss -3.58296 acc 0.66225 roc_auc 0.45922 prc_auc 0.62969[0m
+[93maverage test of epoch 30: loss -3.65412 acc 0.67568 roc_auc 0.64000 prc_auc 0.79745[0m
+[92maverage training of epoch 31: loss -3.64598 acc 0.66225 roc_auc 0.52186 prc_auc 0.65309[0m
+[93maverage test of epoch 31: loss -3.69666 acc 0.67568 roc_auc 0.37000 prc_auc 0.64855[0m
+[92maverage training of epoch 32: loss -3.70698 acc 0.66225 roc_auc 0.49814 prc_auc 0.64872[0m
+[93maverage test of epoch 32: loss -3.76853 acc 0.67568 roc_auc 0.44000 prc_auc 0.70871[0m
+[92maverage training of epoch 33: loss -3.76477 acc 0.66225 roc_auc 0.41804 prc_auc 0.60281[0m
+[93maverage test of epoch 33: loss -3.83919 acc 0.67568 roc_auc 0.54667 prc_auc 0.70866[0m
+[92maverage training of epoch 34: loss -3.83122 acc 0.66225 roc_auc 0.57265 prc_auc 0.71855[0m
+[93maverage test of epoch 34: loss -3.89705 acc 0.67568 roc_auc 0.53333 prc_auc 0.66250[0m
+[92maverage training of epoch 35: loss -3.89272 acc 0.66225 roc_auc 0.39824 prc_auc 0.59710[0m
+[93maverage test of epoch 35: loss -3.94884 acc 0.67568 roc_auc 0.37667 prc_auc 0.65498[0m
+[92maverage training of epoch 36: loss -3.94754 acc 0.66225 roc_auc 0.38137 prc_auc 0.60940[0m
+[93maverage test of epoch 36: loss -4.02676 acc 0.67568 roc_auc 0.74333 prc_auc 0.89098[0m
+[92maverage training of epoch 37: loss -4.01389 acc 0.66225 roc_auc 0.46392 prc_auc 0.63067[0m
+[93maverage test of epoch 37: loss -4.08670 acc 0.67568 roc_auc 0.56667 prc_auc 0.76220[0m
+[92maverage training of epoch 38: loss -4.06970 acc 0.66225 roc_auc 0.49059 prc_auc 0.65290[0m
+[93maverage test of epoch 38: loss -4.14068 acc 0.67568 roc_auc 0.58667 prc_auc 0.76383[0m
+[92maverage training of epoch 39: loss -4.12939 acc 0.66225 roc_auc 0.38275 prc_auc 0.60123[0m
+[93maverage test of epoch 39: loss -4.19523 acc 0.67568 roc_auc 0.57000 prc_auc 0.74613[0m
+[92maverage training of epoch 40: loss -4.18981 acc 0.66225 roc_auc 0.43098 prc_auc 0.61761[0m
+[93maverage test of epoch 40: loss -4.26149 acc 0.67568 roc_auc 0.35667 prc_auc 0.70721[0m
+[92maverage training of epoch 41: loss -4.24714 acc 0.66225 roc_auc 0.45059 prc_auc 0.62768[0m
+[93maverage test of epoch 41: loss -4.32539 acc 0.67568 roc_auc 0.52667 prc_auc 0.72398[0m
+[92maverage training of epoch 42: loss -4.31131 acc 0.66225 roc_auc 0.51294 prc_auc 0.65835[0m
+[93maverage test of epoch 42: loss -4.38293 acc 0.67568 roc_auc 0.56333 prc_auc 0.70926[0m
+[92maverage training of epoch 43: loss -4.36968 acc 0.66225 roc_auc 0.37176 prc_auc 0.59048[0m
+[93maverage test of epoch 43: loss -4.43973 acc 0.67568 roc_auc 0.49333 prc_auc 0.63933[0m
+[92maverage training of epoch 44: loss -4.42766 acc 0.66225 roc_auc 0.42216 prc_auc 0.61695[0m
+[93maverage test of epoch 44: loss -4.49708 acc 0.67568 roc_auc 0.60667 prc_auc 0.79357[0m
+[92maverage training of epoch 45: loss -4.49019 acc 0.66225 roc_auc 0.49725 prc_auc 0.65920[0m
+[93maverage test of epoch 45: loss -4.55621 acc 0.67568 roc_auc 0.55333 prc_auc 0.73126[0m
+[92maverage training of epoch 46: loss -4.54498 acc 0.66225 roc_auc 0.49088 prc_auc 0.63514[0m
+[93maverage test of epoch 46: loss -4.61767 acc 0.67568 roc_auc 0.52000 prc_auc 0.75108[0m
+[92maverage training of epoch 47: loss -4.60145 acc 0.66225 roc_auc 0.39588 prc_auc 0.60233[0m
+[93maverage test of epoch 47: loss -4.66643 acc 0.67568 roc_auc 0.49333 prc_auc 0.73172[0m
+[92maverage training of epoch 48: loss -4.66434 acc 0.66225 roc_auc 0.45784 prc_auc 0.63517[0m
+[93maverage test of epoch 48: loss -4.73406 acc 0.67568 roc_auc 0.72667 prc_auc 0.86530[0m
+[92maverage training of epoch 49: loss -4.72334 acc 0.66225 roc_auc 0.49765 prc_auc 0.64753[0m
+[93maverage test of epoch 49: loss -4.78955 acc 0.67568 roc_auc 0.31667 prc_auc 0.62276[0m
+Run statistics: 
+('note', 'DFScodeRNN_cls_LSTM')
+('graph_type', 'MUTAG')
+('epochs', 50)
+('batch_size', 1)
+('num_layers', 2)
+('embedding_size_dfscode_rnn', 8)
+('hidden_size_dfscode_rnn', 4)
+('dfscode_rnn_dropout', 0.2)
+('number_of_mlp_layer', 0)
+('lr', 0.0001)
+('rnn_type', 'LSTM')
+('gradient_clipping', True)
+('device', device(type='cuda', index=0))
+
+
+Accuracy (avg): 0.60725 ROC_AUC (avg): 0.60251 PRC_AUC (avg): 0.77181 
+
+Average forward propagation time taken(ms): 3.9779231310439243
+Average backward propagation time taken(ms): 1.5165527418189202
+

@@ -738,7 +738,7 @@ if __name__ == '__main__':
 			str(sum(timing_dict["backward"])/len(timing_dict["backward"]) * 1000)
 
 	print(run_statistics_string)
-
+'''
 	if 'DFScodeRNN_cls' in config["run"]["model"]:
 		log_file_name = f"E{args.epochs}_N{args.num_layers}_e{args.embedding_size_dfscode_rnn}_h{args.hidden_size_dfscode_rnn}_n{args.number_of_mlp_layer}_l{args.lr}.txt"
 
@@ -764,7 +764,7 @@ if __name__ == '__main__':
 			# else:
 			dataset_info = ""
 			f.write(dataset_info + run_statistics_string)
-
+'''
 	
 
 
