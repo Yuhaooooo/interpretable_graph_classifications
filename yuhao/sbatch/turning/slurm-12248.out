@@ -1,0 +1,1298 @@
+====== begin of gnn configuration ======
+| msg_average = 0
+======   end of gnn configuration ======
+Using backend: pytorch
+  0%|          | 0/351 [00:00<?, ?it/s] 61%|██████    | 214/351 [00:00<00:00, 2138.86it/s]100%|██████████| 351/351 [00:00<00:00, 2130.85it/s]
+
+torch.cuda.is_available():  True 
+
+
+Graphs produced 351
+Successfully done node count 19
+Successfully done edge count 1
+feature_map: {'node_forward': {'1': 0, '0': 1, '3': 2, '2': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '12': 9, '13': 10, '14': 11, '9': 12, '15': 13, '16': 14, '17': 15, '18': 16, '10': 17, '11': 18}, 'node_backward': {0: '1', 1: '0', 2: '3', 3: '2', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '12', 10: '13', 11: '14', 12: '9', 13: '15', 14: '16', 15: '17', 16: '18', 17: '10', 18: '11'}, 'edge_forward': {'0': 0}, 'edge_backward': {0: '0'}, 'max_nodes': 64, 'min_nodes': 2, 'max_edges': 71, 'min_edges': 1, 'max_degree': 4}
+
+0it [00:00, ?it/s]1it [00:04,  4.74s/it]32it [00:04,  3.32s/it]144it [00:04,  2.32s/it]320it [00:05,  1.63s/it]351it [00:05, 68.96it/s]Done creating min dfscodes
+Time taken to make dfscodes = 5.491s
+
+0it [00:00, ?it/s]1it [00:00,  1.20it/s]64it [00:00,  1.71it/s]351it [00:01, 339.80it/s]/home/FYP/heyu0012/.conda/envs/GCNN_GAP_graphgen/lib/python3.6/site-packages/torch/storage.py:34: FutureWarning: pickle support for Storage will be removed in 1.5. Use `torch.save` instead
+  warnings.warn("pickle support for Storage will be removed in 1.5. Use `torch.save` instead", FutureWarning)
+/home/FYP/heyu0012/.conda/envs/GCNN_GAP_graphgen/lib/python3.6/site-packages/torch/storage.py:34: FutureWarning: pickle support for Storage will be removed in 1.5. Use `torch.save` instead
+  warnings.warn("pickle support for Storage will be removed in 1.5. Use `torch.save` instead", FutureWarning)
+/home/FYP/heyu0012/.conda/envs/GCNN_GAP_graphgen/lib/python3.6/site-packages/torch/storage.py:34: FutureWarning: pickle support for Storage will be removed in 1.5. Use `torch.save` instead
+  warnings.warn("pickle support for Storage will be removed in 1.5. Use `torch.save` instead", FutureWarning)
+/home/FYP/heyu0012/.conda/envs/GCNN_GAP_graphgen/lib/python3.6/site-packages/torch/storage.py:34: FutureWarning: pickle support for Storage will be removed in 1.5. Use `torch.save` instead
+  warnings.warn("pickle support for Storage will be removed in 1.5. Use `torch.save` instead", FutureWarning)
+/home/FYP/heyu0012/.conda/envs/GCNN_GAP_graphgen/lib/python3.6/site-packages/torch/storage.py:34: FutureWarning: pickle support for Storage will be removed in 1.5. Use `torch.save` instead
+  warnings.warn("pickle support for Storage will be removed in 1.5. Use `torch.save` instead", FutureWarning)
+/home/FYP/heyu0012/.conda/envs/GCNN_GAP_graphgen/lib/python3.6/site-packages/torch/storage.py:34: FutureWarning: pickle support for Storage will be removed in 1.5. Use `torch.save` instead
+  warnings.warn("pickle support for Storage will be removed in 1.5. Use `torch.save` instead", FutureWarning)
+/home/FYP/heyu0012/.conda/envs/GCNN_GAP_graphgen/lib/python3.6/site-packages/torch/storage.py:34: FutureWarning: pickle support for Storage will be removed in 1.5. Use `torch.save` instead
+  warnings.warn("pickle support for Storage will be removed in 1.5. Use `torch.save` instead", FutureWarning)
+/home/FYP/heyu0012/.conda/envs/GCNN_GAP_graphgen/lib/python3.6/site-packages/torch/storage.py:34: FutureWarning: pickle support for Storage will be removed in 1.5. Use `torch.save` instead
+  warnings.warn("pickle support for Storage will be removed in 1.5. Use `torch.save` instead", FutureWarning)
+/home/FYP/heyu0012/.conda/envs/GCNN_GAP_graphgen/lib/python3.6/site-packages/torch/storage.py:34: FutureWarning: pickle support for Storage will be removed in 1.5. Use `torch.save` instead
+  warnings.warn("pickle support for Storage will be removed in 1.5. Use `torch.save` instead", FutureWarning)
+/home/FYP/heyu0012/.conda/envs/GCNN_GAP_graphgen/lib/python3.6/site-packages/torch/storage.py:34: FutureWarning: pickle support for Storage will be removed in /home/FYP/heyu0012/.conda/envs/GCNN_GAP_graphgen/lib/python3.6/site-packages/torch/storage.py:34: FutureWarning: pickle support for Storage will be removed in 1.5. Use `torch.save` instead
+  warnings.warn("pickle support for Storage will be removed in 1.5. Use `torch.save` instead", FutureWarning)
+/home/FYP/heyu0012/.conda/envs/GCNN_GAP_graphgen/lib/python3.6/site-packages/torch/storage.py:34: FutureWarning: pickle support for Storage will be removed in 1.5. Use `torch.save` instead
+  warnings.warn("pickle support for Storage will be removed in 1.5. Use `torch.save` instead", FutureWarning)
+/home/FYP/heyu0012/.conda/envs/GCNN_GAP_graphgen/lib/python3.6/site-packages/torch/storage.py:34: FutureWarning: pickle support for Storage will be removed in 1.5. Use `torch.save` instead
+  warnings.warn("pickle support for Storage will be removed in 1.5. Use `torch.save` instead", FutureWarning)
+/home/FYP/heyu0012/.conda/envs/GCNN_GAP_graphgen/lib/python3.6/site-packages/torch/storage.py:34: FutureWarning: pickle support for Storage will be removed in 1.5. Use `torch.save` instead
+  warnings.warn("pickle support for Storage will be removed in 1.5. Use `torch.save` instead", FutureWarning)
+/home/FYP/heyu0012/.conda/envs/GCNN_GAP_graphgen/lib/python3.6/site-packages/torch/storage.py:34: FutureWarning: pickle support for Storage will be removed in 1.5. Use `torch.save` instead
+  warnings.warn("pickle support for Storage will be removed in 1.5. Use `torch.save` instead", FutureWarning)
+/home/FYP/heyu0012/.conda/envs/GCNN_GAP_graphgen/lib/python3.6/site-packages/torch/storage.py:34: FutureWarning: pickle support for Storage will be removed in 1.5. Use `torch.save` instead
+  warnings.warn("pickle support for Storage will be removed in 1.5. Use `torch.save` instead", FutureWarning)
+/home/FYP/heyu0012/.conda/envs/GCNN_GAP_graphgen/lib/python3.6/site-packages/torch/storage.py:34: FutureWarning: pickle support for Storage will be removed in 1.5. Use `torch.save` instead
+  warnings.warn("pickle support for Storage will be removed in 1.5. Use `torch.save` instead", FutureWarning)
+/home/FYP/heyu0012/.conda/envs/GCNN_GAP_graphgen/lib/python3.6/site-packages/torch/storage.py:34: FutureWarning: pickle support for Storage will be removed in 1.5. Use `torch.save` instead
+  warnings.warn("pickle support for Storage will be removed in 1.5. Use `torch.save` instead", FutureWarning)
+/home/FYP/heyu0012/.conda/envs/GCNN_GAP_graphgen/lib/python3.6/site-packages/torch/storage.py:34: FutureWarning: pickle support for Storage will be removed in 1.5. Use `torch.save` instead
+  warnings.warn("pickle support for Storage will be removed in 1.5. Use `torch.save` instead", FutureWarning)
+/home/FYP/heyu0012/.conda/envs/GCNN_GAP_graphgen/lib/python3.6/site-packages/torch/storage.py:34: FutureWarning: pickle support for Storage will be removed in 1.5. Use `torch.save` instead
+  warnings.warn("pickle support for Storage will be removed in 1.5. Use `torch.save` instead", FutureWarning)
+/home/FYP/heyu0012/.conda/envs/GCNN_GAP_graphgen/lib/python3.6/site-packages/torch/storage.py:34: FutureWarning: pickle support for Storage will be removed in 1.5. Use `torch.save` instead
+  warnings.warn("pickle support for Storage will be removed in 1.5. Use `torch.save` instead", FutureWarning)
+
+Time taken to make dfscode tensors= 1.464s
+
+
+dataset_features: {'node_forward': {'1': 0, '0': 1, '3': 2, '2': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '12': 9, '13': 10, '14': 11, '9': 12, '15': 13, '16': 14, '17': 15, '18': 16, '10': 17, '11': 18}, 'node_backward': {0: '1', 1: '0', 2: '3', 3: '2', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '12', 10: '13', 11: '14', 12: '9', 13: '15', 14: '16', 15: '17', 16: '18', 17: '10', 18: '11'}, 'edge_forward': {'0': 0}, 'edge_backward': {0: '0'}, 'max_nodes': 64, 'min_nodes': 2, 'max_edges': 71, 'min_edges': 1, 'max_degree': 4, 'label_size': 2}
+
+
+
+
+config: {'general': {'data_autobalance': False, 'print_dataset_features': True, 'batch_size': 1, 'extract_features': False}, 'run': {'num_epochs': 50, 'learning_rate': 0.0003, 'seed': 1800, 'k_fold': 5, 'model': 'DFScodeRNN_cls', 'dataset': 'PTC_FR'}, 'GNN_models': {'DGCNN': {'convolution_layers_size': '32-32-32-1', 'sortpooling_k': 0.6, 'n_hidden': 128, 'convolution_dropout': 0.5, 'pred_dropout': 0.5, 'FP_len': 0}, 'GCN': {'convolution_layers_size': '128-256-512', 'dropout': 0.5}, 'GCND': {'convolution_layers_size': '128-256-512', 'dropout': 0.5}, 'DiffPool': {'convolution_layers_size': '64-64-64', 'pred_hidden_layers': '50-50-50', 'assign_ratio': 0.25, 'number_of_pooling': 1, 'concat_tensors': False}, 'DiffPoolD': {'convolution_layers_size': '64-64-64', 'pred_hidden_layers': '50-50-50', 'assign_ratio': 0.25, 'number_of_pooling': 1, 'concat_tensors': False}, 'DFScodeRNN_cls': {'dummy': 0}}, 'dataset_features': {'node_forward': {'1': 0, '0': 1, '3': 2, '2': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '12': 9, '13': 10, '14': 11, '9': 12, '15': 13, '16': 14, '17': 15, '18': 16, '10': 17, '11': 18}, 'node_backward': {0: '1', 1: '0', 2: '3', 3: '2', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '12', 10: '13', 11: '14', 12: '9', 13: '15', 14: '16', 15: '17', 16: '18', 17: '10', 18: '11'}, 'edge_forward': {'0': 0}, 'edge_backward': {0: '0'}, 'max_nodes': 64, 'min_nodes': 2, 'max_edges': 71, 'min_edges': 1, 'max_degree': 4, 'label_size': 2}}
+
+
+Training a new model: DFScodeRNN_cls
+Run statistics: 
+==== Configuration Settings ====
+== Run Settings ==
+Model: DFScodeRNN_cls, Dataset: PTC_FR
+num_epochs: 50
+learning_rate: 0.0003
+seed: 1800
+k_fold: 5
+model: DFScodeRNN_cls
+dataset: PTC_FR
+
+== Model Settings and results ==
+dummy: 0
+
+Accuracy (avg): 0.47042 ROC_AUC (avg): 0.49111 PRC_AUC (avg): 0.34822 
+
+Average forward propagation time taken(ms): 3.730656540967537
+Average backward propagation time taken(ms): 1.4149636539230035
+
+====== begin of gnn configuration ======
+| msg_average = 0
+======   end of gnn configuration ======
+Using backend: pytorch
+
+
+torch.cuda.is_available():  True 
+
+
+
+
+dataset_features: {'node_forward': {'1': 0, '0': 1, '3': 2, '2': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '12': 9, '13': 10, '14': 11, '9': 12, '15': 13, '16': 14, '17': 15, '18': 16, '10': 17, '11': 18}, 'node_backward': {0: '1', 1: '0', 2: '3', 3: '2', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '12', 10: '13', 11: '14', 12: '9', 13: '15', 14: '16', 15: '17', 16: '18', 17: '10', 18: '11'}, 'edge_forward': {'0': 0}, 'edge_backward': {0: '0'}, 'max_nodes': 64, 'min_nodes': 2, 'max_edges': 71, 'min_edges': 1, 'max_degree': 4, 'label_size': 2}
+
+
+
+
+config: {'general': {'data_autobalance': False, 'print_dataset_features': True, 'batch_size': 1, 'extract_features': False}, 'run': {'num_epochs': 50, 'learning_rate': 0.001, 'seed': 1800, 'k_fold': 5, 'model': 'DFScodeRNN_cls', 'dataset': 'PTC_FR'}, 'GNN_models': {'DGCNN': {'convolution_layers_size': '32-32-32-1', 'sortpooling_k': 0.6, 'n_hidden': 128, 'convolution_dropout': 0.5, 'pred_dropout': 0.5, 'FP_len': 0}, 'GCN': {'convolution_layers_size': '128-256-512', 'dropout': 0.5}, 'GCND': {'convolution_layers_size': '128-256-512', 'dropout': 0.5}, 'DiffPool': {'convolution_layers_size': '64-64-64', 'pred_hidden_layers': '50-50-50', 'assign_ratio': 0.25, 'number_of_pooling': 1, 'concat_tensors': False}, 'DiffPoolD': {'convolution_layers_size': '64-64-64', 'pred_hidden_layers': '50-50-50', 'assign_ratio': 0.25, 'number_of_pooling': 1, 'concat_tensors': False}, 'DFScodeRNN_cls': {'dummy': 0}}, 'dataset_features': {'node_forward': {'1': 0, '0': 1, '3': 2, '2': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '12': 9, '13': 10, '14': 11, '9': 12, '15': 13, '16': 14, '17': 15, '18': 16, '10': 17, '11': 18}, 'node_backward': {0: '1', 1: '0', 2: '3', 3: '2', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '12', 10: '13', 11: '14', 12: '9', 13: '15', 14: '16', 15: '17', 16: '18', 17: '10', 18: '11'}, 'edge_forward': {'0': 0}, 'edge_backward': {0: '0'}, 'max_nodes': 64, 'min_nodes': 2, 'max_edges': 71, 'min_edges': 1, 'max_degree': 4, 'label_size': 2}}
+
+
+Training a new model: DFScodeRNN_cls
+Run statistics: 
+==== Configuration Settings ====
+== Run Settings ==
+Model: DFScodeRNN_cls, Dataset: PTC_FR
+num_epochs: 50
+learning_rate: 0.001
+seed: 1800
+k_fold: 5
+model: DFScodeRNN_cls
+dataset: PTC_FR
+
+== Model Settings and results ==
+dummy: 0
+
+Accuracy (avg): 0.59332 ROC_AUC (avg): 0.50588 PRC_AUC (avg): 0.35896 
+
+Average forward propagation time taken(ms): 3.677046578915588
+Average backward propagation time taken(ms): 1.3934154054395238
+
+====== begin of gnn configuration ======
+| msg_average = 0
+======   end of gnn configuration ======
+Using backend: pytorch
+
+
+torch.cuda.is_available():  True 
+
+
+
+
+dataset_features: {'node_forward': {'1': 0, '0': 1, '3': 2, '2': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '12': 9, '13': 10, '14': 11, '9': 12, '15': 13, '16': 14, '17': 15, '18': 16, '10': 17, '11': 18}, 'node_backward': {0: '1', 1: '0', 2: '3', 3: '2', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '12', 10: '13', 11: '14', 12: '9', 13: '15', 14: '16', 15: '17', 16: '18', 17: '10', 18: '11'}, 'edge_forward': {'0': 0}, 'edge_backward': {0: '0'}, 'max_nodes': 64, 'min_nodes': 2, 'max_edges': 71, 'min_edges': 1, 'max_degree': 4, 'label_size': 2}
+
+
+
+
+config: {'general': {'data_autobalance': False, 'print_dataset_features': True, 'batch_size': 1, 'extract_features': False}, 'run': {'num_epochs': 50, 'learning_rate': 0.003, 'seed': 1800, 'k_fold': 5, 'model': 'DFScodeRNN_cls', 'dataset': 'PTC_FR'}, 'GNN_models': {'DGCNN': {'convolution_layers_size': '32-32-32-1', 'sortpooling_k': 0.6, 'n_hidden': 128, 'convolution_dropout': 0.5, 'pred_dropout': 0.5, 'FP_len': 0}, 'GCN': {'convolution_layers_size': '128-256-512', 'dropout': 0.5}, 'GCND': {'convolution_layers_size': '128-256-512', 'dropout': 0.5}, 'DiffPool': {'convolution_layers_size': '64-64-64', 'pred_hidden_layers': '50-50-50', 'assign_ratio': 0.25, 'number_of_pooling': 1, 'concat_tensors': False}, 'DiffPoolD': {'convolution_layers_size': '64-64-64', 'pred_hidden_layers': '50-50-50', 'assign_ratio': 0.25, 'number_of_pooling': 1, 'concat_tensors': False}, 'DFScodeRNN_cls': {'dummy': 0}}, 'dataset_features': {'node_forward': {'1': 0, '0': 1, '3': 2, '2': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '12': 9, '13': 10, '14': 11, '9': 12, '15': 13, '16': 14, '17': 15, '18': 16, '10': 17, '11': 18}, 'node_backward': {0: '1', 1: '0', 2: '3', 3: '2', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '12', 10: '13', 11: '14', 12: '9', 13: '15', 14: '16', 15: '17', 16: '18', 17: '10', 18: '11'}, 'edge_forward': {'0': 0}, 'edge_backward': {0: '0'}, 'max_nodes': 64, 'min_nodes': 2, 'max_edges': 71, 'min_edges': 1, 'max_degree': 4, 'label_size': 2}}
+
+
+Training a new model: DFScodeRNN_cls
+Run statistics: 
+==== Configuration Settings ====
+== Run Settings ==
+Model: DFScodeRNN_cls, Dataset: PTC_FR
+num_epochs: 50
+learning_rate: 0.003
+seed: 1800
+k_fold: 5
+model: DFScodeRNN_cls
+dataset: PTC_FR
+
+== Model Settings and results ==
+dummy: 0
+
+Accuracy (avg): 0.59614 ROC_AUC (avg): 0.50391 PRC_AUC (avg): 0.35352 
+
+Average forward propagation time taken(ms): 3.6982665525765896
+Average backward propagation time taken(ms): 1.4047050024680099
+
+====== begin of gnn configuration ======
+| msg_average = 0
+======   end of gnn configuration ======
+Using backend: pytorch
+
+
+torch.cuda.is_available():  True 
+
+
+
+
+dataset_features: {'node_forward': {'1': 0, '0': 1, '3': 2, '2': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '12': 9, '13': 10, '14': 11, '9': 12, '15': 13, '16': 14, '17': 15, '18': 16, '10': 17, '11': 18}, 'node_backward': {0: '1', 1: '0', 2: '3', 3: '2', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '12', 10: '13', 11: '14', 12: '9', 13: '15', 14: '16', 15: '17', 16: '18', 17: '10', 18: '11'}, 'edge_forward': {'0': 0}, 'edge_backward': {0: '0'}, 'max_nodes': 64, 'min_nodes': 2, 'max_edges': 71, 'min_edges': 1, 'max_degree': 4, 'label_size': 2}
+
+
+
+
+config: {'general': {'data_autobalance': False, 'print_dataset_features': True, 'batch_size': 1, 'extract_features': False}, 'run': {'num_epochs': 50, 'learning_rate': 0.01, 'seed': 1800, 'k_fold': 5, 'model': 'DFScodeRNN_cls', 'dataset': 'PTC_FR'}, 'GNN_models': {'DGCNN': {'convolution_layers_size': '32-32-32-1', 'sortpooling_k': 0.6, 'n_hidden': 128, 'convolution_dropout': 0.5, 'pred_dropout': 0.5, 'FP_len': 0}, 'GCN': {'convolution_layers_size': '128-256-512', 'dropout': 0.5}, 'GCND': {'convolution_layers_size': '128-256-512', 'dropout': 0.5}, 'DiffPool': {'convolution_layers_size': '64-64-64', 'pred_hidden_layers': '50-50-50', 'assign_ratio': 0.25, 'number_of_pooling': 1, 'concat_tensors': False}, 'DiffPoolD': {'convolution_layers_size': '64-64-64', 'pred_hidden_layers': '50-50-50', 'assign_ratio': 0.25, 'number_of_pooling': 1, 'concat_tensors': False}, 'DFScodeRNN_cls': {'dummy': 0}}, 'dataset_features': {'node_forward': {'1': 0, '0': 1, '3': 2, '2': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '12': 9, '13': 10, '14': 11, '9': 12, '15': 13, '16': 14, '17': 15, '18': 16, '10': 17, '11': 18}, 'node_backward': {0: '1', 1: '0', 2: '3', 3: '2', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '12', 10: '13', 11: '14', 12: '9', 13: '15', 14: '16', 15: '17', 16: '18', 17: '10', 18: '11'}, 'edge_forward': {'0': 0}, 'edge_backward': {0: '0'}, 'max_nodes': 64, 'min_nodes': 2, 'max_edges': 71, 'min_edges': 1, 'max_degree': 4, 'label_size': 2}}
+
+
+Training a new model: DFScodeRNN_cls
+Run statistics: 
+==== Configuration Settings ====
+== Run Settings ==
+Model: DFScodeRNN_cls, Dataset: PTC_FR
+num_epochs: 50
+learning_rate: 0.01
+seed: 1800
+k_fold: 5
+model: DFScodeRNN_cls
+dataset: PTC_FR
+
+== Model Settings and results ==
+dummy: 0
+
+Accuracy (avg): 0.65529 ROC_AUC (avg): 0.49275 PRC_AUC (avg): 0.3428 
+
+Average forward propagation time taken(ms): 3.689711584675354
+Average backward propagation time taken(ms): 1.4026940678843374
+
+====== begin of gnn configuration ======
+| msg_average = 0
+======   end of gnn configuration ======
+Using backend: pytorch
+
+
+torch.cuda.is_available():  True 
+
+
+
+
+dataset_features: {'node_forward': {'1': 0, '0': 1, '3': 2, '2': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '12': 9, '13': 10, '14': 11, '9': 12, '15': 13, '16': 14, '17': 15, '18': 16, '10': 17, '11': 18}, 'node_backward': {0: '1', 1: '0', 2: '3', 3: '2', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '12', 10: '13', 11: '14', 12: '9', 13: '15', 14: '16', 15: '17', 16: '18', 17: '10', 18: '11'}, 'edge_forward': {'0': 0}, 'edge_backward': {0: '0'}, 'max_nodes': 64, 'min_nodes': 2, 'max_edges': 71, 'min_edges': 1, 'max_degree': 4, 'label_size': 2}
+
+
+
+
+config: {'general': {'data_autobalance': False, 'print_dataset_features': True, 'batch_size': 1, 'extract_features': False}, 'run': {'num_epochs': 50, 'learning_rate': 0.0003, 'seed': 1800, 'k_fold': 5, 'model': 'DFScodeRNN_cls', 'dataset': 'PTC_FR'}, 'GNN_models': {'DGCNN': {'convolution_layers_size': '32-32-32-1', 'sortpooling_k': 0.6, 'n_hidden': 128, 'convolution_dropout': 0.5, 'pred_dropout': 0.5, 'FP_len': 0}, 'GCN': {'convolution_layers_size': '128-256-512', 'dropout': 0.5}, 'GCND': {'convolution_layers_size': '128-256-512', 'dropout': 0.5}, 'DiffPool': {'convolution_layers_size': '64-64-64', 'pred_hidden_layers': '50-50-50', 'assign_ratio': 0.25, 'number_of_pooling': 1, 'concat_tensors': False}, 'DiffPoolD': {'convolution_layers_size': '64-64-64', 'pred_hidden_layers': '50-50-50', 'assign_ratio': 0.25, 'number_of_pooling': 1, 'concat_tensors': False}, 'DFScodeRNN_cls': {'dummy': 0}}, 'dataset_features': {'node_forward': {'1': 0, '0': 1, '3': 2, '2': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '12': 9, '13': 10, '14': 11, '9': 12, '15': 13, '16': 14, '17': 15, '18': 16, '10': 17, '11': 18}, 'node_backward': {0: '1', 1: '0', 2: '3', 3: '2', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '12', 10: '13', 11: '14', 12: '9', 13: '15', 14: '16', 15: '17', 16: '18', 17: '10', 18: '11'}, 'edge_forward': {'0': 0}, 'edge_backward': {0: '0'}, 'max_nodes': 64, 'min_nodes': 2, 'max_edges': 71, 'min_edges': 1, 'max_degree': 4, 'label_size': 2}}
+
+
+Training a new model: DFScodeRNN_cls
+Run statistics: 
+==== Configuration Settings ====
+== Run Settings ==
+Model: DFScodeRNN_cls, Dataset: PTC_FR
+num_epochs: 50
+learning_rate: 0.0003
+seed: 1800
+k_fold: 5
+model: DFScodeRNN_cls
+dataset: PTC_FR
+
+== Model Settings and results ==
+dummy: 0
+
+Accuracy (avg): 0.53328 ROC_AUC (avg): 0.51404 PRC_AUC (avg): 0.35661 
+
+Average forward propagation time taken(ms): 3.685477347026548
+Average backward propagation time taken(ms): 1.3956865312872497
+
+====== begin of gnn configuration ======
+| msg_average = 0
+======   end of gnn configuration ======
+Using backend: pytorch
+
+
+torch.cuda.is_available():  True 
+
+
+
+
+dataset_features: {'node_forward': {'1': 0, '0': 1, '3': 2, '2': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '12': 9, '13': 10, '14': 11, '9': 12, '15': 13, '16': 14, '17': 15, '18': 16, '10': 17, '11': 18}, 'node_backward': {0: '1', 1: '0', 2: '3', 3: '2', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '12', 10: '13', 11: '14', 12: '9', 13: '15', 14: '16', 15: '17', 16: '18', 17: '10', 18: '11'}, 'edge_forward': {'0': 0}, 'edge_backward': {0: '0'}, 'max_nodes': 64, 'min_nodes': 2, 'max_edges': 71, 'min_edges': 1, 'max_degree': 4, 'label_size': 2}
+
+
+
+
+config: {'general': {'data_autobalance': False, 'print_dataset_features': True, 'batch_size': 1, 'extract_features': False}, 'run': {'num_epochs': 50, 'learning_rate': 0.001, 'seed': 1800, 'k_fold': 5, 'model': 'DFScodeRNN_cls', 'dataset': 'PTC_FR'}, 'GNN_models': {'DGCNN': {'convolution_layers_size': '32-32-32-1', 'sortpooling_k': 0.6, 'n_hidden': 128, 'convolution_dropout': 0.5, 'pred_dropout': 0.5, 'FP_len': 0}, 'GCN': {'convolution_layers_size': '128-256-512', 'dropout': 0.5}, 'GCND': {'convolution_layers_size': '128-256-512', 'dropout': 0.5}, 'DiffPool': {'convolution_layers_size': '64-64-64', 'pred_hidden_layers': '50-50-50', 'assign_ratio': 0.25, 'number_of_pooling': 1, 'concat_tensors': False}, 'DiffPoolD': {'convolution_layers_size': '64-64-64', 'pred_hidden_layers': '50-50-50', 'assign_ratio': 0.25, 'number_of_pooling': 1, 'concat_tensors': False}, 'DFScodeRNN_cls': {'dummy': 0}}, 'dataset_features': {'node_forward': {'1': 0, '0': 1, '3': 2, '2': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '12': 9, '13': 10, '14': 11, '9': 12, '15': 13, '16': 14, '17': 15, '18': 16, '10': 17, '11': 18}, 'node_backward': {0: '1', 1: '0', 2: '3', 3: '2', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '12', 10: '13', 11: '14', 12: '9', 13: '15', 14: '16', 15: '17', 16: '18', 17: '10', 18: '11'}, 'edge_forward': {'0': 0}, 'edge_backward': {0: '0'}, 'max_nodes': 64, 'min_nodes': 2, 'max_edges': 71, 'min_edges': 1, 'max_degree': 4, 'label_size': 2}}
+
+
+Training a new model: DFScodeRNN_cls
+Run statistics: 
+==== Configuration Settings ====
+== Run Settings ==
+Model: DFScodeRNN_cls, Dataset: PTC_FR
+num_epochs: 50
+learning_rate: 0.001
+seed: 1800
+k_fold: 5
+model: DFScodeRNN_cls
+dataset: PTC_FR
+
+== Model Settings and results ==
+dummy: 0
+
+Accuracy (avg): 0.59243 ROC_AUC (avg): 0.49439 PRC_AUC (avg): 0.35202 
+
+Average forward propagation time taken(ms): 3.6913195431963044
+Average backward propagation time taken(ms): 1.3975247513023674
+
+====== begin of gnn configuration ======
+| msg_average = 0
+======   end of gnn configuration ======
+Using backend: pytorch
+
+
+torch.cuda.is_available():  True 
+
+
+
+
+dataset_features: {'node_forward': {'1': 0, '0': 1, '3': 2, '2': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '12': 9, '13': 10, '14': 11, '9': 12, '15': 13, '16': 14, '17': 15, '18': 16, '10': 17, '11': 18}, 'node_backward': {0: '1', 1: '0', 2: '3', 3: '2', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '12', 10: '13', 11: '14', 12: '9', 13: '15', 14: '16', 15: '17', 16: '18', 17: '10', 18: '11'}, 'edge_forward': {'0': 0}, 'edge_backward': {0: '0'}, 'max_nodes': 64, 'min_nodes': 2, 'max_edges': 71, 'min_edges': 1, 'max_degree': 4, 'label_size': 2}
+
+
+
+
+config: {'general': {'data_autobalance': False, 'print_dataset_features': True, 'batch_size': 1, 'extract_features': False}, 'run': {'num_epochs': 50, 'learning_rate': 0.003, 'seed': 1800, 'k_fold': 5, 'model': 'DFScodeRNN_cls', 'dataset': 'PTC_FR'}, 'GNN_models': {'DGCNN': {'convolution_layers_size': '32-32-32-1', 'sortpooling_k': 0.6, 'n_hidden': 128, 'convolution_dropout': 0.5, 'pred_dropout': 0.5, 'FP_len': 0}, 'GCN': {'convolution_layers_size': '128-256-512', 'dropout': 0.5}, 'GCND': {'convolution_layers_size': '128-256-512', 'dropout': 0.5}, 'DiffPool': {'convolution_layers_size': '64-64-64', 'pred_hidden_layers': '50-50-50', 'assign_ratio': 0.25, 'number_of_pooling': 1, 'concat_tensors': False}, 'DiffPoolD': {'convolution_layers_size': '64-64-64', 'pred_hidden_layers': '50-50-50', 'assign_ratio': 0.25, 'number_of_pooling': 1, 'concat_tensors': False}, 'DFScodeRNN_cls': {'dummy': 0}}, 'dataset_features': {'node_forward': {'1': 0, '0': 1, '3': 2, '2': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '12': 9, '13': 10, '14': 11, '9': 12, '15': 13, '16': 14, '17': 15, '18': 16, '10': 17, '11': 18}, 'node_backward': {0: '1', 1: '0', 2: '3', 3: '2', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '12', 10: '13', 11: '14', 12: '9', 13: '15', 14: '16', 15: '17', 16: '18', 17: '10', 18: '11'}, 'edge_forward': {'0': 0}, 'edge_backward': {0: '0'}, 'max_nodes': 64, 'min_nodes': 2, 'max_edges': 71, 'min_edges': 1, 'max_degree': 4, 'label_size': 2}}
+
+
+Training a new model: DFScodeRNN_cls
+Run statistics: 
+==== Configuration Settings ====
+== Run Settings ==
+Model: DFScodeRNN_cls, Dataset: PTC_FR
+num_epochs: 50
+learning_rate: 0.003
+seed: 1800
+k_fold: 5
+model: DFScodeRNN_cls
+dataset: PTC_FR
+
+== Model Settings and results ==
+dummy: 0
+
+Accuracy (avg): 0.65529 ROC_AUC (avg): 0.47525 PRC_AUC (avg): 0.33588 
+
+Average forward propagation time taken(ms): 3.6801501884245438
+Average backward propagation time taken(ms): 1.3943162858352178
+
+====== begin of gnn configuration ======
+| msg_average = 0
+======   end of gnn configuration ======
+Using backend: pytorch
+
+
+torch.cuda.is_available():  True 
+
+
+
+
+dataset_features: {'node_forward': {'1': 0, '0': 1, '3': 2, '2': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '12': 9, '13': 10, '14': 11, '9': 12, '15': 13, '16': 14, '17': 15, '18': 16, '10': 17, '11': 18}, 'node_backward': {0: '1', 1: '0', 2: '3', 3: '2', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '12', 10: '13', 11: '14', 12: '9', 13: '15', 14: '16', 15: '17', 16: '18', 17: '10', 18: '11'}, 'edge_forward': {'0': 0}, 'edge_backward': {0: '0'}, 'max_nodes': 64, 'min_nodes': 2, 'max_edges': 71, 'min_edges': 1, 'max_degree': 4, 'label_size': 2}
+
+
+
+
+config: {'general': {'data_autobalance': False, 'print_dataset_features': True, 'batch_size': 1, 'extract_features': False}, 'run': {'num_epochs': 50, 'learning_rate': 0.01, 'seed': 1800, 'k_fold': 5, 'model': 'DFScodeRNN_cls', 'dataset': 'PTC_FR'}, 'GNN_models': {'DGCNN': {'convolution_layers_size': '32-32-32-1', 'sortpooling_k': 0.6, 'n_hidden': 128, 'convolution_dropout': 0.5, 'pred_dropout': 0.5, 'FP_len': 0}, 'GCN': {'convolution_layers_size': '128-256-512', 'dropout': 0.5}, 'GCND': {'convolution_layers_size': '128-256-512', 'dropout': 0.5}, 'DiffPool': {'convolution_layers_size': '64-64-64', 'pred_hidden_layers': '50-50-50', 'assign_ratio': 0.25, 'number_of_pooling': 1, 'concat_tensors': False}, 'DiffPoolD': {'convolution_layers_size': '64-64-64', 'pred_hidden_layers': '50-50-50', 'assign_ratio': 0.25, 'number_of_pooling': 1, 'concat_tensors': False}, 'DFScodeRNN_cls': {'dummy': 0}}, 'dataset_features': {'node_forward': {'1': 0, '0': 1, '3': 2, '2': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '12': 9, '13': 10, '14': 11, '9': 12, '15': 13, '16': 14, '17': 15, '18': 16, '10': 17, '11': 18}, 'node_backward': {0: '1', 1: '0', 2: '3', 3: '2', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '12', 10: '13', 11: '14', 12: '9', 13: '15', 14: '16', 15: '17', 16: '18', 17: '10', 18: '11'}, 'edge_forward': {'0': 0}, 'edge_backward': {0: '0'}, 'max_nodes': 64, 'min_nodes': 2, 'max_edges': 71, 'min_edges': 1, 'max_degree': 4, 'label_size': 2}}
+
+
+Training a new model: DFScodeRNN_cls
+Run statistics: 
+==== Configuration Settings ====
+== Run Settings ==
+Model: DFScodeRNN_cls, Dataset: PTC_FR
+num_epochs: 50
+learning_rate: 0.01
+seed: 1800
+k_fold: 5
+model: DFScodeRNN_cls
+dataset: PTC_FR
+
+== Model Settings and results ==
+dummy: 0
+
+Accuracy (avg): 0.65529 ROC_AUC (avg): 0.48018 PRC_AUC (avg): 0.34444 
+
+Average forward propagation time taken(ms): 3.4372699902872075
+Average backward propagation time taken(ms): 1.2892750162952757
+
+====== begin of gnn configuration ======
+| msg_average = 0
+======   end of gnn configuration ======
+Using backend: pytorch
+
+
+torch.cuda.is_available():  True 
+
+
+
+
+dataset_features: {'node_forward': {'1': 0, '0': 1, '3': 2, '2': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '12': 9, '13': 10, '14': 11, '9': 12, '15': 13, '16': 14, '17': 15, '18': 16, '10': 17, '11': 18}, 'node_backward': {0: '1', 1: '0', 2: '3', 3: '2', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '12', 10: '13', 11: '14', 12: '9', 13: '15', 14: '16', 15: '17', 16: '18', 17: '10', 18: '11'}, 'edge_forward': {'0': 0}, 'edge_backward': {0: '0'}, 'max_nodes': 64, 'min_nodes': 2, 'max_edges': 71, 'min_edges': 1, 'max_degree': 4, 'label_size': 2}
+
+
+
+
+config: {'general': {'data_autobalance': False, 'print_dataset_features': True, 'batch_size': 1, 'extract_features': False}, 'run': {'num_epochs': 50, 'learning_rate': 0.0003, 'seed': 1800, 'k_fold': 5, 'model': 'DFScodeRNN_cls', 'dataset': 'PTC_FR'}, 'GNN_models': {'DGCNN': {'convolution_layers_size': '32-32-32-1', 'sortpooling_k': 0.6, 'n_hidden': 128, 'convolution_dropout': 0.5, 'pred_dropout': 0.5, 'FP_len': 0}, 'GCN': {'convolution_layers_size': '128-256-512', 'dropout': 0.5}, 'GCND': {'convolution_layers_size': '128-256-512', 'dropout': 0.5}, 'DiffPool': {'convolution_layers_size': '64-64-64', 'pred_hidden_layers': '50-50-50', 'assign_ratio': 0.25, 'number_of_pooling': 1, 'concat_tensors': False}, 'DiffPoolD': {'convolution_layers_size': '64-64-64', 'pred_hidden_layers': '50-50-50', 'assign_ratio': 0.25, 'number_of_pooling': 1, 'concat_tensors': False}, 'DFScodeRNN_cls': {'dummy': 0}}, 'dataset_features': {'node_forward': {'1': 0, '0': 1, '3': 2, '2': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '12': 9, '13': 10, '14': 11, '9': 12, '15': 13, '16': 14, '17': 15, '18': 16, '10': 17, '11': 18}, 'node_backward': {0: '1', 1: '0', 2: '3', 3: '2', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '12', 10: '13', 11: '14', 12: '9', 13: '15', 14: '16', 15: '17', 16: '18', 17: '10', 18: '11'}, 'edge_forward': {'0': 0}, 'edge_backward': {0: '0'}, 'max_nodes': 64, 'min_nodes': 2, 'max_edges': 71, 'min_edges': 1, 'max_degree': 4, 'label_size': 2}}
+
+
+Training a new model: DFScodeRNN_cls
+Run statistics: 
+==== Configuration Settings ====
+== Run Settings ==
+Model: DFScodeRNN_cls, Dataset: PTC_FR
+num_epochs: 50
+learning_rate: 0.0003
+seed: 1800
+k_fold: 5
+model: DFScodeRNN_cls
+dataset: PTC_FR
+
+== Model Settings and results ==
+dummy: 0
+
+Accuracy (avg): 0.47042 ROC_AUC (avg): 0.50426 PRC_AUC (avg): 0.35434 
+
+Average forward propagation time taken(ms): 3.4275821944969045
+Average backward propagation time taken(ms): 1.280684916712258
+
+====== begin of gnn configuration ======
+| msg_average = 0
+======   end of gnn configuration ======
+Using backend: pytorch
+
+
+torch.cuda.is_available():  True 
+
+
+
+
+dataset_features: {'node_forward': {'1': 0, '0': 1, '3': 2, '2': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '12': 9, '13': 10, '14': 11, '9': 12, '15': 13, '16': 14, '17': 15, '18': 16, '10': 17, '11': 18}, 'node_backward': {0: '1', 1: '0', 2: '3', 3: '2', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '12', 10: '13', 11: '14', 12: '9', 13: '15', 14: '16', 15: '17', 16: '18', 17: '10', 18: '11'}, 'edge_forward': {'0': 0}, 'edge_backward': {0: '0'}, 'max_nodes': 64, 'min_nodes': 2, 'max_edges': 71, 'min_edges': 1, 'max_degree': 4, 'label_size': 2}
+
+
+
+
+config: {'general': {'data_autobalance': False, 'print_dataset_features': True, 'batch_size': 1, 'extract_features': False}, 'run': {'num_epochs': 50, 'learning_rate': 0.001, 'seed': 1800, 'k_fold': 5, 'model': 'DFScodeRNN_cls', 'dataset': 'PTC_FR'}, 'GNN_models': {'DGCNN': {'convolution_layers_size': '32-32-32-1', 'sortpooling_k': 0.6, 'n_hidden': 128, 'convolution_dropout': 0.5, 'pred_dropout': 0.5, 'FP_len': 0}, 'GCN': {'convolution_layers_size': '128-256-512', 'dropout': 0.5}, 'GCND': {'convolution_layers_size': '128-256-512', 'dropout': 0.5}, 'DiffPool': {'convolution_layers_size': '64-64-64', 'pred_hidden_layers': '50-50-50', 'assign_ratio': 0.25, 'number_of_pooling': 1, 'concat_tensors': False}, 'DiffPoolD': {'convolution_layers_size': '64-64-64', 'pred_hidden_layers': '50-50-50', 'assign_ratio': 0.25, 'number_of_pooling': 1, 'concat_tensors': False}, 'DFScodeRNN_cls': {'dummy': 0}}, 'dataset_features': {'node_forward': {'1': 0, '0': 1, '3': 2, '2': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '12': 9, '13': 10, '14': 11, '9': 12, '15': 13, '16': 14, '17': 15, '18': 16, '10': 17, '11': 18}, 'node_backward': {0: '1', 1: '0', 2: '3', 3: '2', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '12', 10: '13', 11: '14', 12: '9', 13: '15', 14: '16', 15: '17', 16: '18', 17: '10', 18: '11'}, 'edge_forward': {'0': 0}, 'edge_backward': {0: '0'}, 'max_nodes': 64, 'min_nodes': 2, 'max_edges': 71, 'min_edges': 1, 'max_degree': 4, 'label_size': 2}}
+
+
+Training a new model: DFScodeRNN_cls
+Run statistics: 
+==== Configuration Settings ====
+== Run Settings ==
+Model: DFScodeRNN_cls, Dataset: PTC_FR
+num_epochs: 50
+learning_rate: 0.001
+seed: 1800
+k_fold: 5
+model: DFScodeRNN_cls
+dataset: PTC_FR
+
+== Model Settings and results ==
+dummy: 0
+
+Accuracy (avg): 0.59243 ROC_AUC (avg): 0.52615 PRC_AUC (avg): 0.37341 
+
+Average forward propagation time taken(ms): 3.430203635680115
+Average backward propagation time taken(ms): 1.28504614143324
+
+====== begin of gnn configuration ======
+| msg_average = 0
+======   end of gnn configuration ======
+Using backend: pytorch
+
+
+torch.cuda.is_available():  True 
+
+
+
+
+dataset_features: {'node_forward': {'1': 0, '0': 1, '3': 2, '2': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '12': 9, '13': 10, '14': 11, '9': 12, '15': 13, '16': 14, '17': 15, '18': 16, '10': 17, '11': 18}, 'node_backward': {0: '1', 1: '0', 2: '3', 3: '2', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '12', 10: '13', 11: '14', 12: '9', 13: '15', 14: '16', 15: '17', 16: '18', 17: '10', 18: '11'}, 'edge_forward': {'0': 0}, 'edge_backward': {0: '0'}, 'max_nodes': 64, 'min_nodes': 2, 'max_edges': 71, 'min_edges': 1, 'max_degree': 4, 'label_size': 2}
+
+
+
+
+config: {'general': {'data_autobalance': False, 'print_dataset_features': True, 'batch_size': 1, 'extract_features': False}, 'run': {'num_epochs': 50, 'learning_rate': 0.003, 'seed': 1800, 'k_fold': 5, 'model': 'DFScodeRNN_cls', 'dataset': 'PTC_FR'}, 'GNN_models': {'DGCNN': {'convolution_layers_size': '32-32-32-1', 'sortpooling_k': 0.6, 'n_hidden': 128, 'convolution_dropout': 0.5, 'pred_dropout': 0.5, 'FP_len': 0}, 'GCN': {'convolution_layers_size': '128-256-512', 'dropout': 0.5}, 'GCND': {'convolution_layers_size': '128-256-512', 'dropout': 0.5}, 'DiffPool': {'convolution_layers_size': '64-64-64', 'pred_hidden_layers': '50-50-50', 'assign_ratio': 0.25, 'number_of_pooling': 1, 'concat_tensors': False}, 'DiffPoolD': {'convolution_layers_size': '64-64-64', 'pred_hidden_layers': '50-50-50', 'assign_ratio': 0.25, 'number_of_pooling': 1, 'concat_tensors': False}, 'DFScodeRNN_cls': {'dummy': 0}}, 'dataset_features': {'node_forward': {'1': 0, '0': 1, '3': 2, '2': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '12': 9, '13': 10, '14': 11, '9': 12, '15': 13, '16': 14, '17': 15, '18': 16, '10': 17, '11': 18}, 'node_backward': {0: '1', 1: '0', 2: '3', 3: '2', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '12', 10: '13', 11: '14', 12: '9', 13: '15', 14: '16', 15: '17', 16: '18', 17: '10', 18: '11'}, 'edge_forward': {'0': 0}, 'edge_backward': {0: '0'}, 'max_nodes': 64, 'min_nodes': 2, 'max_edges': 71, 'min_edges': 1, 'max_degree': 4, 'label_size': 2}}
+
+
+Training a new model: DFScodeRNN_cls
+Run statistics: 
+==== Configuration Settings ====
+== Run Settings ==
+Model: DFScodeRNN_cls, Dataset: PTC_FR
+num_epochs: 50
+learning_rate: 0.003
+seed: 1800
+k_fold: 5
+model: DFScodeRNN_cls
+dataset: PTC_FR
+
+== Model Settings and results ==
+dummy: 0
+
+Accuracy (avg): 0.65529 ROC_AUC (avg): 0.50427 PRC_AUC (avg): 0.34678 
+
+Average forward propagation time taken(ms): 3.4290971560308994
+Average backward propagation time taken(ms): 1.286393183980508
+
+====== begin of gnn configuration ======
+| msg_average = 0
+======   end of gnn configuration ======
+Using backend: pytorch
+
+
+torch.cuda.is_available():  True 
+
+
+
+
+dataset_features: {'node_forward': {'1': 0, '0': 1, '3': 2, '2': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '12': 9, '13': 10, '14': 11, '9': 12, '15': 13, '16': 14, '17': 15, '18': 16, '10': 17, '11': 18}, 'node_backward': {0: '1', 1: '0', 2: '3', 3: '2', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '12', 10: '13', 11: '14', 12: '9', 13: '15', 14: '16', 15: '17', 16: '18', 17: '10', 18: '11'}, 'edge_forward': {'0': 0}, 'edge_backward': {0: '0'}, 'max_nodes': 64, 'min_nodes': 2, 'max_edges': 71, 'min_edges': 1, 'max_degree': 4, 'label_size': 2}
+
+
+
+
+config: {'general': {'data_autobalance': False, 'print_dataset_features': True, 'batch_size': 1, 'extract_features': False}, 'run': {'num_epochs': 50, 'learning_rate': 0.01, 'seed': 1800, 'k_fold': 5, 'model': 'DFScodeRNN_cls', 'dataset': 'PTC_FR'}, 'GNN_models': {'DGCNN': {'convolution_layers_size': '32-32-32-1', 'sortpooling_k': 0.6, 'n_hidden': 128, 'convolution_dropout': 0.5, 'pred_dropout': 0.5, 'FP_len': 0}, 'GCN': {'convolution_layers_size': '128-256-512', 'dropout': 0.5}, 'GCND': {'convolution_layers_size': '128-256-512', 'dropout': 0.5}, 'DiffPool': {'convolution_layers_size': '64-64-64', 'pred_hidden_layers': '50-50-50', 'assign_ratio': 0.25, 'number_of_pooling': 1, 'concat_tensors': False}, 'DiffPoolD': {'convolution_layers_size': '64-64-64', 'pred_hidden_layers': '50-50-50', 'assign_ratio': 0.25, 'number_of_pooling': 1, 'concat_tensors': False}, 'DFScodeRNN_cls': {'dummy': 0}}, 'dataset_features': {'node_forward': {'1': 0, '0': 1, '3': 2, '2': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '12': 9, '13': 10, '14': 11, '9': 12, '15': 13, '16': 14, '17': 15, '18': 16, '10': 17, '11': 18}, 'node_backward': {0: '1', 1: '0', 2: '3', 3: '2', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '12', 10: '13', 11: '14', 12: '9', 13: '15', 14: '16', 15: '17', 16: '18', 17: '10', 18: '11'}, 'edge_forward': {'0': 0}, 'edge_backward': {0: '0'}, 'max_nodes': 64, 'min_nodes': 2, 'max_edges': 71, 'min_edges': 1, 'max_degree': 4, 'label_size': 2}}
+
+
+Training a new model: DFScodeRNN_cls
+Run statistics: 
+==== Configuration Settings ====
+== Run Settings ==
+Model: DFScodeRNN_cls, Dataset: PTC_FR
+num_epochs: 50
+learning_rate: 0.01
+seed: 1800
+k_fold: 5
+model: DFScodeRNN_cls
+dataset: PTC_FR
+
+== Model Settings and results ==
+dummy: 0
+
+Accuracy (avg): 0.65529 ROC_AUC (avg): 0.51151 PRC_AUC (avg): 0.35013 
+
+Average forward propagation time taken(ms): 3.4190477434106845
+Average backward propagation time taken(ms): 1.284371674412849
+
+====== begin of gnn configuration ======
+| msg_average = 0
+======   end of gnn configuration ======
+Using backend: pytorch
+
+
+torch.cuda.is_available():  True 
+
+
+
+
+dataset_features: {'node_forward': {'1': 0, '0': 1, '3': 2, '2': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '12': 9, '13': 10, '14': 11, '9': 12, '15': 13, '16': 14, '17': 15, '18': 16, '10': 17, '11': 18}, 'node_backward': {0: '1', 1: '0', 2: '3', 3: '2', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '12', 10: '13', 11: '14', 12: '9', 13: '15', 14: '16', 15: '17', 16: '18', 17: '10', 18: '11'}, 'edge_forward': {'0': 0}, 'edge_backward': {0: '0'}, 'max_nodes': 64, 'min_nodes': 2, 'max_edges': 71, 'min_edges': 1, 'max_degree': 4, 'label_size': 2}
+
+
+
+
+config: {'general': {'data_autobalance': False, 'print_dataset_features': True, 'batch_size': 1, 'extract_features': False}, 'run': {'num_epochs': 50, 'learning_rate': 0.0003, 'seed': 1800, 'k_fold': 5, 'model': 'DFScodeRNN_cls', 'dataset': 'PTC_FR'}, 'GNN_models': {'DGCNN': {'convolution_layers_size': '32-32-32-1', 'sortpooling_k': 0.6, 'n_hidden': 128, 'convolution_dropout': 0.5, 'pred_dropout': 0.5, 'FP_len': 0}, 'GCN': {'convolution_layers_size': '128-256-512', 'dropout': 0.5}, 'GCND': {'convolution_layers_size': '128-256-512', 'dropout': 0.5}, 'DiffPool': {'convolution_layers_size': '64-64-64', 'pred_hidden_layers': '50-50-50', 'assign_ratio': 0.25, 'number_of_pooling': 1, 'concat_tensors': False}, 'DiffPoolD': {'convolution_layers_size': '64-64-64', 'pred_hidden_layers': '50-50-50', 'assign_ratio': 0.25, 'number_of_pooling': 1, 'concat_tensors': False}, 'DFScodeRNN_cls': {'dummy': 0}}, 'dataset_features': {'node_forward': {'1': 0, '0': 1, '3': 2, '2': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '12': 9, '13': 10, '14': 11, '9': 12, '15': 13, '16': 14, '17': 15, '18': 16, '10': 17, '11': 18}, 'node_backward': {0: '1', 1: '0', 2: '3', 3: '2', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '12', 10: '13', 11: '14', 12: '9', 13: '15', 14: '16', 15: '17', 16: '18', 17: '10', 18: '11'}, 'edge_forward': {'0': 0}, 'edge_backward': {0: '0'}, 'max_nodes': 64, 'min_nodes': 2, 'max_edges': 71, 'min_edges': 1, 'max_degree': 4, 'label_size': 2}}
+
+
+Training a new model: DFScodeRNN_cls
+Run statistics: 
+==== Configuration Settings ====
+== Run Settings ==
+Model: DFScodeRNN_cls, Dataset: PTC_FR
+num_epochs: 50
+learning_rate: 0.0003
+seed: 1800
+k_fold: 5
+model: DFScodeRNN_cls
+dataset: PTC_FR
+
+== Model Settings and results ==
+dummy: 0
+
+Accuracy (avg): 0.53328 ROC_AUC (avg): 0.51008 PRC_AUC (avg): 0.36525 
+
+Average forward propagation time taken(ms): 3.4218085719490783
+Average backward propagation time taken(ms): 1.2849647505955506
+
+====== begin of gnn configuration ======
+| msg_average = 0
+======   end of gnn configuration ======
+Using backend: pytorch
+
+
+torch.cuda.is_available():  True 
+
+
+
+
+dataset_features: {'node_forward': {'1': 0, '0': 1, '3': 2, '2': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '12': 9, '13': 10, '14': 11, '9': 12, '15': 13, '16': 14, '17': 15, '18': 16, '10': 17, '11': 18}, 'node_backward': {0: '1', 1: '0', 2: '3', 3: '2', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '12', 10: '13', 11: '14', 12: '9', 13: '15', 14: '16', 15: '17', 16: '18', 17: '10', 18: '11'}, 'edge_forward': {'0': 0}, 'edge_backward': {0: '0'}, 'max_nodes': 64, 'min_nodes': 2, 'max_edges': 71, 'min_edges': 1, 'max_degree': 4, 'label_size': 2}
+
+
+
+
+config: {'general': {'data_autobalance': False, 'print_dataset_features': True, 'batch_size': 1, 'extract_features': False}, 'run': {'num_epochs': 50, 'learning_rate': 0.001, 'seed': 1800, 'k_fold': 5, 'model': 'DFScodeRNN_cls', 'dataset': 'PTC_FR'}, 'GNN_models': {'DGCNN': {'convolution_layers_size': '32-32-32-1', 'sortpooling_k': 0.6, 'n_hidden': 128, 'convolution_dropout': 0.5, 'pred_dropout': 0.5, 'FP_len': 0}, 'GCN': {'convolution_layers_size': '128-256-512', 'dropout': 0.5}, 'GCND': {'convolution_layers_size': '128-256-512', 'dropout': 0.5}, 'DiffPool': {'convolution_layers_size': '64-64-64', 'pred_hidden_layers': '50-50-50', 'assign_ratio': 0.25, 'number_of_pooling': 1, 'concat_tensors': False}, 'DiffPoolD': {'convolution_layers_size': '64-64-64', 'pred_hidden_layers': '50-50-50', 'assign_ratio': 0.25, 'number_of_pooling': 1, 'concat_tensors': False}, 'DFScodeRNN_cls': {'dummy': 0}}, 'dataset_features': {'node_forward': {'1': 0, '0': 1, '3': 2, '2': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '12': 9, '13': 10, '14': 11, '9': 12, '15': 13, '16': 14, '17': 15, '18': 16, '10': 17, '11': 18}, 'node_backward': {0: '1', 1: '0', 2: '3', 3: '2', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '12', 10: '13', 11: '14', 12: '9', 13: '15', 14: '16', 15: '17', 16: '18', 17: '10', 18: '11'}, 'edge_forward': {'0': 0}, 'edge_backward': {0: '0'}, 'max_nodes': 64, 'min_nodes': 2, 'max_edges': 71, 'min_edges': 1, 'max_degree': 4, 'label_size': 2}}
+
+
+Training a new model: DFScodeRNN_cls
+Run statistics: 
+==== Configuration Settings ====
+== Run Settings ==
+Model: DFScodeRNN_cls, Dataset: PTC_FR
+num_epochs: 50
+learning_rate: 0.001
+seed: 1800
+k_fold: 5
+model: DFScodeRNN_cls
+dataset: PTC_FR
+
+== Model Settings and results ==
+dummy: 0
+
+Accuracy (avg): 0.53328 ROC_AUC (avg): 0.45828 PRC_AUC (avg): 0.33642 
+
+Average forward propagation time taken(ms): 3.399215201528231
+Average backward propagation time taken(ms): 1.2761126912955099
+
+====== begin of gnn configuration ======
+| msg_average = 0
+======   end of gnn configuration ======
+Using backend: pytorch
+
+
+torch.cuda.is_available():  True 
+
+
+
+
+dataset_features: {'node_forward': {'1': 0, '0': 1, '3': 2, '2': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '12': 9, '13': 10, '14': 11, '9': 12, '15': 13, '16': 14, '17': 15, '18': 16, '10': 17, '11': 18}, 'node_backward': {0: '1', 1: '0', 2: '3', 3: '2', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '12', 10: '13', 11: '14', 12: '9', 13: '15', 14: '16', 15: '17', 16: '18', 17: '10', 18: '11'}, 'edge_forward': {'0': 0}, 'edge_backward': {0: '0'}, 'max_nodes': 64, 'min_nodes': 2, 'max_edges': 71, 'min_edges': 1, 'max_degree': 4, 'label_size': 2}
+
+
+
+
+config: {'general': {'data_autobalance': False, 'print_dataset_features': True, 'batch_size': 1, 'extract_features': False}, 'run': {'num_epochs': 50, 'learning_rate': 0.003, 'seed': 1800, 'k_fold': 5, 'model': 'DFScodeRNN_cls', 'dataset': 'PTC_FR'}, 'GNN_models': {'DGCNN': {'convolution_layers_size': '32-32-32-1', 'sortpooling_k': 0.6, 'n_hidden': 128, 'convolution_dropout': 0.5, 'pred_dropout': 0.5, 'FP_len': 0}, 'GCN': {'convolution_layers_size': '128-256-512', 'dropout': 0.5}, 'GCND': {'convolution_layers_size': '128-256-512', 'dropout': 0.5}, 'DiffPool': {'convolution_layers_size': '64-64-64', 'pred_hidden_layers': '50-50-50', 'assign_ratio': 0.25, 'number_of_pooling': 1, 'concat_tensors': False}, 'DiffPoolD': {'convolution_layers_size': '64-64-64', 'pred_hidden_layers': '50-50-50', 'assign_ratio': 0.25, 'number_of_pooling': 1, 'concat_tensors': False}, 'DFScodeRNN_cls': {'dummy': 0}}, 'dataset_features': {'node_forward': {'1': 0, '0': 1, '3': 2, '2': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '12': 9, '13': 10, '14': 11, '9': 12, '15': 13, '16': 14, '17': 15, '18': 16, '10': 17, '11': 18}, 'node_backward': {0: '1', 1: '0', 2: '3', 3: '2', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '12', 10: '13', 11: '14', 12: '9', 13: '15', 14: '16', 15: '17', 16: '18', 17: '10', 18: '11'}, 'edge_forward': {'0': 0}, 'edge_backward': {0: '0'}, 'max_nodes': 64, 'min_nodes': 2, 'max_edges': 71, 'min_edges': 1, 'max_degree': 4, 'label_size': 2}}
+
+
+Training a new model: DFScodeRNN_cls
+Run statistics: 
+==== Configuration Settings ====
+== Run Settings ==
+Model: DFScodeRNN_cls, Dataset: PTC_FR
+num_epochs: 50
+learning_rate: 0.003
+seed: 1800
+k_fold: 5
+model: DFScodeRNN_cls
+dataset: PTC_FR
+
+== Model Settings and results ==
+dummy: 0
+
+Accuracy (avg): 0.65529 ROC_AUC (avg): 0.47683 PRC_AUC (avg): 0.33684 
+
+Average forward propagation time taken(ms): 3.419443866603475
+Average backward propagation time taken(ms): 1.2843874932363846
+
+====== begin of gnn configuration ======
+| msg_average = 0
+======   end of gnn configuration ======
+Using backend: pytorch
+
+
+torch.cuda.is_available():  True 
+
+
+
+
+dataset_features: {'node_forward': {'1': 0, '0': 1, '3': 2, '2': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '12': 9, '13': 10, '14': 11, '9': 12, '15': 13, '16': 14, '17': 15, '18': 16, '10': 17, '11': 18}, 'node_backward': {0: '1', 1: '0', 2: '3', 3: '2', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '12', 10: '13', 11: '14', 12: '9', 13: '15', 14: '16', 15: '17', 16: '18', 17: '10', 18: '11'}, 'edge_forward': {'0': 0}, 'edge_backward': {0: '0'}, 'max_nodes': 64, 'min_nodes': 2, 'max_edges': 71, 'min_edges': 1, 'max_degree': 4, 'label_size': 2}
+
+
+
+
+config: {'general': {'data_autobalance': False, 'print_dataset_features': True, 'batch_size': 1, 'extract_features': False}, 'run': {'num_epochs': 50, 'learning_rate': 0.01, 'seed': 1800, 'k_fold': 5, 'model': 'DFScodeRNN_cls', 'dataset': 'PTC_FR'}, 'GNN_models': {'DGCNN': {'convolution_layers_size': '32-32-32-1', 'sortpooling_k': 0.6, 'n_hidden': 128, 'convolution_dropout': 0.5, 'pred_dropout': 0.5, 'FP_len': 0}, 'GCN': {'convolution_layers_size': '128-256-512', 'dropout': 0.5}, 'GCND': {'convolution_layers_size': '128-256-512', 'dropout': 0.5}, 'DiffPool': {'convolution_layers_size': '64-64-64', 'pred_hidden_layers': '50-50-50', 'assign_ratio': 0.25, 'number_of_pooling': 1, 'concat_tensors': False}, 'DiffPoolD': {'convolution_layers_size': '64-64-64', 'pred_hidden_layers': '50-50-50', 'assign_ratio': 0.25, 'number_of_pooling': 1, 'concat_tensors': False}, 'DFScodeRNN_cls': {'dummy': 0}}, 'dataset_features': {'node_forward': {'1': 0, '0': 1, '3': 2, '2': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '12': 9, '13': 10, '14': 11, '9': 12, '15': 13, '16': 14, '17': 15, '18': 16, '10': 17, '11': 18}, 'node_backward': {0: '1', 1: '0', 2: '3', 3: '2', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '12', 10: '13', 11: '14', 12: '9', 13: '15', 14: '16', 15: '17', 16: '18', 17: '10', 18: '11'}, 'edge_forward': {'0': 0}, 'edge_backward': {0: '0'}, 'max_nodes': 64, 'min_nodes': 2, 'max_edges': 71, 'min_edges': 1, 'max_degree': 4, 'label_size': 2}}
+
+
+Training a new model: DFScodeRNN_cls
+Run statistics: 
+==== Configuration Settings ====
+== Run Settings ==
+Model: DFScodeRNN_cls, Dataset: PTC_FR
+num_epochs: 50
+learning_rate: 0.01
+seed: 1800
+k_fold: 5
+model: DFScodeRNN_cls
+dataset: PTC_FR
+
+== Model Settings and results ==
+dummy: 0
+
+Accuracy (avg): 0.65529 ROC_AUC (avg): 0.46892 PRC_AUC (avg): 0.33517 
+
+Average forward propagation time taken(ms): 3.4162584603252273
+Average backward propagation time taken(ms): 1.2800875285084508
+
+====== begin of gnn configuration ======
+| msg_average = 0
+======   end of gnn configuration ======
+Using backend: pytorch
+
+
+torch.cuda.is_available():  True 
+
+
+
+
+dataset_features: {'node_forward': {'1': 0, '0': 1, '3': 2, '2': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '12': 9, '13': 10, '14': 11, '9': 12, '15': 13, '16': 14, '17': 15, '18': 16, '10': 17, '11': 18}, 'node_backward': {0: '1', 1: '0', 2: '3', 3: '2', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '12', 10: '13', 11: '14', 12: '9', 13: '15', 14: '16', 15: '17', 16: '18', 17: '10', 18: '11'}, 'edge_forward': {'0': 0}, 'edge_backward': {0: '0'}, 'max_nodes': 64, 'min_nodes': 2, 'max_edges': 71, 'min_edges': 1, 'max_degree': 4, 'label_size': 2}
+
+
+
+
+config: {'general': {'data_autobalance': False, 'print_dataset_features': True, 'batch_size': 1, 'extract_features': False}, 'run': {'num_epochs': 50, 'learning_rate': 0.0003, 'seed': 1800, 'k_fold': 5, 'model': 'DFScodeRNN_cls', 'dataset': 'PTC_FR'}, 'GNN_models': {'DGCNN': {'convolution_layers_size': '32-32-32-1', 'sortpooling_k': 0.6, 'n_hidden': 128, 'convolution_dropout': 0.5, 'pred_dropout': 0.5, 'FP_len': 0}, 'GCN': {'convolution_layers_size': '128-256-512', 'dropout': 0.5}, 'GCND': {'convolution_layers_size': '128-256-512', 'dropout': 0.5}, 'DiffPool': {'convolution_layers_size': '64-64-64', 'pred_hidden_layers': '50-50-50', 'assign_ratio': 0.25, 'number_of_pooling': 1, 'concat_tensors': False}, 'DiffPoolD': {'convolution_layers_size': '64-64-64', 'pred_hidden_layers': '50-50-50', 'assign_ratio': 0.25, 'number_of_pooling': 1, 'concat_tensors': False}, 'DFScodeRNN_cls': {'dummy': 0}}, 'dataset_features': {'node_forward': {'1': 0, '0': 1, '3': 2, '2': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '12': 9, '13': 10, '14': 11, '9': 12, '15': 13, '16': 14, '17': 15, '18': 16, '10': 17, '11': 18}, 'node_backward': {0: '1', 1: '0', 2: '3', 3: '2', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '12', 10: '13', 11: '14', 12: '9', 13: '15', 14: '16', 15: '17', 16: '18', 17: '10', 18: '11'}, 'edge_forward': {'0': 0}, 'edge_backward': {0: '0'}, 'max_nodes': 64, 'min_nodes': 2, 'max_edges': 71, 'min_edges': 1, 'max_degree': 4, 'label_size': 2}}
+
+
+Training a new model: DFScodeRNN_cls
+Run statistics: 
+==== Configuration Settings ====
+== Run Settings ==
+Model: DFScodeRNN_cls, Dataset: PTC_FR
+num_epochs: 50
+learning_rate: 0.0003
+seed: 1800
+k_fold: 5
+model: DFScodeRNN_cls
+dataset: PTC_FR
+
+== Model Settings and results ==
+dummy: 0
+
+Accuracy (avg): 0.34471 ROC_AUC (avg): 0.50284 PRC_AUC (avg): 0.35669 
+
+Average forward propagation time taken(ms): 5.278922793444862
+Average backward propagation time taken(ms): 2.0413629189618945
+
+====== begin of gnn configuration ======
+| msg_average = 0
+======   end of gnn configuration ======
+Using backend: pytorch
+
+
+torch.cuda.is_available():  True 
+
+
+
+
+dataset_features: {'node_forward': {'1': 0, '0': 1, '3': 2, '2': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '12': 9, '13': 10, '14': 11, '9': 12, '15': 13, '16': 14, '17': 15, '18': 16, '10': 17, '11': 18}, 'node_backward': {0: '1', 1: '0', 2: '3', 3: '2', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '12', 10: '13', 11: '14', 12: '9', 13: '15', 14: '16', 15: '17', 16: '18', 17: '10', 18: '11'}, 'edge_forward': {'0': 0}, 'edge_backward': {0: '0'}, 'max_nodes': 64, 'min_nodes': 2, 'max_edges': 71, 'min_edges': 1, 'max_degree': 4, 'label_size': 2}
+
+
+
+
+config: {'general': {'data_autobalance': False, 'print_dataset_features': True, 'batch_size': 1, 'extract_features': False}, 'run': {'num_epochs': 50, 'learning_rate': 0.001, 'seed': 1800, 'k_fold': 5, 'model': 'DFScodeRNN_cls', 'dataset': 'PTC_FR'}, 'GNN_models': {'DGCNN': {'convolution_layers_size': '32-32-32-1', 'sortpooling_k': 0.6, 'n_hidden': 128, 'convolution_dropout': 0.5, 'pred_dropout': 0.5, 'FP_len': 0}, 'GCN': {'convolution_layers_size': '128-256-512', 'dropout': 0.5}, 'GCND': {'convolution_layers_size': '128-256-512', 'dropout': 0.5}, 'DiffPool': {'convolution_layers_size': '64-64-64', 'pred_hidden_layers': '50-50-50', 'assign_ratio': 0.25, 'number_of_pooling': 1, 'concat_tensors': False}, 'DiffPoolD': {'convolution_layers_size': '64-64-64', 'pred_hidden_layers': '50-50-50', 'assign_ratio': 0.25, 'number_of_pooling': 1, 'concat_tensors': False}, 'DFScodeRNN_cls': {'dummy': 0}}, 'dataset_features': {'node_forward': {'1': 0, '0': 1, '3': 2, '2': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '12': 9, '13': 10, '14': 11, '9': 12, '15': 13, '16': 14, '17': 15, '18': 16, '10': 17, '11': 18}, 'node_backward': {0: '1', 1: '0', 2: '3', 3: '2', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '12', 10: '13', 11: '14', 12: '9', 13: '15', 14: '16', 15: '17', 16: '18', 17: '10', 18: '11'}, 'edge_forward': {'0': 0}, 'edge_backward': {0: '0'}, 'max_nodes': 64, 'min_nodes': 2, 'max_edges': 71, 'min_edges': 1, 'max_degree': 4, 'label_size': 2}}
+
+
+Training a new model: DFScodeRNN_cls
+Run statistics: 
+==== Configuration Settings ====
+== Run Settings ==
+Model: DFScodeRNN_cls, Dataset: PTC_FR
+num_epochs: 50
+learning_rate: 0.001
+seed: 1800
+k_fold: 5
+model: DFScodeRNN_cls
+dataset: PTC_FR
+
+== Model Settings and results ==
+dummy: 0
+
+Accuracy (avg): 0.46672 ROC_AUC (avg): 0.48406 PRC_AUC (avg): 0.34457 
+
+Average forward propagation time taken(ms): 5.207862891281384
+Average backward propagation time taken(ms): 2.0211162273267336
+
+====== begin of gnn configuration ======
+| msg_average = 0
+======   end of gnn configuration ======
+Using backend: pytorch
+
+
+torch.cuda.is_available():  True 
+
+
+
+
+dataset_features: {'node_forward': {'1': 0, '0': 1, '3': 2, '2': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '12': 9, '13': 10, '14': 11, '9': 12, '15': 13, '16': 14, '17': 15, '18': 16, '10': 17, '11': 18}, 'node_backward': {0: '1', 1: '0', 2: '3', 3: '2', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '12', 10: '13', 11: '14', 12: '9', 13: '15', 14: '16', 15: '17', 16: '18', 17: '10', 18: '11'}, 'edge_forward': {'0': 0}, 'edge_backward': {0: '0'}, 'max_nodes': 64, 'min_nodes': 2, 'max_edges': 71, 'min_edges': 1, 'max_degree': 4, 'label_size': 2}
+
+
+
+
+config: {'general': {'data_autobalance': False, 'print_dataset_features': True, 'batch_size': 1, 'extract_features': False}, 'run': {'num_epochs': 50, 'learning_rate': 0.003, 'seed': 1800, 'k_fold': 5, 'model': 'DFScodeRNN_cls', 'dataset': 'PTC_FR'}, 'GNN_models': {'DGCNN': {'convolution_layers_size': '32-32-32-1', 'sortpooling_k': 0.6, 'n_hidden': 128, 'convolution_dropout': 0.5, 'pred_dropout': 0.5, 'FP_len': 0}, 'GCN': {'convolution_layers_size': '128-256-512', 'dropout': 0.5}, 'GCND': {'convolution_layers_size': '128-256-512', 'dropout': 0.5}, 'DiffPool': {'convolution_layers_size': '64-64-64', 'pred_hidden_layers': '50-50-50', 'assign_ratio': 0.25, 'number_of_pooling': 1, 'concat_tensors': False}, 'DiffPoolD': {'convolution_layers_size': '64-64-64', 'pred_hidden_layers': '50-50-50', 'assign_ratio': 0.25, 'number_of_pooling': 1, 'concat_tensors': False}, 'DFScodeRNN_cls': {'dummy': 0}}, 'dataset_features': {'node_forward': {'1': 0, '0': 1, '3': 2, '2': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '12': 9, '13': 10, '14': 11, '9': 12, '15': 13, '16': 14, '17': 15, '18': 16, '10': 17, '11': 18}, 'node_backward': {0: '1', 1: '0', 2: '3', 3: '2', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '12', 10: '13', 11: '14', 12: '9', 13: '15', 14: '16', 15: '17', 16: '18', 17: '10', 18: '11'}, 'edge_forward': {'0': 0}, 'edge_backward': {0: '0'}, 'max_nodes': 64, 'min_nodes': 2, 'max_edges': 71, 'min_edges': 1, 'max_degree': 4, 'label_size': 2}}
+
+
+Training a new model: DFScodeRNN_cls
+Run statistics: 
+==== Configuration Settings ====
+== Run Settings ==
+Model: DFScodeRNN_cls, Dataset: PTC_FR
+num_epochs: 50
+learning_rate: 0.003
+seed: 1800
+k_fold: 5
+model: DFScodeRNN_cls
+dataset: PTC_FR
+
+== Model Settings and results ==
+dummy: 0
+
+Accuracy (avg): 0.52958 ROC_AUC (avg): 0.49383 PRC_AUC (avg): 0.34293 
+
+Average forward propagation time taken(ms): 5.217998195764996
+Average backward propagation time taken(ms): 2.0240198377674203
+
+====== begin of gnn configuration ======
+| msg_average = 0
+======   end of gnn configuration ======
+Using backend: pytorch
+
+
+torch.cuda.is_available():  True 
+
+
+
+
+dataset_features: {'node_forward': {'1': 0, '0': 1, '3': 2, '2': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '12': 9, '13': 10, '14': 11, '9': 12, '15': 13, '16': 14, '17': 15, '18': 16, '10': 17, '11': 18}, 'node_backward': {0: '1', 1: '0', 2: '3', 3: '2', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '12', 10: '13', 11: '14', 12: '9', 13: '15', 14: '16', 15: '17', 16: '18', 17: '10', 18: '11'}, 'edge_forward': {'0': 0}, 'edge_backward': {0: '0'}, 'max_nodes': 64, 'min_nodes': 2, 'max_edges': 71, 'min_edges': 1, 'max_degree': 4, 'label_size': 2}
+
+
+
+
+config: {'general': {'data_autobalance': False, 'print_dataset_features': True, 'batch_size': 1, 'extract_features': False}, 'run': {'num_epochs': 50, 'learning_rate': 0.01, 'seed': 1800, 'k_fold': 5, 'model': 'DFScodeRNN_cls', 'dataset': 'PTC_FR'}, 'GNN_models': {'DGCNN': {'convolution_layers_size': '32-32-32-1', 'sortpooling_k': 0.6, 'n_hidden': 128, 'convolution_dropout': 0.5, 'pred_dropout': 0.5, 'FP_len': 0}, 'GCN': {'convolution_layers_size': '128-256-512', 'dropout': 0.5}, 'GCND': {'convolution_layers_size': '128-256-512', 'dropout': 0.5}, 'DiffPool': {'convolution_layers_size': '64-64-64', 'pred_hidden_layers': '50-50-50', 'assign_ratio': 0.25, 'number_of_pooling': 1, 'concat_tensors': False}, 'DiffPoolD': {'convolution_layers_size': '64-64-64', 'pred_hidden_layers': '50-50-50', 'assign_ratio': 0.25, 'number_of_pooling': 1, 'concat_tensors': False}, 'DFScodeRNN_cls': {'dummy': 0}}, 'dataset_features': {'node_forward': {'1': 0, '0': 1, '3': 2, '2': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '12': 9, '13': 10, '14': 11, '9': 12, '15': 13, '16': 14, '17': 15, '18': 16, '10': 17, '11': 18}, 'node_backward': {0: '1', 1: '0', 2: '3', 3: '2', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '12', 10: '13', 11: '14', 12: '9', 13: '15', 14: '16', 15: '17', 16: '18', 17: '10', 18: '11'}, 'edge_forward': {'0': 0}, 'edge_backward': {0: '0'}, 'max_nodes': 64, 'min_nodes': 2, 'max_edges': 71, 'min_edges': 1, 'max_degree': 4, 'label_size': 2}}
+
+
+Training a new model: DFScodeRNN_cls
+Run statistics: 
+==== Configuration Settings ====
+== Run Settings ==
+Model: DFScodeRNN_cls, Dataset: PTC_FR
+num_epochs: 50
+learning_rate: 0.01
+seed: 1800
+k_fold: 5
+model: DFScodeRNN_cls
+dataset: PTC_FR
+
+== Model Settings and results ==
+dummy: 0
+
+Accuracy (avg): 0.65529 ROC_AUC (avg): 0.5058 PRC_AUC (avg): 0.34809 
+
+Average forward propagation time taken(ms): 5.207949435042219
+Average backward propagation time taken(ms): 2.0214953256848154
+
+====== begin of gnn configuration ======
+| msg_average = 0
+======   end of gnn configuration ======
+Using backend: pytorch
+
+
+torch.cuda.is_available():  True 
+
+
+
+
+dataset_features: {'node_forward': {'1': 0, '0': 1, '3': 2, '2': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '12': 9, '13': 10, '14': 11, '9': 12, '15': 13, '16': 14, '17': 15, '18': 16, '10': 17, '11': 18}, 'node_backward': {0: '1', 1: '0', 2: '3', 3: '2', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '12', 10: '13', 11: '14', 12: '9', 13: '15', 14: '16', 15: '17', 16: '18', 17: '10', 18: '11'}, 'edge_forward': {'0': 0}, 'edge_backward': {0: '0'}, 'max_nodes': 64, 'min_nodes': 2, 'max_edges': 71, 'min_edges': 1, 'max_degree': 4, 'label_size': 2}
+
+
+
+
+config: {'general': {'data_autobalance': False, 'print_dataset_features': True, 'batch_size': 1, 'extract_features': False}, 'run': {'num_epochs': 50, 'learning_rate': 0.0003, 'seed': 1800, 'k_fold': 5, 'model': 'DFScodeRNN_cls', 'dataset': 'PTC_FR'}, 'GNN_models': {'DGCNN': {'convolution_layers_size': '32-32-32-1', 'sortpooling_k': 0.6, 'n_hidden': 128, 'convolution_dropout': 0.5, 'pred_dropout': 0.5, 'FP_len': 0}, 'GCN': {'convolution_layers_size': '128-256-512', 'dropout': 0.5}, 'GCND': {'convolution_layers_size': '128-256-512', 'dropout': 0.5}, 'DiffPool': {'convolution_layers_size': '64-64-64', 'pred_hidden_layers': '50-50-50', 'assign_ratio': 0.25, 'number_of_pooling': 1, 'concat_tensors': False}, 'DiffPoolD': {'convolution_layers_size': '64-64-64', 'pred_hidden_layers': '50-50-50', 'assign_ratio': 0.25, 'number_of_pooling': 1, 'concat_tensors': False}, 'DFScodeRNN_cls': {'dummy': 0}}, 'dataset_features': {'node_forward': {'1': 0, '0': 1, '3': 2, '2': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '12': 9, '13': 10, '14': 11, '9': 12, '15': 13, '16': 14, '17': 15, '18': 16, '10': 17, '11': 18}, 'node_backward': {0: '1', 1: '0', 2: '3', 3: '2', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '12', 10: '13', 11: '14', 12: '9', 13: '15', 14: '16', 15: '17', 16: '18', 17: '10', 18: '11'}, 'edge_forward': {'0': 0}, 'edge_backward': {0: '0'}, 'max_nodes': 64, 'min_nodes': 2, 'max_edges': 71, 'min_edges': 1, 'max_degree': 4, 'label_size': 2}}
+
+
+Training a new model: DFScodeRNN_cls
+Run statistics: 
+==== Configuration Settings ====
+== Run Settings ==
+Model: DFScodeRNN_cls, Dataset: PTC_FR
+num_epochs: 50
+learning_rate: 0.0003
+seed: 1800
+k_fold: 5
+model: DFScodeRNN_cls
+dataset: PTC_FR
+
+== Model Settings and results ==
+dummy: 0
+
+Accuracy (avg): 0.47042 ROC_AUC (avg): 0.4917 PRC_AUC (avg): 0.36036 
+
+Average forward propagation time taken(ms): 5.204387161721076
+Average backward propagation time taken(ms): 2.0162299785883753
+
+====== begin of gnn configuration ======
+| msg_average = 0
+======   end of gnn configuration ======
+Using backend: pytorch
+
+
+torch.cuda.is_available():  True 
+
+
+
+
+dataset_features: {'node_forward': {'1': 0, '0': 1, '3': 2, '2': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '12': 9, '13': 10, '14': 11, '9': 12, '15': 13, '16': 14, '17': 15, '18': 16, '10': 17, '11': 18}, 'node_backward': {0: '1', 1: '0', 2: '3', 3: '2', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '12', 10: '13', 11: '14', 12: '9', 13: '15', 14: '16', 15: '17', 16: '18', 17: '10', 18: '11'}, 'edge_forward': {'0': 0}, 'edge_backward': {0: '0'}, 'max_nodes': 64, 'min_nodes': 2, 'max_edges': 71, 'min_edges': 1, 'max_degree': 4, 'label_size': 2}
+
+
+
+
+config: {'general': {'data_autobalance': False, 'print_dataset_features': True, 'batch_size': 1, 'extract_features': False}, 'run': {'num_epochs': 50, 'learning_rate': 0.001, 'seed': 1800, 'k_fold': 5, 'model': 'DFScodeRNN_cls', 'dataset': 'PTC_FR'}, 'GNN_models': {'DGCNN': {'convolution_layers_size': '32-32-32-1', 'sortpooling_k': 0.6, 'n_hidden': 128, 'convolution_dropout': 0.5, 'pred_dropout': 0.5, 'FP_len': 0}, 'GCN': {'convolution_layers_size': '128-256-512', 'dropout': 0.5}, 'GCND': {'convolution_layers_size': '128-256-512', 'dropout': 0.5}, 'DiffPool': {'convolution_layers_size': '64-64-64', 'pred_hidden_layers': '50-50-50', 'assign_ratio': 0.25, 'number_of_pooling': 1, 'concat_tensors': False}, 'DiffPoolD': {'convolution_layers_size': '64-64-64', 'pred_hidden_layers': '50-50-50', 'assign_ratio': 0.25, 'number_of_pooling': 1, 'concat_tensors': False}, 'DFScodeRNN_cls': {'dummy': 0}}, 'dataset_features': {'node_forward': {'1': 0, '0': 1, '3': 2, '2': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '12': 9, '13': 10, '14': 11, '9': 12, '15': 13, '16': 14, '17': 15, '18': 16, '10': 17, '11': 18}, 'node_backward': {0: '1', 1: '0', 2: '3', 3: '2', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '12', 10: '13', 11: '14', 12: '9', 13: '15', 14: '16', 15: '17', 16: '18', 17: '10', 18: '11'}, 'edge_forward': {'0': 0}, 'edge_backward': {0: '0'}, 'max_nodes': 64, 'min_nodes': 2, 'max_edges': 71, 'min_edges': 1, 'max_degree': 4, 'label_size': 2}}
+
+
+Training a new model: DFScodeRNN_cls
+Run statistics: 
+==== Configuration Settings ====
+== Run Settings ==
+Model: DFScodeRNN_cls, Dataset: PTC_FR
+num_epochs: 50
+learning_rate: 0.001
+seed: 1800
+k_fold: 5
+model: DFScodeRNN_cls
+dataset: PTC_FR
+
+== Model Settings and results ==
+dummy: 0
+
+Accuracy (avg): 0.53328 ROC_AUC (avg): 0.51254 PRC_AUC (avg): 0.35765 
+
+Average forward propagation time taken(ms): 5.1929301347731265
+Average backward propagation time taken(ms): 2.0113486297102865
+
+====== begin of gnn configuration ======
+| msg_average = 0
+======   end of gnn configuration ======
+Using backend: pytorch
+
+
+torch.cuda.is_available():  True 
+
+
+
+
+dataset_features: {'node_forward': {'1': 0, '0': 1, '3': 2, '2': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '12': 9, '13': 10, '14': 11, '9': 12, '15': 13, '16': 14, '17': 15, '18': 16, '10': 17, '11': 18}, 'node_backward': {0: '1', 1: '0', 2: '3', 3: '2', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '12', 10: '13', 11: '14', 12: '9', 13: '15', 14: '16', 15: '17', 16: '18', 17: '10', 18: '11'}, 'edge_forward': {'0': 0}, 'edge_backward': {0: '0'}, 'max_nodes': 64, 'min_nodes': 2, 'max_edges': 71, 'min_edges': 1, 'max_degree': 4, 'label_size': 2}
+
+
+
+
+config: {'general': {'data_autobalance': False, 'print_dataset_features': True, 'batch_size': 1, 'extract_features': False}, 'run': {'num_epochs': 50, 'learning_rate': 0.003, 'seed': 1800, 'k_fold': 5, 'model': 'DFScodeRNN_cls', 'dataset': 'PTC_FR'}, 'GNN_models': {'DGCNN': {'convolution_layers_size': '32-32-32-1', 'sortpooling_k': 0.6, 'n_hidden': 128, 'convolution_dropout': 0.5, 'pred_dropout': 0.5, 'FP_len': 0}, 'GCN': {'convolution_layers_size': '128-256-512', 'dropout': 0.5}, 'GCND': {'convolution_layers_size': '128-256-512', 'dropout': 0.5}, 'DiffPool': {'convolution_layers_size': '64-64-64', 'pred_hidden_layers': '50-50-50', 'assign_ratio': 0.25, 'number_of_pooling': 1, 'concat_tensors': False}, 'DiffPoolD': {'convolution_layers_size': '64-64-64', 'pred_hidden_layers': '50-50-50', 'assign_ratio': 0.25, 'number_of_pooling': 1, 'concat_tensors': False}, 'DFScodeRNN_cls': {'dummy': 0}}, 'dataset_features': {'node_forward': {'1': 0, '0': 1, '3': 2, '2': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '12': 9, '13': 10, '14': 11, '9': 12, '15': 13, '16': 14, '17': 15, '18': 16, '10': 17, '11': 18}, 'node_backward': {0: '1', 1: '0', 2: '3', 3: '2', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '12', 10: '13', 11: '14', 12: '9', 13: '15', 14: '16', 15: '17', 16: '18', 17: '10', 18: '11'}, 'edge_forward': {'0': 0}, 'edge_backward': {0: '0'}, 'max_nodes': 64, 'min_nodes': 2, 'max_edges': 71, 'min_edges': 1, 'max_degree': 4, 'label_size': 2}}
+
+
+Training a new model: DFScodeRNN_cls
+Run statistics: 
+==== Configuration Settings ====
+== Run Settings ==
+Model: DFScodeRNN_cls, Dataset: PTC_FR
+num_epochs: 50
+learning_rate: 0.003
+seed: 1800
+k_fold: 5
+model: DFScodeRNN_cls
+dataset: PTC_FR
+
+== Model Settings and results ==
+dummy: 0
+
+Accuracy (avg): 0.65529 ROC_AUC (avg): 0.49312 PRC_AUC (avg): 0.34181 
+
+Average forward propagation time taken(ms): 5.208703317535766
+Average backward propagation time taken(ms): 2.017669164609584
+
+====== begin of gnn configuration ======
+| msg_average = 0
+======   end of gnn configuration ======
+Using backend: pytorch
+
+
+torch.cuda.is_available():  True 
+
+
+
+
+dataset_features: {'node_forward': {'1': 0, '0': 1, '3': 2, '2': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '12': 9, '13': 10, '14': 11, '9': 12, '15': 13, '16': 14, '17': 15, '18': 16, '10': 17, '11': 18}, 'node_backward': {0: '1', 1: '0', 2: '3', 3: '2', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '12', 10: '13', 11: '14', 12: '9', 13: '15', 14: '16', 15: '17', 16: '18', 17: '10', 18: '11'}, 'edge_forward': {'0': 0}, 'edge_backward': {0: '0'}, 'max_nodes': 64, 'min_nodes': 2, 'max_edges': 71, 'min_edges': 1, 'max_degree': 4, 'label_size': 2}
+
+
+
+
+config: {'general': {'data_autobalance': False, 'print_dataset_features': True, 'batch_size': 1, 'extract_features': False}, 'run': {'num_epochs': 50, 'learning_rate': 0.01, 'seed': 1800, 'k_fold': 5, 'model': 'DFScodeRNN_cls', 'dataset': 'PTC_FR'}, 'GNN_models': {'DGCNN': {'convolution_layers_size': '32-32-32-1', 'sortpooling_k': 0.6, 'n_hidden': 128, 'convolution_dropout': 0.5, 'pred_dropout': 0.5, 'FP_len': 0}, 'GCN': {'convolution_layers_size': '128-256-512', 'dropout': 0.5}, 'GCND': {'convolution_layers_size': '128-256-512', 'dropout': 0.5}, 'DiffPool': {'convolution_layers_size': '64-64-64', 'pred_hidden_layers': '50-50-50', 'assign_ratio': 0.25, 'number_of_pooling': 1, 'concat_tensors': False}, 'DiffPoolD': {'convolution_layers_size': '64-64-64', 'pred_hidden_layers': '50-50-50', 'assign_ratio': 0.25, 'number_of_pooling': 1, 'concat_tensors': False}, 'DFScodeRNN_cls': {'dummy': 0}}, 'dataset_features': {'node_forward': {'1': 0, '0': 1, '3': 2, '2': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '12': 9, '13': 10, '14': 11, '9': 12, '15': 13, '16': 14, '17': 15, '18': 16, '10': 17, '11': 18}, 'node_backward': {0: '1', 1: '0', 2: '3', 3: '2', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '12', 10: '13', 11: '14', 12: '9', 13: '15', 14: '16', 15: '17', 16: '18', 17: '10', 18: '11'}, 'edge_forward': {'0': 0}, 'edge_backward': {0: '0'}, 'max_nodes': 64, 'min_nodes': 2, 'max_edges': 71, 'min_edges': 1, 'max_degree': 4, 'label_size': 2}}
+
+
+Training a new model: DFScodeRNN_cls
+Run statistics: 
+==== Configuration Settings ====
+== Run Settings ==
+Model: DFScodeRNN_cls, Dataset: PTC_FR
+num_epochs: 50
+learning_rate: 0.01
+seed: 1800
+k_fold: 5
+model: DFScodeRNN_cls
+dataset: PTC_FR
+
+== Model Settings and results ==
+dummy: 0
+
+Accuracy (avg): 0.65529 ROC_AUC (avg): 0.50951 PRC_AUC (avg): 0.34989 
+
+Average forward propagation time taken(ms): 5.222476576947822
+Average backward propagation time taken(ms): 2.0203912555171435
+
+====== begin of gnn configuration ======
+| msg_average = 0
+======   end of gnn configuration ======
+Using backend: pytorch
+
+
+torch.cuda.is_available():  True 
+
+
+
+
+dataset_features: {'node_forward': {'1': 0, '0': 1, '3': 2, '2': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '12': 9, '13': 10, '14': 11, '9': 12, '15': 13, '16': 14, '17': 15, '18': 16, '10': 17, '11': 18}, 'node_backward': {0: '1', 1: '0', 2: '3', 3: '2', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '12', 10: '13', 11: '14', 12: '9', 13: '15', 14: '16', 15: '17', 16: '18', 17: '10', 18: '11'}, 'edge_forward': {'0': 0}, 'edge_backward': {0: '0'}, 'max_nodes': 64, 'min_nodes': 2, 'max_edges': 71, 'min_edges': 1, 'max_degree': 4, 'label_size': 2}
+
+
+
+
+config: {'general': {'data_autobalance': False, 'print_dataset_features': True, 'batch_size': 1, 'extract_features': False}, 'run': {'num_epochs': 50, 'learning_rate': 0.0003, 'seed': 1800, 'k_fold': 5, 'model': 'DFScodeRNN_cls', 'dataset': 'PTC_FR'}, 'GNN_models': {'DGCNN': {'convolution_layers_size': '32-32-32-1', 'sortpooling_k': 0.6, 'n_hidden': 128, 'convolution_dropout': 0.5, 'pred_dropout': 0.5, 'FP_len': 0}, 'GCN': {'convolution_layers_size': '128-256-512', 'dropout': 0.5}, 'GCND': {'convolution_layers_size': '128-256-512', 'dropout': 0.5}, 'DiffPool': {'convolution_layers_size': '64-64-64', 'pred_hidden_layers': '50-50-50', 'assign_ratio': 0.25, 'number_of_pooling': 1, 'concat_tensors': False}, 'DiffPoolD': {'convolution_layers_size': '64-64-64', 'pred_hidden_layers': '50-50-50', 'assign_ratio': 0.25, 'number_of_pooling': 1, 'concat_tensors': False}, 'DFScodeRNN_cls': {'dummy': 0}}, 'dataset_features': {'node_forward': {'1': 0, '0': 1, '3': 2, '2': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '12': 9, '13': 10, '14': 11, '9': 12, '15': 13, '16': 14, '17': 15, '18': 16, '10': 17, '11': 18}, 'node_backward': {0: '1', 1: '0', 2: '3', 3: '2', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '12', 10: '13', 11: '14', 12: '9', 13: '15', 14: '16', 15: '17', 16: '18', 17: '10', 18: '11'}, 'edge_forward': {'0': 0}, 'edge_backward': {0: '0'}, 'max_nodes': 64, 'min_nodes': 2, 'max_edges': 71, 'min_edges': 1, 'max_degree': 4, 'label_size': 2}}
+
+
+Training a new model: DFScodeRNN_cls
+Run statistics: 
+==== Configuration Settings ====
+== Run Settings ==
+Model: DFScodeRNN_cls, Dataset: PTC_FR
+num_epochs: 50
+learning_rate: 0.0003
+seed: 1800
+k_fold: 5
+model: DFScodeRNN_cls
+dataset: PTC_FR
+
+== Model Settings and results ==
+dummy: 0
+
+Accuracy (avg): 0.59243 ROC_AUC (avg): 0.50267 PRC_AUC (avg): 0.37532 
+
+Average forward propagation time taken(ms): 5.2056463973839096
+Average backward propagation time taken(ms): 2.01975374485716
+
+====== begin of gnn configuration ======
+| msg_average = 0
+======   end of gnn configuration ======
+Using backend: pytorch
+
+
+torch.cuda.is_available():  True 
+
+
+
+
+dataset_features: {'node_forward': {'1': 0, '0': 1, '3': 2, '2': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '12': 9, '13': 10, '14': 11, '9': 12, '15': 13, '16': 14, '17': 15, '18': 16, '10': 17, '11': 18}, 'node_backward': {0: '1', 1: '0', 2: '3', 3: '2', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '12', 10: '13', 11: '14', 12: '9', 13: '15', 14: '16', 15: '17', 16: '18', 17: '10', 18: '11'}, 'edge_forward': {'0': 0}, 'edge_backward': {0: '0'}, 'max_nodes': 64, 'min_nodes': 2, 'max_edges': 71, 'min_edges': 1, 'max_degree': 4, 'label_size': 2}
+
+
+
+
+config: {'general': {'data_autobalance': False, 'print_dataset_features': True, 'batch_size': 1, 'extract_features': False}, 'run': {'num_epochs': 50, 'learning_rate': 0.001, 'seed': 1800, 'k_fold': 5, 'model': 'DFScodeRNN_cls', 'dataset': 'PTC_FR'}, 'GNN_models': {'DGCNN': {'convolution_layers_size': '32-32-32-1', 'sortpooling_k': 0.6, 'n_hidden': 128, 'convolution_dropout': 0.5, 'pred_dropout': 0.5, 'FP_len': 0}, 'GCN': {'convolution_layers_size': '128-256-512', 'dropout': 0.5}, 'GCND': {'convolution_layers_size': '128-256-512', 'dropout': 0.5}, 'DiffPool': {'convolution_layers_size': '64-64-64', 'pred_hidden_layers': '50-50-50', 'assign_ratio': 0.25, 'number_of_pooling': 1, 'concat_tensors': False}, 'DiffPoolD': {'convolution_layers_size': '64-64-64', 'pred_hidden_layers': '50-50-50', 'assign_ratio': 0.25, 'number_of_pooling': 1, 'concat_tensors': False}, 'DFScodeRNN_cls': {'dummy': 0}}, 'dataset_features': {'node_forward': {'1': 0, '0': 1, '3': 2, '2': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '12': 9, '13': 10, '14': 11, '9': 12, '15': 13, '16': 14, '17': 15, '18': 16, '10': 17, '11': 18}, 'node_backward': {0: '1', 1: '0', 2: '3', 3: '2', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '12', 10: '13', 11: '14', 12: '9', 13: '15', 14: '16', 15: '17', 16: '18', 17: '10', 18: '11'}, 'edge_forward': {'0': 0}, 'edge_backward': {0: '0'}, 'max_nodes': 64, 'min_nodes': 2, 'max_edges': 71, 'min_edges': 1, 'max_degree': 4, 'label_size': 2}}
+
+
+Training a new model: DFScodeRNN_cls
+Run statistics: 
+==== Configuration Settings ====
+== Run Settings ==
+Model: DFScodeRNN_cls, Dataset: PTC_FR
+num_epochs: 50
+learning_rate: 0.001
+seed: 1800
+k_fold: 5
+model: DFScodeRNN_cls
+dataset: PTC_FR
+
+== Model Settings and results ==
+dummy: 0
+
+Accuracy (avg): 0.65529 ROC_AUC (avg): 0.52197 PRC_AUC (avg): 0.36466 
+
+Average forward propagation time taken(ms): 5.218985793549931
+Average backward propagation time taken(ms): 2.0219328230886093
+
+====== begin of gnn configuration ======
+| msg_average = 0
+======   end of gnn configuration ======
+Using backend: pytorch
+
+
+torch.cuda.is_available():  True 
+
+
+
+
+dataset_features: {'node_forward': {'1': 0, '0': 1, '3': 2, '2': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '12': 9, '13': 10, '14': 11, '9': 12, '15': 13, '16': 14, '17': 15, '18': 16, '10': 17, '11': 18}, 'node_backward': {0: '1', 1: '0', 2: '3', 3: '2', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '12', 10: '13', 11: '14', 12: '9', 13: '15', 14: '16', 15: '17', 16: '18', 17: '10', 18: '11'}, 'edge_forward': {'0': 0}, 'edge_backward': {0: '0'}, 'max_nodes': 64, 'min_nodes': 2, 'max_edges': 71, 'min_edges': 1, 'max_degree': 4, 'label_size': 2}
+
+
+
+
+config: {'general': {'data_autobalance': False, 'print_dataset_features': True, 'batch_size': 1, 'extract_features': False}, 'run': {'num_epochs': 50, 'learning_rate': 0.003, 'seed': 1800, 'k_fold': 5, 'model': 'DFScodeRNN_cls', 'dataset': 'PTC_FR'}, 'GNN_models': {'DGCNN': {'convolution_layers_size': '32-32-32-1', 'sortpooling_k': 0.6, 'n_hidden': 128, 'convolution_dropout': 0.5, 'pred_dropout': 0.5, 'FP_len': 0}, 'GCN': {'convolution_layers_size': '128-256-512', 'dropout': 0.5}, 'GCND': {'convolution_layers_size': '128-256-512', 'dropout': 0.5}, 'DiffPool': {'convolution_layers_size': '64-64-64', 'pred_hidden_layers': '50-50-50', 'assign_ratio': 0.25, 'number_of_pooling': 1, 'concat_tensors': False}, 'DiffPoolD': {'convolution_layers_size': '64-64-64', 'pred_hidden_layers': '50-50-50', 'assign_ratio': 0.25, 'number_of_pooling': 1, 'concat_tensors': False}, 'DFScodeRNN_cls': {'dummy': 0}}, 'dataset_features': {'node_forward': {'1': 0, '0': 1, '3': 2, '2': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '12': 9, '13': 10, '14': 11, '9': 12, '15': 13, '16': 14, '17': 15, '18': 16, '10': 17, '11': 18}, 'node_backward': {0: '1', 1: '0', 2: '3', 3: '2', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '12', 10: '13', 11: '14', 12: '9', 13: '15', 14: '16', 15: '17', 16: '18', 17: '10', 18: '11'}, 'edge_forward': {'0': 0}, 'edge_backward': {0: '0'}, 'max_nodes': 64, 'min_nodes': 2, 'max_edges': 71, 'min_edges': 1, 'max_degree': 4, 'label_size': 2}}
+
+
+Training a new model: DFScodeRNN_cls
+Run statistics: 
+==== Configuration Settings ====
+== Run Settings ==
+Model: DFScodeRNN_cls, Dataset: PTC_FR
+num_epochs: 50
+learning_rate: 0.003
+seed: 1800
+k_fold: 5
+model: DFScodeRNN_cls
+dataset: PTC_FR
+
+== Model Settings and results ==
+dummy: 0
+
+Accuracy (avg): 0.65529 ROC_AUC (avg): 0.49695 PRC_AUC (avg): 0.34804 
+
+Average forward propagation time taken(ms): 5.2198533927751445
+Average backward propagation time taken(ms): 2.020677405538822
+
+====== begin of gnn configuration ======
+| msg_average = 0
+======   end of gnn configuration ======
+Using backend: pytorch
+
+
+torch.cuda.is_available():  True 
+
+
+
+
+dataset_features: {'node_forward': {'1': 0, '0': 1, '3': 2, '2': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '12': 9, '13': 10, '14': 11, '9': 12, '15': 13, '16': 14, '17': 15, '18': 16, '10': 17, '11': 18}, 'node_backward': {0: '1', 1: '0', 2: '3', 3: '2', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '12', 10: '13', 11: '14', 12: '9', 13: '15', 14: '16', 15: '17', 16: '18', 17: '10', 18: '11'}, 'edge_forward': {'0': 0}, 'edge_backward': {0: '0'}, 'max_nodes': 64, 'min_nodes': 2, 'max_edges': 71, 'min_edges': 1, 'max_degree': 4, 'label_size': 2}
+
+
+
+
+config: {'general': {'data_autobalance': False, 'print_dataset_features': True, 'batch_size': 1, 'extract_features': False}, 'run': {'num_epochs': 50, 'learning_rate': 0.01, 'seed': 1800, 'k_fold': 5, 'model': 'DFScodeRNN_cls', 'dataset': 'PTC_FR'}, 'GNN_models': {'DGCNN': {'convolution_layers_size': '32-32-32-1', 'sortpooling_k': 0.6, 'n_hidden': 128, 'convolution_dropout': 0.5, 'pred_dropout': 0.5, 'FP_len': 0}, 'GCN': {'convolution_layers_size': '128-256-512', 'dropout': 0.5}, 'GCND': {'convolution_layers_size': '128-256-512', 'dropout': 0.5}, 'DiffPool': {'convolution_layers_size': '64-64-64', 'pred_hidden_layers': '50-50-50', 'assign_ratio': 0.25, 'number_of_pooling': 1, 'concat_tensors': False}, 'DiffPoolD': {'convolution_layers_size': '64-64-64', 'pred_hidden_layers': '50-50-50', 'assign_ratio': 0.25, 'number_of_pooling': 1, 'concat_tensors': False}, 'DFScodeRNN_cls': {'dummy': 0}}, 'dataset_features': {'node_forward': {'1': 0, '0': 1, '3': 2, '2': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '12': 9, '13': 10, '14': 11, '9': 12, '15': 13, '16': 14, '17': 15, '18': 16, '10': 17, '11': 18}, 'node_backward': {0: '1', 1: '0', 2: '3', 3: '2', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '12', 10: '13', 11: '14', 12: '9', 13: '15', 14: '16', 15: '17', 16: '18', 17: '10', 18: '11'}, 'edge_forward': {'0': 0}, 'edge_backward': {0: '0'}, 'max_nodes': 64, 'min_nodes': 2, 'max_edges': 71, 'min_edges': 1, 'max_degree': 4, 'label_size': 2}}
+
+
+Training a new model: DFScodeRNN_cls
+Run statistics: 
+==== Configuration Settings ====
+== Run Settings ==
+Model: DFScodeRNN_cls, Dataset: PTC_FR
+num_epochs: 50
+learning_rate: 0.01
+seed: 1800
+k_fold: 5
+model: DFScodeRNN_cls
+dataset: PTC_FR
+
+== Model Settings and results ==
+dummy: 0
+
+Accuracy (avg): 0.65529 ROC_AUC (avg): 0.49873 PRC_AUC (avg): 0.34414 
+
+Average forward propagation time taken(ms): 5.216690619523008
+Average backward propagation time taken(ms): 2.022109035486246
+
+====== begin of gnn configuration ======
+| msg_average = 0
+======   end of gnn configuration ======
+Using backend: pytorch
+
+
+torch.cuda.is_available():  True 
+
+
+
+
+dataset_features: {'node_forward': {'1': 0, '0': 1, '3': 2, '2': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '12': 9, '13': 10, '14': 11, '9': 12, '15': 13, '16': 14, '17': 15, '18': 16, '10': 17, '11': 18}, 'node_backward': {0: '1', 1: '0', 2: '3', 3: '2', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '12', 10: '13', 11: '14', 12: '9', 13: '15', 14: '16', 15: '17', 16: '18', 17: '10', 18: '11'}, 'edge_forward': {'0': 0}, 'edge_backward': {0: '0'}, 'max_nodes': 64, 'min_nodes': 2, 'max_edges': 71, 'min_edges': 1, 'max_degree': 4, 'label_size': 2}
+
+
+
+
+config: {'general': {'data_autobalance': False, 'print_dataset_features': True, 'batch_size': 1, 'extract_features': False}, 'run': {'num_epochs': 50, 'learning_rate': 0.0003, 'seed': 1800, 'k_fold': 5, 'model': 'DFScodeRNN_cls', 'dataset': 'PTC_FR'}, 'GNN_models': {'DGCNN': {'convolution_layers_size': '32-32-32-1', 'sortpooling_k': 0.6, 'n_hidden': 128, 'convolution_dropout': 0.5, 'pred_dropout': 0.5, 'FP_len': 0}, 'GCN': {'convolution_layers_size': '128-256-512', 'dropout': 0.5}, 'GCND': {'convolution_layers_size': '128-256-512', 'dropout': 0.5}, 'DiffPool': {'convolution_layers_size': '64-64-64', 'pred_hidden_layers': '50-50-50', 'assign_ratio': 0.25, 'number_of_pooling': 1, 'concat_tensors': False}, 'DiffPoolD': {'convolution_layers_size': '64-64-64', 'pred_hidden_layers': '50-50-50', 'assign_ratio': 0.25, 'number_of_pooling': 1, 'concat_tensors': False}, 'DFScodeRNN_cls': {'dummy': 0}}, 'dataset_features': {'node_forward': {'1': 0, '0': 1, '3': 2, '2': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '12': 9, '13': 10, '14': 11, '9': 12, '15': 13, '16': 14, '17': 15, '18': 16, '10': 17, '11': 18}, 'node_backward': {0: '1', 1: '0', 2: '3', 3: '2', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '12', 10: '13', 11: '14', 12: '9', 13: '15', 14: '16', 15: '17', 16: '18', 17: '10', 18: '11'}, 'edge_forward': {'0': 0}, 'edge_backward': {0: '0'}, 'max_nodes': 64, 'min_nodes': 2, 'max_edges': 71, 'min_edges': 1, 'max_degree': 4, 'label_size': 2}}
+
+
+Training a new model: DFScodeRNN_cls
+Run statistics: 
+==== Configuration Settings ====
+== Run Settings ==
+Model: DFScodeRNN_cls, Dataset: PTC_FR
+num_epochs: 50
+learning_rate: 0.0003
+seed: 1800
+k_fold: 5
+model: DFScodeRNN_cls
+dataset: PTC_FR
+
+== Model Settings and results ==
+dummy: 0
+
+Accuracy (avg): 0.65529 ROC_AUC (avg): 0.49039 PRC_AUC (avg): 0.36507 
+
+Average forward propagation time taken(ms): 5.224263843361538
+Average backward propagation time taken(ms): 2.0215310778600006
+
+====== begin of gnn configuration ======
+| msg_average = 0
+======   end of gnn configuration ======
+Using backend: pytorch
+
+
+torch.cuda.is_available():  True 
+
+
+
+
+dataset_features: {'node_forward': {'1': 0, '0': 1, '3': 2, '2': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '12': 9, '13': 10, '14': 11, '9': 12, '15': 13, '16': 14, '17': 15, '18': 16, '10': 17, '11': 18}, 'node_backward': {0: '1', 1: '0', 2: '3', 3: '2', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '12', 10: '13', 11: '14', 12: '9', 13: '15', 14: '16', 15: '17', 16: '18', 17: '10', 18: '11'}, 'edge_forward': {'0': 0}, 'edge_backward': {0: '0'}, 'max_nodes': 64, 'min_nodes': 2, 'max_edges': 71, 'min_edges': 1, 'max_degree': 4, 'label_size': 2}
+
+
+
+
+config: {'general': {'data_autobalance': False, 'print_dataset_features': True, 'batch_size': 1, 'extract_features': False}, 'run': {'num_epochs': 50, 'learning_rate': 0.001, 'seed': 1800, 'k_fold': 5, 'model': 'DFScodeRNN_cls', 'dataset': 'PTC_FR'}, 'GNN_models': {'DGCNN': {'convolution_layers_size': '32-32-32-1', 'sortpooling_k': 0.6, 'n_hidden': 128, 'convolution_dropout': 0.5, 'pred_dropout': 0.5, 'FP_len': 0}, 'GCN': {'convolution_layers_size': '128-256-512', 'dropout': 0.5}, 'GCND': {'convolution_layers_size': '128-256-512', 'dropout': 0.5}, 'DiffPool': {'convolution_layers_size': '64-64-64', 'pred_hidden_layers': '50-50-50', 'assign_ratio': 0.25, 'number_of_pooling': 1, 'concat_tensors': False}, 'DiffPoolD': {'convolution_layers_size': '64-64-64', 'pred_hidden_layers': '50-50-50', 'assign_ratio': 0.25, 'number_of_pooling': 1, 'concat_tensors': False}, 'DFScodeRNN_cls': {'dummy': 0}}, 'dataset_features': {'node_forward': {'1': 0, '0': 1, '3': 2, '2': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '12': 9, '13': 10, '14': 11, '9': 12, '15': 13, '16': 14, '17': 15, '18': 16, '10': 17, '11': 18}, 'node_backward': {0: '1', 1: '0', 2: '3', 3: '2', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '12', 10: '13', 11: '14', 12: '9', 13: '15', 14: '16', 15: '17', 16: '18', 17: '10', 18: '11'}, 'edge_forward': {'0': 0}, 'edge_backward': {0: '0'}, 'max_nodes': 64, 'min_nodes': 2, 'max_edges': 71, 'min_edges': 1, 'max_degree': 4, 'label_size': 2}}
+
+
+Training a new model: DFScodeRNN_cls
+Run statistics: 
+==== Configuration Settings ====
+== Run Settings ==
+Model: DFScodeRNN_cls, Dataset: PTC_FR
+num_epochs: 50
+learning_rate: 0.001
+seed: 1800
+k_fold: 5
+model: DFScodeRNN_cls
+dataset: PTC_FR
+
+== Model Settings and results ==
+dummy: 0
+
+Accuracy (avg): 0.65529 ROC_AUC (avg): 0.51346 PRC_AUC (avg): 0.36458 
+
+Average forward propagation time taken(ms): 5.2197588692076895
+Average backward propagation time taken(ms): 2.019216772212339
+
+====== begin of gnn configuration ======
+| msg_average = 0
+======   end of gnn configuration ======
+Using backend: pytorch
+
+
+torch.cuda.is_available():  True 
+
+
+
+
+dataset_features: {'node_forward': {'1': 0, '0': 1, '3': 2, '2': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '12': 9, '13': 10, '14': 11, '9': 12, '15': 13, '16': 14, '17': 15, '18': 16, '10': 17, '11': 18}, 'node_backward': {0: '1', 1: '0', 2: '3', 3: '2', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '12', 10: '13', 11: '14', 12: '9', 13: '15', 14: '16', 15: '17', 16: '18', 17: '10', 18: '11'}, 'edge_forward': {'0': 0}, 'edge_backward': {0: '0'}, 'max_nodes': 64, 'min_nodes': 2, 'max_edges': 71, 'min_edges': 1, 'max_degree': 4, 'label_size': 2}
+
+
+
+
+config: {'general': {'data_autobalance': False, 'print_dataset_features': True, 'batch_size': 1, 'extract_features': False}, 'run': {'num_epochs': 50, 'learning_rate': 0.003, 'seed': 1800, 'k_fold': 5, 'model': 'DFScodeRNN_cls', 'dataset': 'PTC_FR'}, 'GNN_models': {'DGCNN': {'convolution_layers_size': '32-32-32-1', 'sortpooling_k': 0.6, 'n_hidden': 128, 'convolution_dropout': 0.5, 'pred_dropout': 0.5, 'FP_len': 0}, 'GCN': {'convolution_layers_size': '128-256-512', 'dropout': 0.5}, 'GCND': {'convolution_layers_size': '128-256-512', 'dropout': 0.5}, 'DiffPool': {'convolution_layers_size': '64-64-64', 'pred_hidden_layers': '50-50-50', 'assign_ratio': 0.25, 'number_of_pooling': 1, 'concat_tensors': False}, 'DiffPoolD': {'convolution_layers_size': '64-64-64', 'pred_hidden_layers': '50-50-50', 'assign_ratio': 0.25, 'number_of_pooling': 1, 'concat_tensors': False}, 'DFScodeRNN_cls': {'dummy': 0}}, 'dataset_features': {'node_forward': {'1': 0, '0': 1, '3': 2, '2': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '12': 9, '13': 10, '14': 11, '9': 12, '15': 13, '16': 14, '17': 15, '18': 16, '10': 17, '11': 18}, 'node_backward': {0: '1', 1: '0', 2: '3', 3: '2', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '12', 10: '13', 11: '14', 12: '9', 13: '15', 14: '16', 15: '17', 16: '18', 17: '10', 18: '11'}, 'edge_forward': {'0': 0}, 'edge_backward': {0: '0'}, 'max_nodes': 64, 'min_nodes': 2, 'max_edges': 71, 'min_edges': 1, 'max_degree': 4, 'label_size': 2}}
+
+
+Training a new model: DFScodeRNN_cls
+Run statistics: 
+==== Configuration Settings ====
+== Run Settings ==
+Model: DFScodeRNN_cls, Dataset: PTC_FR
+num_epochs: 50
+learning_rate: 0.003
+seed: 1800
+k_fold: 5
+model: DFScodeRNN_cls
+dataset: PTC_FR
+
+== Model Settings and results ==
+dummy: 0
+
+Accuracy (avg): 0.65529 ROC_AUC (avg): 0.51713 PRC_AUC (avg): 0.35631 
+
+Average forward propagation time taken(ms): 5.218437383440381
+Average backward propagation time taken(ms): 2.0184935965548765
+
+====== begin of gnn configuration ======
+| msg_average = 0
+======   end of gnn configuration ======
+Using backend: pytorch
+
+
+torch.cuda.is_available():  True 
+
+
+
+
+dataset_features: {'node_forward': {'1': 0, '0': 1, '3': 2, '2': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '12': 9, '13': 10, '14': 11, '9': 12, '15': 13, '16': 14, '17': 15, '18': 16, '10': 17, '11': 18}, 'node_backward': {0: '1', 1: '0', 2: '3', 3: '2', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '12', 10: '13', 11: '14', 12: '9', 13: '15', 14: '16', 15: '17', 16: '18', 17: '10', 18: '11'}, 'edge_forward': {'0': 0}, 'edge_backward': {0: '0'}, 'max_nodes': 64, 'min_nodes': 2, 'max_edges': 71, 'min_edges': 1, 'max_degree': 4, 'label_size': 2}
+
+
+
+
+config: {'general': {'data_autobalance': False, 'print_dataset_features': True, 'batch_size': 1, 'extract_features': False}, 'run': {'num_epochs': 50, 'learning_rate': 0.01, 'seed': 1800, 'k_fold': 5, 'model': 'DFScodeRNN_cls', 'dataset': 'PTC_FR'}, 'GNN_models': {'DGCNN': {'convolution_layers_size': '32-32-32-1', 'sortpooling_k': 0.6, 'n_hidden': 128, 'convolution_dropout': 0.5, 'pred_dropout': 0.5, 'FP_len': 0}, 'GCN': {'convolution_layers_size': '128-256-512', 'dropout': 0.5}, 'GCND': {'convolution_layers_size': '128-256-512', 'dropout': 0.5}, 'DiffPool': {'convolution_layers_size': '64-64-64', 'pred_hidden_layers': '50-50-50', 'assign_ratio': 0.25, 'number_of_pooling': 1, 'concat_tensors': False}, 'DiffPoolD': {'convolution_layers_size': '64-64-64', 'pred_hidden_layers': '50-50-50', 'assign_ratio': 0.25, 'number_of_pooling': 1, 'concat_tensors': False}, 'DFScodeRNN_cls': {'dummy': 0}}, 'dataset_features': {'node_forward': {'1': 0, '0': 1, '3': 2, '2': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '12': 9, '13': 10, '14': 11, '9': 12, '15': 13, '16': 14, '17': 15, '18': 16, '10': 17, '11': 18}, 'node_backward': {0: '1', 1: '0', 2: '3', 3: '2', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '12', 10: '13', 11: '14', 12: '9', 13: '15', 14: '16', 15: '17', 16: '18', 17: '10', 18: '11'}, 'edge_forward': {'0': 0}, 'edge_backward': {0: '0'}, 'max_nodes': 64, 'min_nodes': 2, 'max_edges': 71, 'min_edges': 1, 'max_degree': 4, 'label_size': 2}}
+
+
+Training a new model: DFScodeRNN_cls
+Run statistics: 
+==== Configuration Settings ====
+== Run Settings ==
+Model: DFScodeRNN_cls, Dataset: PTC_FR
+num_epochs: 50
+learning_rate: 0.01
+seed: 1800
+k_fold: 5
+model: DFScodeRNN_cls
+dataset: PTC_FR
+
+== Model Settings and results ==
+dummy: 0
+
+Accuracy (avg): 0.65529 ROC_AUC (avg): 0.49696 PRC_AUC (avg): 0.3475 
+
+Average forward propagation time taken(ms): 5.220481860829849
+Average backward propagation time taken(ms): 2.0207565494697497
+

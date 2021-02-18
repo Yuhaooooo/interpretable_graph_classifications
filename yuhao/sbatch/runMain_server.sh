@@ -14,17 +14,18 @@ conda activate GCNN_GAP_graphgen
 
 # MODEL=GCN
 MODEL=DFScodeRNN_cls
-RNN_TYPE=GRU
-DATA=MUTAG
+# RNN_TYPE=GRU
+RNN_TYPE=LSTM
+# DATA=MUTAG
 # DATA=NCI-H23
 # DATA=TOX21_AR
-# DATA=PTC_FR
+DATA=PTC_FR
 
 epochs=(50)
 number_of_rnn_layers=(1 2)
-embedding_sizes=(4 8 16)
+embedding_sizes=(8 16)
 hidden_sizes=(4 8)
-number_of_mlp_layers=(1)
+number_of_mlp_layers=(0)
 learning_rates=(0.0003 0.001 0.003 0.01)
 
 ROOT=/home/FYP/heyu0012/projects/interpretable_graph_classifications

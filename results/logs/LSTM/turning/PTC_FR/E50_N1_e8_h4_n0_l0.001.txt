@@ -1,0 +1,31 @@
+
+
+model:
+ {'dfs_code_rnn': RNN(
+  (input): Linear(in_features=172, out_features=8, bias=True)
+  (rnn): LSTM(8, 4, batch_first=True)
+), 'output_layer': MLP_layers(
+  (mlp): Sequential(
+    (Linear0): Linear(in_features=4, out_features=2, bias=True)
+  )
+)}
+
+
+Run statistics: 
+==== Configuration Settings ====
+== Run Settings ==
+Model: DFScodeRNN_cls, Dataset: PTC_FR
+num_epochs: 50
+learning_rate: 0.001
+seed: 1800
+k_fold: 5
+model: DFScodeRNN_cls
+dataset: PTC_FR
+
+== Model Settings and results ==
+dummy: 0
+
+Accuracy (avg): 0.59243 ROC_AUC (avg): 0.52837 PRC_AUC (avg): 0.36798 
+
+Average forward propagation time taken(ms): 3.1948590539429893
+Average backward propagation time taken(ms): 1.2154129161801515
