@@ -17,6 +17,7 @@ import sys
 import yaml
 import json
 import hashlib
+import pickle
 
 from tqdm import tqdm
 from copy import deepcopy
@@ -326,14 +327,15 @@ if __name__ == '__main__':
 	cmd_opt.add_argument('-data', default='NCI-H23', help='Dataset to use')
 	# 0 -> Load classifier, 1 -> train from scratch
 	cmd_opt.add_argument('-retrain', default='1', help='Whether to re-train the classifier or use saved trained model')
-	cmd_opt.add_argument('-params_turning', type=int, default=0, help='for dfscode_rnn only')
-	cmd_opt.add_argument('-rnn_type', type=str, help='for dfscode_rnn only')
-	cmd_opt.add_argument('-epoch', type=int, help='for dfscode_rnn only')
-	cmd_opt.add_argument('-number_of_rnn_layer', type=int, help='for dfscode_rnn only')
-	cmd_opt.add_argument('-embedding_size', type=int, help='for dfscode_rnn only')
-	cmd_opt.add_argument('-hidden_size', type=int, help='for dfscode_rnn only')
-	cmd_opt.add_argument('-number_of_mlp_layer', type=int, help='for dfscode_rnn only')
-	cmd_opt.add_argument('-learning_rate', type=float, help='for dfscode_rnn only')
+	cmd_opt.add_argument('-GCN_reduced_dataset', type=int, default=0, help='Whether to use gids from graphgen, 0 - no use , 1 - use')
+	cmd_opt.add_argument('-params_turning', type=int, default=0, help='for dfscode_rnn only, if 1, then write log file')
+	cmd_opt.add_argument('-rnn_type', type=str, default='LSTM', help='for dfscode_rnn only, LSTM or GRU or BERT')
+	cmd_opt.add_argument('-epoch', type=int, default=50, help='for dfscode_rnn only')
+	cmd_opt.add_argument('-number_of_rnn_layer', type=int, default=1, help='for dfscode_rnn only, only used in LSTM or GRU (BERT?)')
+	cmd_opt.add_argument('-embedding_size', type=int, default=8, help='for dfscode_rnn only')
+	cmd_opt.add_argument('-hidden_size', type=int, default=4, help='for dfscode_rnn only')
+	cmd_opt.add_argument('-number_of_mlp_layer', type=int, default=0, help='for dfscode_rnn only')
+	cmd_opt.add_argument('-learning_rate', type=float, default=0.001, help='for dfscode_rnn only')
 	cmd_args, _ = cmd_opt.parse_known_args()
 
 	## TODO
@@ -360,8 +362,9 @@ if __name__ == '__main__':
 		# import graphgen functions, replace args
 		from models.graphgen.main import *
 
-		# 统一yml & args
-		# 其实不需要统一，统一用GCN里的就好
+		# args is used in graphgen
+		# yaml is used in GCN
+		# args are decides by cmd_args and yaml
 		# 
 		# args.note = config["run"]["model"]
 		# args.graph_type = config["run"]["dataset"]
@@ -377,7 +380,6 @@ if __name__ == '__main__':
 		args.number_of_mlp_layer = cmd_args.number_of_mlp_layer
 		args.lr = cmd_args.learning_rate
 		config['run']['learning_rate'] = args.lr # only for printing purpose
-		# args.lr = config["run"]["learning_rate"] #用GCN的
 
 		# # 在这个script里面，graphgen默认用cls模式，和已生成好的tensor
 		# args.used_in = 'cls'
@@ -388,9 +390,13 @@ if __name__ == '__main__':
 		graph_list = get_graph_list()
 		graph_label_list = get_graph_label_list()
 
+		# select the one that has mindfscode
+		with open(os.path.join(args.graphgen_save_path, 'gids_with_mindfscode.dat'), 'rb') as f:
+			gids = pickle.load(f)
+			f.close()
+		graph_list = [graph_list[i] for i in gids]
+		graph_label_list = [graph_label_list[i] for i in gids]
 
-		# TODO 2
-		# 统一 dataset features 和 feature map, 因为后面会用到
 		dataset_features = get_feature_map(graph_label_list)
 		# dataset_features are the same as feature_map in graphgen main.py
 
@@ -399,12 +405,20 @@ if __name__ == '__main__':
 		# print(f'\n\ngraphgen args.__dict__: {pprint.pprint(args.__dict__)}\n\n')
 		print(f'\n\ndataset_features: {dataset_features}\n\n')
 
-	else:
+	else:	
+		print('cmd_args.GCN_reduced_dataset: ', cmd_args.GCN_reduced_dataset)
+		if cmd_args.GCN_reduced_dataset==1:
+			with open(os.path.join(os.environ.get('BASE_PATH'), 'graphgen', 'gids_with_mindfscode.dat'), 'rb') as f:
+				gids = pickle.load(f)
+				f.close()
+		else:
+			gids=False
 		train_graphs, test_graphs, dataset_features = load_model_data(
 			config["run"]["dataset"],
 			config["run"]["k_fold"],
 			config["general"]["data_autobalance"],
-			config["general"]["print_dataset_features"]
+			config["general"]["print_dataset_features"],
+			gids
 		)
 
 	config["dataset_features"] = dataset_features
@@ -506,7 +520,6 @@ if __name__ == '__main__':
 				exec (exec_string)
 				if cmd_args.cuda == '1':
 					classifier_model = classifier_model.cuda()
-
 
 			# Define back propagation optimizer
 			if config["run"]["model"]=='DFScodeRNN_cls':

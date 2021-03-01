@@ -454,7 +454,7 @@ def create_graphs(args):
             count = unserialize_MUTAG_pickle(
                 input_path, args.graphgen_save_path, args.graph_path)
 
-        print('Graphs produced', count)
+        # print('Graphs produced', count)
 
         # Produce feature map
         feature_map = mapping(args.graph_path,
@@ -475,6 +475,7 @@ def create_graphs(args):
         end = time.time()
         print('Time taken to make dfscodes = {:.3f}s'.format(end - start))
 
+
     # if (args.note in ['DFScodeRNN', 'DFScodeRNN_cls']) and args.produce_min_dfscode_tensors:
     if not os.path.exists(args.min_dfscode_tensor_path):
         # Empty the directory
@@ -488,7 +489,12 @@ def create_graphs(args):
         print('Time taken to make dfscode tensors= {:.3f}s'.format(
             end - start))
 
-    count = len([name for name in os.listdir(args.min_dfscode_tensor_path) if name.endswith(".dat")])
+    # write down the ids of graph that have min dfs code 
+    gids = sorted([int(gid[5:-4]) for gid in os.listdir(args.min_dfscode_tensor_path)])
+    with open(os.path.join(args.graphgen_save_path, 'gids_with_mindfscode.dat'), 'wb') as f:
+        pickle.dump(gids, f)
 
+    count = len([name for name in os.listdir(args.graph_path) if name.endswith(".dat")])
     graphs = [i for i in range(count)]
+
     return graphs

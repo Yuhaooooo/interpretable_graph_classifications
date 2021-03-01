@@ -23,9 +23,6 @@ import os
 args = Args()
 args = args.update_args()
 
-# TODO 4
-# args fetch info from config.yml also
-
 def get_feature_map(graph_label_list):
     fearure_map_path = os.path.join(args.graphgen_save_path, 'graphs', 'map.dict')
     # if not os.path.exists(fearure_map_path):

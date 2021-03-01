@@ -100,7 +100,7 @@ def unserialize_pickle_file(path):
 	return graph_list
 
 
-def unserialize_pickle(dataset_name):
+def unserialize_pickle(dataset_name, select_graphs=False):
 	# Unserialize the pickled file
 	with open("data/%s/%s.p" % (dataset_name, dataset_name), 'rb') as pickled_file:
 		nxgraph_list = pickle.load(pickled_file)
@@ -157,6 +157,12 @@ def unserialize_pickle(dataset_name):
 	# Extract graph labels
 	graph_id = 0
 	for nxgraph in nxgraph_list:
+    		
+		# from graphgen 
+		if select_graphs!=False and graph_id not in select_graphs:
+			graph_id += 1
+			continue
+
 		# Get graph label
 		graph_label = graph_labels_mapping_dict[str(nxgraph.graph['label'])]
 
@@ -210,7 +216,7 @@ def split_train_test(k_fold, graph_list, graph_labels):
 	
 
 # load_data(): Loads pickled dataset
-def load_model_data(dataset_name, k_fold=5, dataset_autobalance=False, print_dataset_info=True):
+def load_model_data(dataset_name, k_fold=5, dataset_autobalance=False, print_dataset_info=True, select_graphs=False):
 	'''
 
 	:param dataset_name: name of the dataset to use
@@ -224,7 +230,8 @@ def load_model_data(dataset_name, k_fold=5, dataset_autobalance=False, print_dat
 
 	# Perform unserialisation
 	graph_list, graph_labels_mapping_dict, node_labels_mapping_dict, node_label_flag, node_feature_flag =\
-		unserialize_pickle(dataset_name)
+		unserialize_pickle(dataset_name, select_graphs)
+	print('len(graph_list): ', len(graph_list))
 
 	# Count the number of labels, and form a graph label list for kfold split later
 	label_count_list = [0 for _ in range(len(graph_labels_mapping_dict))]
@@ -352,7 +359,7 @@ def load_model_data(dataset_name, k_fold=5, dataset_autobalance=False, print_dat
 		print(dataset_features_string)
 
 	print('*** 3 dataset_features: ', dataset_features)
-	
+
 	train_graphs, test_graphs = split_train_test(k_fold, graph_list, graph_labels)
 
 	return train_graphs, test_graphs, dataset_features

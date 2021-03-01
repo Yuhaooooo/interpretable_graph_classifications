@@ -118,7 +118,6 @@ def graph_to_min_dfscode(graph_file, graphs_path, min_dfscodes_path, temp_path):
                 pickle.dump(min_dfscode, f)
         else:
             print('Error in min dfscode for filename', graph_file)
-            exit()
 
 
 def graphs_to_min_dfscodes(graphs_path, min_dfscodes_path, temp_path):
