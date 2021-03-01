@@ -1,8 +1,0 @@
-Traceback (most recent call last):
-  File "main.py", line 26, in <module>
-    from models import *
-  File "/home/FYP/heyu0012/projects/interpretable_graph_classifications/models/__init__.py", line 5, in <module>
-    from .DGCNN import DGCNN
-  File "/home/FYP/heyu0012/projects/interpretable_graph_classifications/models/DGCNN.py", line 5, in <module>
-    from models.lib.weight_util import weights_init
-ModuleNotFoundError: No module named 'models.lib.weight_util'
