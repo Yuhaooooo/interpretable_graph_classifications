@@ -13,7 +13,8 @@ conda activate GCNN_GAP_graphgen
 # conda env list
 
 MODEL=GCN
-
+# MODEL=DGCNN
+# MODEL=DiffPool
 
 # DATA=MUTAG
 # DATA=NCI-H23

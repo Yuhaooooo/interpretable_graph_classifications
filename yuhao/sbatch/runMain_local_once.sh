@@ -20,7 +20,7 @@ export DATA=${DATA}
 export BASE_PATH=$BASE_PATH
 
 # add graphgen bin for generating dfs code
-export PATH=${ROOT}/models/graphgen/bin:/$PATH
+export PATH=$ROOT:${ROOT}/models/graphgen/bin:$PATH
 
 # MUTAG_DATASET_PATH=/home/FYP/heyu0012/results/graphgen/DfsRNN_MUTAG_classification/datasets/MUTAG
 # MUTAG_LABEL_PATH=$MUTAG_DATASET_PATH
@@ -29,5 +29,7 @@ export PATH=${ROOT}/models/graphgen/bin:/$PATH
 # export MUTAG_DFSTENSOR_PATH=$MUTAG_DFSTENSOR_PATH
 
 cd $ROOT
+
+echo $PATH
 
 python main.py cuda=0 -gm=$MODEL -data=$DATA -retrain=1 -GCN_reduced_dataset=True
