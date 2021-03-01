@@ -1,0 +1,23 @@
+Run statistics: 
+==== Configuration Settings ====
+== Run Settings ==
+Model: DGCNN, Dataset: MUTAG
+num_epochs: 50
+learning_rate: 0.0001
+seed: 1800
+k_fold: 5
+model: DGCNN
+dataset: MUTAG
+
+== Model Settings and results ==
+convolution_layers_size: 32-32-32-1
+sortpooling_k: 0.6
+n_hidden: 128
+convolution_dropout: 0.5
+pred_dropout: 0.5
+FP_len: 0
+
+Accuracy (avg): 0.85121 ROC_AUC (avg): 0.90354 PRC_AUC (avg): 0.95141 
+
+Average forward propagation time taken(ms): 3.004422574997211
+Average backward propagation time taken(ms): 2.563603079776483

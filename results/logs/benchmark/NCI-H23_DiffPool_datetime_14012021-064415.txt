@@ -1,0 +1,22 @@
+Run statistics: 
+==== Configuration Settings ====
+== Run Settings ==
+Model: DiffPool, Dataset: NCI-H23
+num_epochs: 50
+learning_rate: 0.0001
+seed: 1800
+k_fold: 5
+model: DiffPool
+dataset: NCI-H23
+
+== Model Settings and results ==
+convolution_layers_size: 64-64-64
+pred_hidden_layers: 50-50-50
+assign_ratio: 0.25
+number_of_pooling: 1
+concat_tensors: False
+
+Accuracy (avg): 0.2016 ROC_AUC (avg): 0.69797 PRC_AUC (avg): 0.4281 
+
+Average forward propagation time taken(ms): 2.4490246673868983
+Average backward propagation time taken(ms): 3.51914497429505

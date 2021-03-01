@@ -1,0 +1,23 @@
+Run statistics: 
+==== Configuration Settings ====
+== Run Settings ==
+Model: DGCNN, Dataset: NCI-H23
+num_epochs: 50
+learning_rate: 0.0001
+seed: 1800
+k_fold: 5
+model: DGCNN
+dataset: NCI-H23
+
+== Model Settings and results ==
+convolution_layers_size: 32-32-32-1
+sortpooling_k: 0.6
+n_hidden: 128
+convolution_dropout: 0.5
+pred_dropout: 0.5
+FP_len: 0
+
+Accuracy (avg): 0.2004 ROC_AUC (avg): 0.64199 PRC_AUC (avg): 0.32661 
+
+Average forward propagation time taken(ms): 2.9748405263507713
+Average backward propagation time taken(ms): 2.5445171644957743
